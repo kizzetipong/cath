@@ -1,0 +1,17 @@
+{
+  "configurations": {
+    "dataPath": "/web"
+  },
+  "datacenter_configurations": {
+    "dev": {
+      "serviceEndpoint": {
+        "db": "http://localhost:3000"
+      }
+    },
+    "prod": {
+      "serviceEndpoint": {
+        "db": "http://localhost:3000"
+      }
+    }
+  }
+}

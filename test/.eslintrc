@@ -1,0 +1,10 @@
+env:
+  jasmine: true
+globals:
+  afterEach: false
+  beforeEach: false
+  describe: false
+  expect: false
+  inject: false
+  it: false
+  spyOn: false

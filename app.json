@@ -1,0 +1,8 @@
+{
+  "name": "AngularSeed",
+  "version": "0.0.0",
+  "type": "WebApp",
+  "displayName": "My Angular AppSeed",
+  "description": "My Angular AppSeed",
+  "defaultPlatform": "NodeJS"
+}
