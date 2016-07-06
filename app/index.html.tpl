@@ -10,7 +10,8 @@
     <!-- endbuild -->
   </head>
   <body ng-app="angular-seed">
-    <div class="nav" ng-controller="navController">
+    <div ng-controller="navController">
+      <nav-header></nav-header>
     </div>
     <div class="app-container">
       <div ng-view=""></div>
@@ -18,7 +19,7 @@
     <hr class="footer-hr">
     <div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> Class Action Thailand</p>
+        <p><span class="glyphicon glyphicon-heart"></span> Brand</p>
       </div>
     </div>
 
@@ -37,6 +38,7 @@
     <script src="scripts/controllers/mainController.js"></script>
     <script src="scripts/services/myService.js"></script>
     <script src="scripts/components/mydirective/myDirective.js"></script>
+    <script src="scripts/components/navheader/navHeader.js"></script>
     <script src="templates.js"></script>
     <!-- endbuild -->
 
