@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Class Actions Thailand</title>
+    <title>Brand</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- build:css(.tmp) web/assets/css/app.css -->
