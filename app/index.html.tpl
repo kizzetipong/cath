@@ -10,7 +10,7 @@
     <!-- endbuild -->
   </head>
   <body ng-app="angular-seed">
-    <div ng-controller="navController">
+    <div>
       <nav-header></nav-header>
     </div>
     <div class="app-container">
@@ -36,9 +36,10 @@
     <script src="scripts/appRoute.js"></script>
     <script src="scripts/appConfig.js"></script>
     <script src="scripts/controllers/mainController.js"></script>
+    <script src="scripts/factory/dataFactory.js"></script>
     <script src="scripts/services/myService.js"></script>
-    <script src="scripts/components/mydirective/myDirective.js"></script>
     <script src="scripts/components/navheader/navHeader.js"></script>
+    <script src="scripts/components/navheader/navHeaderController.js"></script>
     <script src="templates.js"></script>
     <!-- endbuild -->
 
