@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angular-seed')
-.config(function ($routeProvider) {
+.config(function ($routeProvider, $locationProvider) {
   $routeProvider
   .when('/', {
     controller: 'MainController',
@@ -10,4 +10,6 @@ angular.module('angular-seed')
   .otherwise({
     redirectTo: '/',
   });
+  
+  $locationProvider.html5Mode(true);
 });

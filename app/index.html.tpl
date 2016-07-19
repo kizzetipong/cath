@@ -2,6 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
+    <base href="/">
     <title>Brand</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
@@ -40,6 +41,8 @@
     <script src="scripts/services/myService.js"></script>
     <script src="scripts/components/navheader/navHeader.js"></script>
     <script src="scripts/components/navheader/navHeaderController.js"></script>
+    <script src="scripts/components/catalogslider/catalogSlider.js"></script>
+    <script src="scripts/components/catalogslider/catalogSliderController.js"></script>
     <script src="templates.js"></script>
     <!-- endbuild -->
 

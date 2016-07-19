@@ -5,13 +5,9 @@ angular.module('angular-seed')
   function ($rootScope, $scope, $routeParams) {
     $scope.init = function () {
       $scope.params = $routeParams;
-      $scope.helloWorld = 'Hello World';
+      $scope.helloWorld = 'Hello World from Controller';
     };
 
     $scope.init();
-
-    this.compute = function () {
-
-    };
   },
 ]);
