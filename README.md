@@ -6,6 +6,7 @@ Just for fun
 0. Pull this repo
 0. Open git bash on root of this directory
 0. Use command 'npm install -g grunt-cli'
+0. Use command 'npm install -g bower'
 0. Use command 'npm install'
 0. Use command 'bower install'
 0. Use command 'grunt prepare'
