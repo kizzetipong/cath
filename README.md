@@ -13,3 +13,10 @@ Just for fun
 
 * Use command 'grunt serve' to start web server with http://localhost:9999
 * Use command 'grunt build' to prepare deploymeny package save at folder '/dist'
+
+* How to deploy to Firebase
+0. Install firebase tool with command 'npm install -g firebase-tools'
+0. Use command 'firebase login'
+0. Use command 'firebase use --add' and choose cath-ce838
+0. Use command 'firebase serve' to run in http://localhost:5000
+0. Use command 'firebase deploy' to deploy to https://cath-ce838.firebaseapp.com/

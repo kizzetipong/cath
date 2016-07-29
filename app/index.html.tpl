@@ -50,5 +50,17 @@
     <script src="http://localhost:35729/livereload.js"></script>
     <!-- endbuild -->
 
+    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: 'AIzaSyAmR8JqrtECxddqGS4CAkwTjKChjDOf5Kw',
+        authDomain: 'cath-ce838.firebaseapp.com',
+        databaseURL: 'https://cath-ce838.firebaseio.com',
+        storageBucket: 'cath-ce838.appspot.com',
+      };
+      firebase.initializeApp(config);
+    </script>
+
   </body>
 </html>

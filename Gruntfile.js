@@ -185,6 +185,17 @@ module.exports = function (grunt) {
       css: ['<%= yeoman.dist %>/web/**/*.css'],
     },
 
+    imagemin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/assets/images',
+          src: '{,*/}*.{png,jpg,jpeg,gif}',
+          dest: '<%= yeoman.dist %>/assets/images',
+        }],
+      },
+    },
+
     htmlmin: {
       dist: {
         options: {
@@ -344,7 +355,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'validate',
+    // 'validate',
     'clean:dist',
     'env:prod',
     'preprocess',

@@ -13,3 +13,4 @@ globals:
   $: false
   angular: false
   JET: false
+  firebase: false
