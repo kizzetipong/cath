@@ -15,6 +15,7 @@ Just for fun
 * Use command 'grunt build' to prepare deploymeny package save at folder '/dist'
 
 # How to deploy to Firebase
+0. Open cmd (or git bash) on root of this directory
 0. Install firebase tool with command 'npm install -g firebase-tools'
 0. Use command 'firebase login'
 0. Use command 'firebase use --add' and choose cath-ce838

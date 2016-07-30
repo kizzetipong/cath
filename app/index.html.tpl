@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- build:css(.tmp) web/assets/css/app.css -->
     <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <!-- endbuild -->
   </head>
   <body ng-app="angular-seed">
@@ -20,7 +21,8 @@
     <hr class="footer-hr">
     <div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> Brand</p>
+        <site-map></site-map>
+        <p>© 2016 Class Actions Thailand. All right reserved.  |  <a href="/legal-notice">Legal Notice</a>  |  <a href="/contactus">Contact Us</a></p>
       </div>
     </div>
 
@@ -37,6 +39,7 @@
     <script src="scripts/appRoute.js"></script>
     <script src="scripts/appConfig.js"></script>
     <script src="scripts/controllers/mainController.js"></script>
+    <script src="scripts/factory/firebaseFactory.js"></script>
     <script src="scripts/factory/dataFactory.js"></script>
     <script src="scripts/services/myService.js"></script>
     <script src="scripts/components/navheader/navHeader.js"></script>
