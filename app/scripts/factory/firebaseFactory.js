@@ -38,7 +38,7 @@ angular.module('angular-seed').factory('firebaseFactory', ['$q',
       firebaseModel.auth.onAuthStateChanged(firebaseModel.onAuthStateChanged.bind(firebaseModel));
     };
 
-    firebaseModel.signIn = function () {
+    firebaseModel.signInGG = function () {
       // Sign in Firebase using popup auth and Google as the identity provider.
       var provider = new firebase.auth.GoogleAuthProvider();
       firebaseModel.auth.signInWithPopup(provider);
@@ -55,6 +55,11 @@ angular.module('angular-seed').factory('firebaseFactory', ['$q',
         var profilePicUrl = user.photoURL;
         var userName = user.displayName;
 
+        console.log(userName + 'is signed in');
+
+        //TODO: gather data from signin and process next
+
+        /*
         // Set the user's profile pic and name.
         firebaseModel.userPic.style.backgroundImage = 'url(' + profilePicUrl + ')';
         firebaseModel.userName.textContent = userName;
@@ -66,6 +71,7 @@ angular.module('angular-seed').factory('firebaseFactory', ['$q',
 
         // Hide sign-in button.
         firebaseModel.signInButton.setAttribute('hidden', 'true');
+        */
 
       } else { // User is signed out!
         console.log('User not signed in');
