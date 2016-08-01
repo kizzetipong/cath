@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width">
     <!-- build:css(.tmp) web/assets/css/app.css -->
     <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <!-- endbuild -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   </head>
   <body ng-app="angular-seed">
     <div>

@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "cath-ce838"
+    "default": "cath-ce838",
+    "staging": "cath-ce838"
   }
 }
