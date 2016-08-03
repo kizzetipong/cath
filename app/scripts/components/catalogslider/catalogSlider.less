@@ -16,14 +16,34 @@
     border-right: 1px solid #d6d7d9;
   }
 
+  .carousel-indicators {
+    bottom: -5px;
+  }
+
   .carousel-inner {
     .item {
-      height: 150px;
+      height: 200px;
       .content {
-        height: 150px;
+        display: inline-flex;
+        height: 200px;
         background-color: @grey01;
         padding: 5px;
       }
+    }
+  }
+
+  img {
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+    &:hover {
+      -webkit-transform:scale(1.1); /* Safari and Chrome */
+      -moz-transform:scale(1.1); /* Firefox */
+      -ms-transform:scale(1.1); /* IE 9 */
+      -o-transform:scale(1.1); /* Opera */
+       transform:scale(1.1);
     }
   }
 }

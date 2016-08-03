@@ -11,8 +11,32 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item" ng-repeat="(key, item) in list" ng-class="{'active': key === 0}">
-        <div class="content">{{item.headlineText}}</div>
-      </div>
+        <div class="content">
+          <div class="row">
+            <div class="col-md-4">
+              <a ng-href="/{{item.type}}/{{item.classId}}">
+                <img src="{{item.img}}" class="image image180-160" alt="image1">
+              </a>
+            </div>
+            <div class="col-md-8">
+              <div class="post-wrap">
+                <a href="/{{item.type}}/{{item.classId}}" title="title1">
+                  <h4 class="blog-title">{{item.headlineText}}</h4>
+                </a>
+                <div class="post-meta">
+                  <span class="date">{{item.date}}</span> | <span class="comments">
+                    <a href="/{{item.type}}/{{item.classId}}/#respond">Make a Comment</a>
+                  </span>
+                </div>
+                <span class="post-content">{{item.briefText}}…
+                  <a class="view-article" href="/{{item.type}}/{{item.classId}}">Read More</a>
+                  <!-- AddThis Sharing Buttons below -->
+                  <p></p>
+                </span>
+              </div>
+            </div>
+          </div>          
+        </div>
     </div>
   </div>
 </div>

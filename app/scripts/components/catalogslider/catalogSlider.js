@@ -6,8 +6,8 @@ angular.module('angular-seed')
     templateUrl: 'scripts/components/catalogslider/catalogSlider.html',
     restrict: 'E',
     scope: {
-    	catalogTitle: '@',
-    	catalog: '@',
+      catalogTitle: '@',
+      catalog: '@',
     },
     controller: 'catalogSliderController',
   };

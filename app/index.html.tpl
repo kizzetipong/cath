@@ -47,6 +47,8 @@
     <script src="scripts/components/navheader/navHeaderController.js"></script>
     <script src="scripts/components/catalogslider/catalogSlider.js"></script>
     <script src="scripts/components/catalogslider/catalogSliderController.js"></script>
+    <script src="scripts/components/subscriber/subscriber.js"></script>
+    <script src="scripts/components/subscriber/subscriberController.js"></script>
     <script src="templates.js"></script>
     <!-- endbuild -->
 
