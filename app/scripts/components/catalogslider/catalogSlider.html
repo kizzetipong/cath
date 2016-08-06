@@ -13,12 +13,12 @@
       <div class="item" ng-repeat="(key, item) in list" ng-class="{'active': key === 0}">
         <div class="content">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 col-xs-6">
               <a ng-href="/{{item.type}}/{{item.classId}}">
                 <img src="{{item.img}}" class="image image180-160" alt="image1">
               </a>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 col-xs-6">
               <div class="post-wrap">
                 <a href="/{{item.type}}/{{item.classId}}" title="title1">
                   <h4 class="blog-title">{{item.headlineText}}</h4>
