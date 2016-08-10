@@ -8,7 +8,11 @@ angular.module('angular-seed')
     templateUrl: 'views/mainView.html',
   })
   // TODO: implement routes
-  .when('/news/:type?/', {
+  .when('/news/catalog/:catalog?/', {
+    controller: 'NewsCatalogController',
+    templateUrl: 'views/newsCatalogView.html',
+  })
+  .when('/news/:articleId?/', {
     controller: 'NewsController',
     templateUrl: 'views/newsView.html',
   })
@@ -35,6 +39,6 @@ angular.module('angular-seed')
   .otherwise({
     redirectTo: '/',
   });
-  
+
   $locationProvider.html5Mode(true);
 });

@@ -39,6 +39,7 @@
     <script src="scripts/appRoute.js"></script>
     <script src="scripts/appConfig.js"></script>
     <script src="scripts/controllers/mainController.js"></script>
+    <script src="scripts/controllers/newsCatalogController.js"></script>
     <script src="scripts/controllers/newsController.js"></script>
     <script src="scripts/factory/firebaseFactory.js"></script>
     <script src="scripts/factory/dataFactory.js"></script>

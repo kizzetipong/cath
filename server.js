@@ -11,7 +11,6 @@ var serviceCtrl = require('./server/service.js');
 var app = express();
 var server = http.createServer(app, { 'log level': 0, 'match origin protocol': 'yes' });
 var path = __dirname + '/app';
-var proxyServer = httpProxy.createProxyServer();
 var rootUrl = '';
 
 app.use(compression());
@@ -54,3 +53,7 @@ app.get('/service/:serviceName', serviceCtrl.get);
 app.post(rootUrl + '/service/:serviceName', serviceCtrl.post);
 app.get(rootUrl + '/service/:serviceName', serviceCtrl.get);
 
+app.all('/*', function (req, res) {
+  // Just send the index.html for other files to support HTML5Mode
+  res.sendFile('index.html', { root: path });
+});
