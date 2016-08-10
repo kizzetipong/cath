@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular-seed').factory('dataFactory', ['$q',
+angular.module('cath').factory('dataFactory', ['$q',
   function($q) {
     var dataModel = {
       user: {},

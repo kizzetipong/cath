@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular-seed').factory('firebaseFactory', ['$q',
+angular.module('cath').factory('firebaseFactory', ['$q',
   function($q) {
     var firebaseModel = {
     };

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular-seed')
+angular.module('cath')
 .config(function ($routeProvider, $locationProvider) {
   $routeProvider
   .when('/', {

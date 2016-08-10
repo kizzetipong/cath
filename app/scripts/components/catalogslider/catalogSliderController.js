@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular-seed')
+angular.module('cath')
 .controller('catalogSliderController', ['$rootScope', '$scope', 'myService', function ($rootScope, $scope, myService) {
   $scope.dataReady = false;
   

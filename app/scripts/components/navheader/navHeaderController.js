@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular-seed')
+angular.module('cath')
 .controller('navHeaderController', ['$rootScope', '$scope', 'firebaseFactory', function ($rootScope, $scope, firebaseFactory) {
   firebaseFactory.initFirebase();
 

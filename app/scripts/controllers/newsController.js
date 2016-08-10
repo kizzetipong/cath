@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular-seed')
+angular.module('cath')
 .controller('NewsController', ['$rootScope', '$scope', '$routeParams',
   function ($rootScope, $scope, $routeParams) {
     $scope.init = function () {

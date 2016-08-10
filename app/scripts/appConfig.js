@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular-seed')
+angular.module('cath')
 .constant(
   'AppConfig', {
     DB_URL: '/',

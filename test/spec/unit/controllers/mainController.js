@@ -6,7 +6,7 @@ describe('Controller: MainController', function () {
   var scope;
 
   // load the controller's module
-  beforeEach(module('angular-seed'));
+  beforeEach(module('cath'));
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {

@@ -11,7 +11,7 @@
     <!-- endbuild -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   </head>
-  <body ng-app="angular-seed">
+  <body ng-app="cath">
     <div>
       <nav-header></nav-header>
     </div>
@@ -46,8 +46,12 @@
     <script src="scripts/services/myService.js"></script>
     <script src="scripts/components/navheader/navHeader.js"></script>
     <script src="scripts/components/navheader/navHeaderController.js"></script>
+    <script src="scripts/components/articledisplay/articleDisplay.js"></script>
+    <script src="scripts/components/articledisplay/articleDisplayController.js"></script>
     <script src="scripts/components/catalogslider/catalogSlider.js"></script>
     <script src="scripts/components/catalogslider/catalogSliderController.js"></script>
+    <script src="scripts/components/registerbox/registerBox.js"></script>
+    <script src="scripts/components/registerbox/registerBoxController.js"></script>
     <script src="scripts/components/subscriber/subscriber.js"></script>
     <script src="scripts/components/subscriber/subscriberController.js"></script>
     <script src="templates.js"></script>

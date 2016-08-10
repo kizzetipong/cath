@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular-seed')
+angular.module('cath')
 .service('myService', ['AppConfig',
   function ($appConfig) {
     var data;

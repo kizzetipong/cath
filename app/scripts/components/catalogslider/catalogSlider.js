@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular-seed')
+angular.module('cath')
 .directive('catalogSlider', function () {
   return {
     templateUrl: 'scripts/components/catalogslider/catalogSlider.html',

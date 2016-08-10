@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular-seed')
+angular.module('cath')
 .directive('navHeader', function () {
   return {
     templateUrl: 'scripts/components/navheader/navHeader.html',
