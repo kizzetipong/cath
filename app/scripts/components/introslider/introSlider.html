@@ -1,0 +1,18 @@
+<div class="intro-slider">
+  <div ng-if="dataReady" id="{{catalog}}Carousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li ng-repeat="(idx, n) in list" data-target="#{{catalog}}Carousel" data-slide-to="{{idx}}" ng-class="{'active': idx === 0}"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item" ng-repeat="(key, item) in list" ng-class="{'active': key === 0}">
+        <div class="slotholder">
+          <div class="bg-image" style="background-image: url('/assets/images/marketing/1-1.jpg')" src="/assets/images/marketing/1-1.jpg"></div>
+        </div>
+        <div id="layer1" class="caption">Inside text1</div>
+        <div id="layer2" class="caption">Inside text2</div>
+    </div>
+  </div>
+</div>

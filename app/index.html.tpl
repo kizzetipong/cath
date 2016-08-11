@@ -50,6 +50,8 @@
     <script src="scripts/components/articledisplay/articleDisplayController.js"></script>
     <script src="scripts/components/catalogslider/catalogSlider.js"></script>
     <script src="scripts/components/catalogslider/catalogSliderController.js"></script>
+    <script src="scripts/components/introslider/introSlider.js"></script>
+    <script src="scripts/components/introslider/introSliderController.js"></script>
     <script src="scripts/components/registerbox/registerBox.js"></script>
     <script src="scripts/components/registerbox/registerBoxController.js"></script>
     <script src="scripts/components/subscriber/subscriber.js"></script>
