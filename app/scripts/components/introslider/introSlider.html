@@ -9,14 +9,14 @@
     <div class="carousel-inner" role="listbox">
       <div ng-style="{'height': calcHeight}" class="item" ng-repeat="(key, item) in list" ng-class="{'active': key === 0}">
         <div class="slotholder">
-          <div class="bg-image" style="background-image: url('/assets/images/marketing/1-1.jpg')" src="/assets/images/marketing/1-1.jpg">
+          <div class="bg-image" style="background-image: url('{{item.image}}')" src="{{item.image}}">
           </div>
         </div>
         <div id="layer1" class="caption" ng-style="{'left': calcWidth / 10, 'top': (calcHeight * 6 / 10)}" style="z-index: 5;">
           <div class="caption-wrap">
             <div class="caption-mask-wrap">
               <div class="caption-text header" ng-style="{'min-width': (calcWidth * 3 / 4), 'max-width': (calcWidth * 7 / 8), 'font-size': (calcWidth / 20)}" style="z-index:5">
-                EQUAL . JUSTIC . UNDER . LAW
+                {{item.header}}
               </div>
             </div>
           </div>
@@ -24,7 +24,7 @@
         <div id="layer2" class="caption" ng-style="{'left': calcWidth / 8, 'top': (calcHeight * 6 / 8)}" style="z-index: 6;">
           <div class="caption-wrap">
             <div class="caption-mask-wrap">
-              <div class="caption-text desc" ng-style="{'min-width': (calcWidth * 3 / 4), 'max-width': (calcWidth * 7 / 8), 'font-size': (calcWidth / 60), 'line-height': ((calcWidth / 60) + 3 ) + 'px'}" style="z-index:6"><span class="inner-text">We have served clients of all range, from individuals to big organization. We provide personal solutions based on one's situation. Contact us for more information.</span>
+              <div class="caption-text desc" ng-style="{'min-width': (calcWidth * 3 / 4), 'max-width': (calcWidth * 7 / 8), 'font-size': (calcWidth / 60), 'line-height': ((calcWidth / 60) + 3 ) + 'px'}" style="z-index:6"><span class="inner-text">{{item.content}}</span>
               </div>
             </div>
           </div>
