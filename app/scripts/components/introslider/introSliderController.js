@@ -3,9 +3,9 @@
 angular.module('cath')
 .controller('introSliderController', ['$rootScope', '$scope', 'myService', function ($rootScope, $scope, myService) {
   $scope.dataReady = false;
-  $scope.calcHeight = 620;
   $scope.calcWidth = $(window).width();
-  
+  $scope.calcHeight = $scope.calcWidth / 2;
+
   myService.fetchData($scope.catalog).then(function (ret) {
     // TODO: mockData
     ret = [
@@ -35,8 +35,8 @@ angular.module('cath')
     $scope.$applyAsync();
   });
   $(window).resize(function () {
-    $scope.calcHeight = $(window).width() / 2;
     $scope.calcWidth = $(window).width();
+    $scope.calcHeight = $scope.calcWidth / 2;
     $scope.$applyAsync();
   });
 }]);
