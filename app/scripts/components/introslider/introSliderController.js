@@ -6,7 +6,7 @@ angular.module('cath')
   $scope.calcWidth = $(window).width();
   $scope.calcHeight = $scope.calcWidth / 2;
 
-  myService.fetchData($scope.catalog).then(function (ret) {
+  myService.fetchData('news').then(function (ret) {
     // TODO: mockData
     ret = [
       {

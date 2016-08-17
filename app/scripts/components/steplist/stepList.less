@@ -1,0 +1,83 @@
+.step-list {
+  ul.list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    margin-top: 30px;
+    width: 90%;
+    margin-left: 40%;
+    li {
+      .active {
+        .num span {
+          background-color: #00BA51;
+          color: #fff;
+        }
+        .stepCnt h3 {
+          color:#00BA51;
+          font-weight: 600;
+        }
+      }
+      position: relative;
+      overflow: hidden;
+      min-height: 135px;
+      .num {
+        display: inline-block;
+        float: left;
+        width: 30px;
+        margin-right: 15px;
+        span {
+          display:block;
+          width:30px;
+          height:30px;
+          border-radius:50%;
+          border:2px solid #00BA51;
+          font-family: 'Sanomat Sans Web';
+          font-weight: 500;
+          font-style: normal;
+          font-stretch: normal;
+          font-size:1em;
+          color:#00BA51;
+          text-align:center;
+          line-height:29px;
+        }
+        :hover {
+          cursor:pointer;
+        }
+      }
+      .stepCnt {
+        float:left;
+        width:auto;
+        overflow:hidden;
+        width: 85%;
+        h3 {
+          margin: 0px;
+          color: #333;
+          font-family: 'Sanomat Sans Web';
+          font-weight: 600;
+          font-style: normal;
+          font-stretch: normal;
+          font-size:1.143em;
+          line-height:1;
+          margin-bottom:10px;
+          margin-top:7px;
+          :hover {
+            cursor:pointer;
+          }
+        }
+      }
+      &:after {
+        width: 13px;
+        height: 92px;
+        display: block;
+        background: url('../images/arrowdown.png') no-repeat center/cover;
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 8px;
+      }
+      &:last-child:after {
+        display: none;
+      }
+    }
+  }
+}

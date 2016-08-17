@@ -6,8 +6,6 @@ angular.module('cath')
     templateUrl: 'scripts/components/introslider/introSlider.html',
     restrict: 'E',
     scope: {
-      catalogTitle: '@',
-      catalog: '@',
     },
     controller: 'introSliderController',
   };

@@ -54,6 +54,8 @@
     <script src="scripts/components/introslider/introSliderController.js"></script>
     <script src="scripts/components/registerbox/registerBox.js"></script>
     <script src="scripts/components/registerbox/registerBoxController.js"></script>
+    <script src="scripts/components/steplist/stepList.js"></script>
+    <script src="scripts/components/steplist/stepListController.js"></script>
     <script src="scripts/components/subscriber/subscriber.js"></script>
     <script src="scripts/components/subscriber/subscriberController.js"></script>
     <script src="templates.js"></script>
