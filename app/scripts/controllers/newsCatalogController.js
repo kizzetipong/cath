@@ -5,7 +5,7 @@ angular.module('cath')
   function ($rootScope, $scope, $routeParams) {
     $scope.init = function () {
       $scope.params = $routeParams;
-      $scope.helloWorld = 'Hello World from NewsCatalog Controller' + JSON.stringify($scope.params);
+      $scope.catalog = $scope.params.catalog || 'all';
     };
 
     $scope.init();

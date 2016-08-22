@@ -44,12 +44,15 @@
     <script src="scripts/factory/firebaseFactory.js"></script>
     <script src="scripts/factory/dataFactory.js"></script>
     <script src="scripts/services/myService.js"></script>
+    <script src="scripts/services/newscatalogService.js"></script>
     <script src="scripts/components/navheader/navHeader.js"></script>
     <script src="scripts/components/navheader/navHeaderController.js"></script>
     <script src="scripts/components/articledisplay/articleDisplay.js"></script>
     <script src="scripts/components/articledisplay/articleDisplayController.js"></script>
     <script src="scripts/components/catalogslider/catalogSlider.js"></script>
     <script src="scripts/components/catalogslider/catalogSliderController.js"></script>
+    <script src="scripts/components/catalogfloatlist/catalogFloatlist.js"></script>
+    <script src="scripts/components/catalogfloatlist/catalogFloatlistController.js"></script>
     <script src="scripts/components/introslider/introSlider.js"></script>
     <script src="scripts/components/introslider/introSliderController.js"></script>
     <script src="scripts/components/registerbox/registerBox.js"></script>

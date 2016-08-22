@@ -1,0 +1,12 @@
+<div class="catalog-floatlist container" ng-if="dataReady">
+  <div class="row">
+    <div ng-repeat="(key, value) in list" class="col-md-4 col-sm-6 col-xs-12">
+      <img class="image-block" ng-src="{{value.img}}">
+      <div class="clear padding-top10"></div>
+      <h4 class="font-title block-padtop">{{value.headlineText}} @ {{value.date}}</h1>
+      <div class="font-normal-gray block-padtop">
+        <p>{{value.briefText}}</p>
+      </div>
+    </div>
+  </div>
+</div>
