@@ -1,3 +1,40 @@
 .catalog-floatlist {
-  
+  .list {
+    float: left;
+    min-height: 300px;
+
+    -webkit-animation-name: scaleIn;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-duration: 0.6s;
+
+    animation-name: scaleIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 0.6s;
+
+    .timestamp {
+      font-size: 7px;
+    }
+
+    img.image-block {
+      width: 320px;
+      height: 160px;
+      margin: auto;
+      border-radius: 5%;
+
+      -webkit-transition: all 1s ease; /* Safari and Chrome */
+      -moz-transition: all 1s ease; /* Firefox */
+      -ms-transition: all 1s ease; /* IE 9 */
+      -o-transition: all 1s ease; /* Opera */
+      transition: all 1s ease;
+      &:hover {
+        -webkit-transform:scale(1.05); /* Safari and Chrome */
+        -moz-transform:scale(1.05); /* Firefox */
+        -ms-transform:scale(1.05); /* IE 9 */
+        -o-transform:scale(1.05); /* Opera */
+         transform:scale(1.05);
+      }
+    }
+  }
 }

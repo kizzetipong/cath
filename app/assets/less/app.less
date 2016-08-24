@@ -1,10 +1,35 @@
 @import 'prerequisite';
 
 .app-container {
-	width: 100%;
-	background-color: #ffffff;
-	color: black;
-	margin: 0px auto;
-	padding: 0px 0px;
-	.border-radius(5px);
+  width: 100%;
+  background-color: #ffffff;
+  color: black;
+  margin: 0px auto;
+  padding: 0px 0px;
+  .border-radius(5px);
+}
+
+@-moz-keyframes scaleIn {
+  0% {
+    -moz-transform: scale(0.7);
+  }
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+@-webkit-keyframes scaleIn {
+  0% {
+    -webkit-transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
