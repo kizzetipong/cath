@@ -33,6 +33,15 @@ angular.module('cath')
     $scope.dataReady = true;
     $scope.list = ret;
     $scope.$applyAsync();
+
+    _.defer(function () {
+      $('#introCarousel').swiperight(function() {
+        $(this).carousel('prev');
+      });
+      $("#introCarousel").swipeleft(function() {
+        $(this).carousel('next');
+      });
+    });
   });
   $(window).resize(function () {
     $scope.calcWidth = $(window).width();
