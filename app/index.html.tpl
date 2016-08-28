@@ -33,7 +33,10 @@
     <!-- bower:js -->
     <!-- endbower -->
     <!-- endbuild -->
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- build:js({.tmp,app}) web/scripts/libs.js -->
+    <script src="scripts/libs/jquery.mobile.custom.min.js"></script>
+    <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) web/scripts/app.js -->
     <script src="scripts/appModule.js"></script>
