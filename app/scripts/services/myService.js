@@ -50,26 +50,65 @@ angular.module('cath')
         //       img: '/assets/images/news/5.jpg',
         //       briefText: 'Alleged deceptive advertising at Jos. A. Bank men’s clothing stores convinces consumers they are getting a better bargain than they really are. For the past decade, Jos. A. Bank has faced allegations of false pricing by',
         //     },
-        //   ],
-        //   investigations: [
+        //     ],
+        //     cases: [
         //     {
-        //       classId: '006',
-        //       type: 'investigations',
+        //       caseId: '001',
+        //       stage: 'investigations',
         //       headlineText: 'Investigations 1',
         //       date: '03/08/2016',
         //       img: '/assets/images/investigations/1.jpg',
         //       briefText: 'A settlement has been reached between BMW of North America and the Class of consumers',
         //     },
         //     {
-        //       classId: '007',
-        //       type: 'investigations',
+        //       caseId: '002',
+        //       stage: 'investigations',
         //       headlineText: 'Investigations 2',
         //       date: '01/08/2016',
         //       img: '/assets/images/investigations/2.jpg',
         //       briefText: 'A settlement has been reached between BMW',
         //     },
+        //     {
+        //       caseId: '003',
+        //       stage: 'settlements',
+        //       headlineText: 'Settlements 1',
+        //       date: '03/08/2016',
+        //       img: '/assets/images/settlements/1.jpg',
+        //       briefText: 'A settlement has been reached between BMW of North America and the Class of consumers',
+        //     },
+        //     {
+        //       caseId: '004',
+        //       stage: 'investigations',
+        //       headlineText: 'Investigations 3',
+        //       date: '03/08/2016',
+        //       img: '/assets/images/investigations/3.jpg',
+        //       briefText: 'A settlement has been reached between BMW of North America and the Class of consumers',
+        //     },
+        //     {
+        //       caseId: '005',
+        //       stage: 'settlements',
+        //       headlineText: 'Settlements 2',
+        //       date: '03/08/2016',
+        //       img: '/assets/images/settlements/2.jpg',
+        //       briefText: 'A settlement has been reached between BMW of North America and the Class of consumers',
+        //     },
+        //     {
+        //       caseId: '006',
+        //       stage: 'investigations',
+        //       headlineText: 'Investigations 4',
+        //       date: '03/08/2016',
+        //       img: '/assets/images/investigations/4.jpg',
+        //       briefText: 'A settlement has been reached between BMW of North America and the Class of consumers',
+        //     },
+        //     {
+        //       caseId: '007',
+        //       stage: 'investigations',
+        //       headlineText: 'Investigations 5',
+        //       date: '03/08/2016',
+        //       img: '/assets/images/investigations/5.jpg',
+        //       briefText: 'A settlement has been reached between BMW of North America and the Class of consumers',
+        //     },
         //   ],
-        //   settlements: [],
         // };
         // _.delay(function () { //TODO: should call real nodejs service
         //   deferred.resolve(_.get(mockData, cat));
@@ -81,7 +120,6 @@ angular.module('cath')
           url: '/service/mynodeservice',
           data: {catalog: cat},
           success: $.proxy(function (ret) {
-            console.log('Success with' + JSON.stringify(ret));
             deferred.resolve(ret);
           }, this),
           error: $.proxy(function () {

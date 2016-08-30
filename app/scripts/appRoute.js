@@ -16,13 +16,17 @@ angular.module('cath')
     controller: 'NewsController',
     templateUrl: 'views/newsView.html',
   })
-  .when('/settlements/:type?', {
-    controller: 'MainController',
-    templateUrl: 'views/mainView.html',
+  .when('/cases/:caseId?', {
+    controller: 'NewsController',
+    templateUrl: 'views/newsView.html',
   })
-  .when('/investigations/:type?', {
-    controller: 'MainController',
-    templateUrl: 'views/mainView.html',
+  .when('/cases/s/:stage?', {
+    controller: 'CasesController',
+    templateUrl: 'views/casesView.html',
+  })
+  .when('/cases/:stage/c/:catalog?', {
+    controller: 'NewsController',
+    templateUrl: 'views/newsView.html',
   })
   .when('/attorneys/', {
     controller: 'MainController',

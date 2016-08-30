@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('cath')
-.controller('articleDisplayController', ['$rootScope', '$scope', 'myService', function ($rootScope, $scope, myService) {
+.controller('articleDisplayController', ['$rootScope', '$scope', function ($rootScope, $scope) {
 	//
 }]);

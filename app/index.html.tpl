@@ -26,9 +26,6 @@
       </div>
     </div>
 
-    <!-- build:js({.,app}) web/scripts/bootstrap.js -->
-    <!-- endbuild -->
-
     <!-- build:js({.,app}) web/scripts/vendor.js -->
     <!-- bower:js -->
     <!-- endbower -->
@@ -43,6 +40,7 @@
     <script src="scripts/appRoute.js"></script>
     <script src="scripts/appConfig.js"></script>
     <script src="scripts/controllers/mainController.js"></script>
+    <script src="scripts/controllers/casesController.js"></script>
     <script src="scripts/controllers/newsCatalogController.js"></script>
     <script src="scripts/controllers/newsController.js"></script>
     <script src="scripts/factory/firebaseFactory.js"></script>
@@ -57,6 +55,8 @@
     <script src="scripts/components/catalogslider/catalogSliderController.js"></script>
     <script src="scripts/components/catalogfloatlist/catalogFloatlist.js"></script>
     <script src="scripts/components/catalogfloatlist/catalogFloatlistController.js"></script>
+    <script src="scripts/components/caseslist/casesList.js"></script>
+    <script src="scripts/components/caseslist/casesListController.js"></script>
     <script src="scripts/components/introslider/introSlider.js"></script>
     <script src="scripts/components/introslider/introSliderController.js"></script>
     <script src="scripts/components/registerbox/registerBox.js"></script>
