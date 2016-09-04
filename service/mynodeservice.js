@@ -16,7 +16,7 @@ MyNodeService.prototype.service = function (context, payload, serviceCallback) {
     var mockData = {
       news: [
         {
-          classId: '001',
+          newsId: '001',
           type: 'news',
           headlineText: 'HEADLINE 1',
           date: '03/08/2016',
@@ -24,7 +24,7 @@ MyNodeService.prototype.service = function (context, payload, serviceCallback) {
           briefText: 'Alleged deceptive advertising at Jos. A. Bank men’s clothing stores convinces consumers they are getting a better bargain than they really are. For the past decade, Jos. A. Bank has faced allegations of false pricing by',
         },
         {
-          classId: '002',
+          newsId: '002',
           type: 'news',
           headlineText: 'HEADLINE 2',
           date: '02/08/2016',
@@ -32,7 +32,7 @@ MyNodeService.prototype.service = function (context, payload, serviceCallback) {
           briefText: 'Alleged deceptive advertising at Jos.',
         },
         {
-          classId: '003',
+          newsId: '003',
           type: 'news',
           headlineText: 'HEADLINE 3',
           date: '01/08/2016',
@@ -40,7 +40,7 @@ MyNodeService.prototype.service = function (context, payload, serviceCallback) {
           briefText: 'Alleged deceptive advertising at Jos. A. Bank men’s clothing stores convinces consumers they are getting a better bargain than they really are.',
         },
         {
-          classId: '004',
+          newsId: '004',
           type: 'news',
           headlineText: 'HEADLINE 4',
           date: '30/07/2016',
@@ -48,7 +48,7 @@ MyNodeService.prototype.service = function (context, payload, serviceCallback) {
           briefText: 'Alleged deceptive advertising at Jos. A. Bank men’s clothing stores convinces consumers they are getting a better bargain than they really are. For the past decade, Jos. A. Bank has faced allegations of false pricing by',
         },
         {
-          classId: '005',
+          newsId: '005',
           type: 'news',
           headlineText: 'HEADLINE 5',
           date: '29/07/2016',

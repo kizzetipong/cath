@@ -16,7 +16,7 @@
       <nav-header></nav-header>
     </div>
     <div class="app-container">
-      <div ng-view=""></div>
+      <div ng-view="" autoscroll></div>
     </div>
     <hr class="footer-hr">
     <div class="footer">

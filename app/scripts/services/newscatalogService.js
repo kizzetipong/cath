@@ -10,7 +10,7 @@ angular.module('cath')
         var deferred = new $.Deferred();
         var mockData = [ // for cat = all
         {
-          classId: '001',
+          newsId: '001',
           type: 'news',
           catalog: 'cars',
           headlineText: 'HEADLINE 1 (Text length 143)',
@@ -19,7 +19,7 @@ angular.module('cath')
           briefText: 'Alleged deceptive advertising at Jos. A. Bank men’s clothing stores convinces consumers they are getting a better bargain than they really are.',
         },
         {
-          classId: '002',
+          newsId: '002',
           type: 'news',
           catalog: 'residences',
           headlineText: 'HEADLINE 2  (Text length 100)',
@@ -28,7 +28,7 @@ angular.module('cath')
           briefText: 'Alleged deceptive advertising at Jos. A. Bank men’s clothing stores convinces consumers they are get',
         },
         {
-          classId: '003',
+          newsId: '003',
           type: 'news',
           catalog: 'insurance',
           headlineText: 'HEADLINE 3 (Text length 160)',
@@ -37,7 +37,7 @@ angular.module('cath')
           briefText: 'Alleged deceptive advertising at Jos. A. Bank men’s clothing stores convinces consumers they are getting a better bargain than they really are. For the past dec',
         },
         {
-          classId: '004',
+          newsId: '004',
           type: 'news',
           catalog: 'cars',
           headlineText: 'HEADLINE 4 (Text length 37)',
@@ -46,7 +46,7 @@ angular.module('cath')
           briefText: 'Alleged deceptive advertising at Jos.',
         },
         {
-          classId: '005',
+          newsId: '005',
           type: 'news',
           catalog: 'banks',
           headlineText: 'HEADLINE 5 (Text length should < 160)',
