@@ -12,11 +12,12 @@ Just for fun
 0. Use command 'grunt prepare'
 
 * Use command 'grunt serve' to start web server with http://localhost:9999
-* Use command 'grunt build' to prepare deploymeny package save at folder '/dist'
+* Use command 'grunt build' to prepare deployment package save at folder '/dist'
 
 #How to run server to DO
 0. Make sure that RAM on droplet is enough for running server (add swap file if necessary)
-0. Open folder /dist
+0. Use command 'grunt build' to create deployment folder on '/dist'
+0. Open folder '/dist'
 0. Use command 'node server_host.js'
 0. Web app will be opened on default port 80
 

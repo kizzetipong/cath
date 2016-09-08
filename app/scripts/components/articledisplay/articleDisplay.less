@@ -19,21 +19,25 @@
     }
   }
   .blank-space {
-    padding-bottom: 20px;
+    padding-bottom: 25px;
   }
   .wrapper {
     position: relative;
     img {
       width: 300px;
       height: 200px;
+      @media (max-width: 600px) {
+        width: auto;
+        height: auto;
+      }
       border-radius: 5px;
       &.alignleft {
         float: left;
-        margin: 5px 30px 20px 20px;
+        margin: 5px 10px 20px 10px;
       }
       &.alignright {
         float: right;
-        margin: 5px 20px 20px 30px;
+        margin: 5px 10px 20px 10px;
       }
     }
     h4 {
@@ -45,6 +49,9 @@
     }
     .image-wrap {
       display: inline-block;
+    }
+    p {
+      line-height: 25px;
     }
   }
 }
