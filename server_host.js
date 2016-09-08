@@ -9,11 +9,10 @@ var serviceCtrl = require('./server/service.js');
 
 var app = express();
 var server = http.createServer(app, { 'log level': 0, 'match origin protocol': 'yes' });
-var path = __dirname + '/app';
+var path = __dirname;
 var rootUrl = '';
 
 app.use(compression());
-app.use(rootUrl + '/bower_components', express.static('./bower_components'));
 app.use(rootUrl, express.static(path));
 app.use(rootUrl + '/web', express.static(path));
 
@@ -21,21 +20,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride());
 
-
-app.use('/reports', express.static(__dirname + '/test/reports'));
-app.use('/reports', function (req, res) {
-  res.status(404).end();
-});
-
-app.set('port', 9999);
+app.set('port', 80);
 
 server.listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));
-});
-
-app.get(rootUrl + '/templates.js', function (req, res) {
-  res.setHeader('Content-Type', 'application/javascript');
-  res.send('');
 });
 
 app.get('/', function (req, res) {
