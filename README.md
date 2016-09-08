@@ -14,6 +14,12 @@ Just for fun
 * Use command 'grunt serve' to start web server with http://localhost:9999
 * Use command 'grunt build' to prepare deploymeny package save at folder '/dist'
 
+#How to run server to DO
+0. Make sure that RAM on droplet is enough for running server (add swap file if necessary)
+0. Open folder /dist
+0. Use command 'node server_host.js'
+0. Web app will be opened on default port 80
+
 # How to deploy to Firebase
 0. Open cmd (or git bash) on root of this directory
 0. Install firebase tool with command 'npm install -g firebase-tools'

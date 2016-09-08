@@ -272,7 +272,7 @@ module.exports = function (grunt) {
         expand: true,
         cwd: './',
         dest: '<%= yeoman.dist %>',
-        src: ['bower.json', 'package.json', 'server.js', '.bowerrc']
+        src: ['bower.json', 'package.json', 'server_host.js', '.bowerrc']
       },
       dist: {
         files: [{
