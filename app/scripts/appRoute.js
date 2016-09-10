@@ -32,6 +32,10 @@ angular.module('cath')
     controller: 'MainController',
     templateUrl: 'views/mainView.html',
   })
+  .when('/faqs/', {
+    controller: 'MainController',
+    templateUrl: 'views/mainView.html',
+  })
   .when('/search/:keywords?', {
     controller: 'MainController',
     templateUrl: 'views/mainView.html',
@@ -39,6 +43,9 @@ angular.module('cath')
   .when('/tags/:tags?', {
     controller: 'MainController',
     templateUrl: 'views/mainView.html',
+  })
+  .when('/comps', {
+    templateUrl: 'views/compsDisplay.html',
   })
   .otherwise({
     redirectTo: '/',
