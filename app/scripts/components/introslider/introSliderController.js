@@ -14,21 +14,21 @@ angular.module('cath')
         header: 'EQUAL . JUSTIC . UNDER . LAW',
         content: 'We have served clients of all range, from individuals to big organization. We provide personal solutions based on one\'s situation. Contact us for more information.',
       },
-      {
-        image: '/assets/images/marketing/1-2.jpg',
-        header: 'WE OFFER OUR CLIENTS ONLY',
-        content: 'We have served clients of all range, from individuals to big organization. We provide personal solutions based on one\'s situation. Contact us for more information.',
-      },
-      {
-        image: '/assets/images/marketing/1-1.jpg',
-        header: 'EQUAL . JUSTIC . UNDER . LAW',
-        content: 'We have served clients of all range, from individuals to big organization. We provide personal solutions based on one\'s situation. Contact us for more information.',
-      },
-      {
-        image: '/assets/images/marketing/1-2.jpg',
-        header: 'WE OFFER OUR CLIENTS ONLY',
-        content: 'We have served clients of all range, from individuals to big organization. We provide personal solutions based on one\'s situation. Contact us for more information.',
-      },
+      // {
+      //   image: '/assets/images/marketing/1-2.jpg',
+      //   header: 'WE OFFER OUR CLIENTS ONLY',
+      //   content: 'We have served clients of all range, from individuals to big organization. We provide personal solutions based on one\'s situation. Contact us for more information.',
+      // },
+      // {
+      //   image: '/assets/images/marketing/1-1.jpg',
+      //   header: 'EQUAL . JUSTIC . UNDER . LAW',
+      //   content: 'We have served clients of all range, from individuals to big organization. We provide personal solutions based on one\'s situation. Contact us for more information.',
+      // },
+      // {
+      //   image: '/assets/images/marketing/1-2.jpg',
+      //   header: 'WE OFFER OUR CLIENTS ONLY',
+      //   content: 'We have served clients of all range, from individuals to big organization. We provide personal solutions based on one\'s situation. Contact us for more information.',
+      // },
     ];
     $scope.dataReady = true;
     $scope.list = ret;

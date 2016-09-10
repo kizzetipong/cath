@@ -1,14 +1,14 @@
 <div class="intro-slider">
   <div ng-if="dataReady" id="introCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
-    <ol class="carousel-indicators">
+    <ol ng-if="!hideIndicator" class="carousel-indicators">
       <li ng-repeat="(idx, n) in list" data-target="#introCarousel" data-slide-to="{{idx}}" ng-class="{'active': idx === 0}"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div ng-style="{'height': calcHeight}" class="item" ng-repeat="(key, item) in list" ng-class="{'active': key === 0}">
-        <div class="slotholder">
+        <div class="slotholder" ng-class="{'filter' : !noFilter}">
           <div class="bg-image" style="background-image: url('{{item.image}}')" src="{{item.image}}">
           </div>
         </div>

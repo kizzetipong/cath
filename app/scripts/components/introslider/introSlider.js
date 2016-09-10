@@ -6,6 +6,8 @@ angular.module('cath')
     templateUrl: 'scripts/components/introslider/introSlider.html',
     restrict: 'E',
     scope: {
+    	noFilter: '@',
+    	hideIndicator: '@',
     },
     controller: 'introSliderController',
   };
