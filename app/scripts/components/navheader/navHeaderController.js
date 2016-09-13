@@ -1,10 +1,6 @@
 'use strict';
 
 angular.module('cath')
-.controller('navHeaderController', ['$rootScope', '$scope', 'firebaseFactory', function ($rootScope, $scope, firebaseFactory) {
-  firebaseFactory.initFirebase();
+.controller('navHeaderController', ['$rootScope', '$scope', function ($rootScope, $scope) {
 
-  $scope.signInGG = function() {
-  	firebaseFactory.signInGG();
-  }
 }]);

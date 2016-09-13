@@ -1,6 +1,8 @@
 'use strict';
 
 var _ = require('lodash');
+var mockData;
+var retAry = [];
 
 function MyNodeService() {
 }
@@ -11,9 +13,8 @@ MyNodeService.prototype.init = function () {
 MyNodeService.prototype.service = function (context, payload, serviceCallback) {
   if (!payload || !payload.catalog) {
     serviceCallback('ERROR Msg', null);
-  }
-  else {
-    var mockData = {
+  } else {
+    mockData = {
       news: [
         {
           newsId: '001',
@@ -60,18 +61,20 @@ MyNodeService.prototype.service = function (context, payload, serviceCallback) {
         {
           caseId: '001',
           stage: 'investigations',
-          headlineText: 'Investigations 1',
+          headlineText: 'California Force-Placed Insurance',
           date: '03/08/2016',
           img: '/assets/images/investigations/1.jpg',
-          briefText: 'A settlement has been reached between BMW of North America and the Class of consumers',
+          briefText: 'California Force-Placed Insurance Class Action Lawsuit Investigation',
+          moreText: 'Who’s Affected Were you hit with force-placed insurance in California? A class action lawsuit investigation has been launched into what appears to be an industry-wide practice of banks and lenders overcharging homeowners for “force-placed…',
         },
         {
           caseId: '002',
           stage: 'investigations',
-          headlineText: 'Investigations 2',
+          headlineText: 'Abilify Lawsuit',
           date: '01/08/2016',
           img: '/assets/images/investigations/2.jpg',
-          briefText: 'A settlement has been reached between BMW',
+          briefText: 'Gambling Addiction, Shopping Addiction & Compulsive Behavior',
+          moreText: 'Who’s Affected Did you or a loved one have a gambling addiction or shopping addiction after taking Abilify? Researchers have linked the antipsychotic drug Abilify (aripiprazole) to a number of compulsive behaviors including pathological…',
         },
         {
           caseId: '003',
@@ -80,14 +83,16 @@ MyNodeService.prototype.service = function (context, payload, serviceCallback) {
           date: '03/08/2016',
           img: '/assets/images/settlements/1.jpg',
           briefText: 'A settlement has been reached between BMW of North America and the Class of consumers',
+          moreText: 'Who’s Affected Did you or a loved one have a gambling addiction or shopping addiction after taking Abilify? Researchers have linked the antipsychotic drug Abilify (aripiprazole) to a number of compulsive behaviors including pathological…',
         },
         {
           caseId: '004',
           stage: 'investigations',
-          headlineText: 'Investigations 3',
+          headlineText: 'Delivery Driver',
           date: '03/08/2016',
           img: '/assets/images/investigations/3.jpg',
-          briefText: 'A settlement has been reached between BMW of North America and the Class of consumers',
+          briefText: 'Misclassified Employee Class Action Lawsuit Investigation',
+          moreText: 'Who’s Affected Do you work for a courier service or delivery company to provide delivery services for Amazon, Google or FedEx? Delivery drivers who have worked as independent contractors for courier services while making…',
         },
         {
           caseId: '005',
@@ -96,6 +101,7 @@ MyNodeService.prototype.service = function (context, payload, serviceCallback) {
           date: '03/08/2016',
           img: '/assets/images/settlements/2.jpg',
           briefText: 'A settlement has been reached between BMW of North America and the Class of consumers',
+          moreText: 'Who’s Affected Do you work for a courier service or delivery company to provide delivery services for Amazon, Google or FedEx? Delivery drivers who have worked as independent contractors for courier services while making…',
         },
         {
           caseId: '006',
@@ -104,6 +110,7 @@ MyNodeService.prototype.service = function (context, payload, serviceCallback) {
           date: '03/08/2016',
           img: '/assets/images/investigations/4.jpg',
           briefText: 'A settlement has been reached between BMW of North America and the Class of consumers',
+          moreText: 'Who’s Affected Do you work for a courier service or delivery company to provide delivery services for Amazon, Google or FedEx? Delivery drivers who have worked as independent contractors for courier services while making…',
         },
         {
           caseId: '007',
@@ -112,10 +119,11 @@ MyNodeService.prototype.service = function (context, payload, serviceCallback) {
           date: '03/08/2016',
           img: '/assets/images/investigations/5.jpg',
           briefText: 'A settlement has been reached between BMW of North America and the Class of consumers',
+          moreText: 'Who’s Affected Do you work for a courier service or delivery company to provide delivery services for Amazon, Google or FedEx? Delivery drivers who have worked as independent contractors for courier services while making…',
         },
       ],
-    };  //TODO: should retrieve data from real database
-    var retAry = mockData[payload.catalog] || [];
+    };  // TODO: should retrieve data from real database
+    retAry = mockData[payload.catalog] || [];
     serviceCallback(null, retAry);
   }
 };

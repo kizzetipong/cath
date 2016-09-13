@@ -1,12 +1,25 @@
 .cases-list {
   .section {
-    min-height: 300px;
+    min-height: 200px;
     .content-container {
       > div {
-        padding: 30px 10px;
+        &.section {
+          height: 100%;
+          padding: 20px 10px;
+        }
       }
-      display: inline-block;
       width: 100%;
     }
+  }
+  .image-section {
+    min-width: 200px;
+    .image-block {
+      display: block;
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+  .text-section {
+    min-width: 200px;
   }
 }
