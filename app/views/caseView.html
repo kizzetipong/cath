@@ -1,0 +1,71 @@
+<style>
+
+h2 {
+    font-size: 26px;
+    padding-left: 20px;
+    padding-top: 0px;    
+    line-height: 34px;
+    letter-spacing: -1px;
+}
+
+
+
+img{
+     
+    float: left;
+    vertical-align: top;
+    margin: 7px 7px 7px 7px; 
+}
+
+.favbtn  {
+    color: #fff;
+    background: #00ab51;
+    font-size: 16px;    
+    border: 2px solid #00ab51;
+    padding: 5px 12px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;    
+}
+
+.favbtn:hover {
+    color: green;
+    background: #ffffff;    
+text-decoration: none;    
+}
+
+.favbtn a {
+    background: #ffffff;    
+    text-decoration: none;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+</style>
+
+<h2>{{data.headlineText}}</h2>
+ <div class="panel panel-default" style="margin:10px 10px 10px 10px;width:95%">
+      <div class="panel-heading" style="background: #415463;border-color:#415463" ><font class="box-detail-headline">WHO’S AFFECTED</font></div>
+      <div class="panel-body " >
+        <div class="box-detail">
+            <div class="box-detail-inner">
+                <img src="{{data.img}}" width="240" height="180" style="margin-top:0px">
+                {{data.briefText}}        
+            </div>
+            <p style="margin:10px 0px 10px 0px;align:left;">
+                <a href="/member-home/my-favorites/?szbl-favorite=342601&amp;hash=eefc029dfb" class="favbtn">JOIN INVESTIGATION</a>
+            </p>            
+        </div>
+       
+        <div ng-bind-html="detail"></div>
+        <p style="margin:20px 0px 10px 0px;align:left;">
+            <a href="/member-home/my-favorites/?szbl-favorite=342601&amp;hash=eefc029dfb" class="favbtn">JOIN INVESTIGATION</a>        
+        </p>                    
+       </div>      
+</div>
+

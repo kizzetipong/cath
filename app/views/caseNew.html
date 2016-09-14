@@ -1,0 +1,103 @@
+<style>
+img{ 
+    float: left;
+    vertical-align: top;
+    margin: 7px 7px 7px 7px; 
+}
+
+
+.favbtn  {
+    color: #fff;
+    background: #00ab51;
+    font-size: 16px;    
+    border: 2px solid #00ab51;
+    padding: 5px 12px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;    
+}
+
+.favbtn:hover {
+    color: green;
+    background: #ffffff;    
+text-decoration: none;    
+}
+
+.favbtn a {
+    background: #ffffff;    
+    text-decoration: none;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+</style>
+<link rel="stylesheet" href="/app/scripts/libs/redactor/redactor.css" />
+<script src="/app/scripts/libs/redactor/redactor.js"></script>
+<script src="/app/scripts/libs/redactor/jquery-1.9.0.min.js"></script>
+
+<script type="text/javascript">
+$(function()
+{
+    //$('#content').redactor();
+});
+
+
+angular.module('Module', []).directive("redactor", function() {
+  return {
+    require: '?ngModel',
+    link: function($scope, elem, attrs, controller) {   
+
+      controller.$render = function() {
+
+        elem.redactor({
+          keyupCallback: function() {
+            $scope.$apply(controller.$setViewValue(elem.getCode()));
+          },
+          execCommandCallback: function() {
+            $scope.$apply(controller.$setViewValue(elem.getCode()));
+          }
+        });
+
+        elem.setCode(controller.$viewValue);
+      };
+    }
+  };
+});
+
+</script>
+
+
+ <div class="panel panel-default" style="margin:10px 10px 10px 10px;width:95%">
+      <div class="panel-heading" style="background: #415463;border-color:#415463" ><font class="box-detail-headline">SUBMIT NEW INVESTIGATION</font></div>
+      <div class="panel-body" >
+        <div class="box-detail">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="My Investigation">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Detail</label>
+                <textarea class="form-control" rows="5" style="margin-right:15px"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputFile">File attach</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Maximum file size is 5 MB</p>
+              </div>
+
+              <a href="/member-home/my-favorites/?szbl-favorite=342601&amp;hash=eefc029dfb" class="favbtn" style="margin-top:15px;margin-bottom:15px">SUBMIT</a>
+
+            </form>
+        </div>
+       
+        <div ng-bind-html="detail"></div>
+
+       </div>      
+</div>
+

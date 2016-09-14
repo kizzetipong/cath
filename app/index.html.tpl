@@ -40,12 +40,12 @@
     <script src="scripts/appRoute.js"></script>
     <script src="scripts/appConfig.js"></script>
     <script src="scripts/controllers/mainController.js"></script>
-    <script src="scripts/controllers/casesController.js"></script>
+    <script src="scripts/controllers/caseController.js"></script>
     <script src="scripts/controllers/newsCatalogController.js"></script>
     <script src="scripts/controllers/newsController.js"></script>
     <script src="scripts/factory/firebaseFactory.js"></script>
     <script src="scripts/factory/dataFactory.js"></script>
-    <script src="scripts/services/myService.js"></script>
+    <script src="scripts/services/caseService.js"></script>
     <script src="scripts/services/newscatalogService.js"></script>
     <script src="scripts/components/navheader/navHeader.js"></script>
     <script src="scripts/components/navheader/navHeaderController.js"></script>
@@ -55,8 +55,8 @@
     <script src="scripts/components/catalogslider/catalogSliderController.js"></script>
     <script src="scripts/components/catalogfloatlist/catalogFloatlist.js"></script>
     <script src="scripts/components/catalogfloatlist/catalogFloatlistController.js"></script>
-    <script src="scripts/components/caseslist/casesList.js"></script>
-    <script src="scripts/components/caseslist/casesListController.js"></script>
+    <script src="scripts/components/caselist/caseList.js"></script>
+    <script src="scripts/components/caselist/caseListController.js"></script>
     <script src="scripts/components/introslider/introSlider.js"></script>
     <script src="scripts/components/introslider/introSliderController.js"></script>
     <script src="scripts/components/registerbox/registerBox.js"></script>
@@ -67,6 +67,7 @@
     <script src="scripts/components/steplist/stepListController.js"></script>
     <script src="scripts/components/subscriber/subscriber.js"></script>
     <script src="scripts/components/subscriber/subscriberController.js"></script>
+    <script src="../bower_components\angular-redactor\angular-redactor-9.x.js"></script>
     <script src="templates.js"></script>
     <!-- endbuild -->
 
