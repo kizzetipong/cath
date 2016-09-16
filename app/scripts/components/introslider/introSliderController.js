@@ -2,9 +2,9 @@
 
 angular.module('cath')
 .controller('introSliderController', ['$rootScope', '$scope', 'myService', function ($rootScope, $scope, myService) {
+  var imageScale = 1 / 2;
+  // var imageScale = 1 / 3;
   $scope.dataReady = false;
-  // $scope.imageScale = 1/2;
-  var imageScale = 1/3;
   $scope.calcWidth = $(window).width();
   $scope.calcHeight = $scope.calcWidth * imageScale;
 
@@ -12,7 +12,7 @@ angular.module('cath')
     // TODO: mockData
     ret = [
       {
-        image: '/assets/images/marketing/title.jpg',
+        image: '/assets/images/marketing/1-1.jpg',
         header: 'EQUAL . JUSTIC . UNDER . LAW',
         content: 'We have served clients of all range, from individuals to big organization. We provide personal solutions based on one\'s situation. Contact us for more information.',
       },
@@ -37,10 +37,10 @@ angular.module('cath')
     $scope.$applyAsync();
 
     _.defer(function () {
-      $('#introCarousel').swiperight(function() {
+      $('#introCarousel').swiperight(function () {
         $(this).carousel('prev');
       });
-      $("#introCarousel").swipeleft(function() {
+      $('#introCarousel').swipeleft(function () {
         $(this).carousel('next');
       });
     });
