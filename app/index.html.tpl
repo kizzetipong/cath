@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <base href="/">
-    <title>Brand</title>
+    <title>Fo..Di</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- build:css(.tmp) web/assets/css/app.css -->
@@ -13,7 +13,7 @@
   </head>
   <body ng-app="cath">
     <div>
-      <nav-header></nav-header>
+      <!-- <nav-header></nav-header> -->
     </div>
     <div class="app-container">
       <div ng-view="" autoscroll></div>
@@ -22,7 +22,7 @@
     <div class="footer">
       <div class="container">
         <site-map></site-map>
-        <p>© 2016 Class Actions Thailand. All right reserved.  |  <a href="/legal-notice">Legal Notice</a>  |  <a href="/contactus">Contact Us</a></p>
+        <p>© 2016 FongDi. All right reserved.  |  <a href="/legal-notice">Legal Notice</a>  |  <a href="/contactus">Contact Us</a></p>
       </div>
     </div>
 
@@ -74,9 +74,8 @@
     <script src="http://localhost:35729/livereload.js"></script>
     <!-- endbuild -->
 
-    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
     <script>
-      // Initialize Firebase
       var config = {
         apiKey: 'AIzaSyAmR8JqrtECxddqGS4CAkwTjKChjDOf5Kw',
         authDomain: 'cath-ce838.firebaseapp.com',
@@ -84,7 +83,7 @@
         storageBucket: 'cath-ce838.appspot.com',
       };
       firebase.initializeApp(config);
-    </script>
+    </script>-->
 
   </body>
 </html>
