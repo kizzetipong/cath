@@ -18,6 +18,35 @@ body {
   margin: 0px auto;
   padding: 0px 0px;
   .border-radius(5px);
+
+  .intro-container {
+    background-color: @red;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    min-height: 600px;
+    .flex-item {
+      flex: 1 1 auto;
+    }
+    img.title {
+      width: 100%;
+      min-height: 300px;
+      opacity: 1;
+      z-index: 20;
+    }
+  }
+
+  .how-to-container {
+    background-color: transparent;
+    min-height: 600px;
+    overflow: hidden;
+    img.step {
+      width: 100%;
+      min-height: 600px;
+      opacity: 1;
+      z-index: 20;
+    }
+  }
 }
 
 @-moz-keyframes scaleIn {
