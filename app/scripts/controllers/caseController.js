@@ -12,7 +12,7 @@ angular.module('cath')
       $scope.params = $routeParams;
       $scope.id = $scope.params.id || '';
     };
-    //console.log($scope);
+//    console.log($scope);
 
     if ($routeParams.id) {
         $scope.dataReady = false;        
@@ -30,3 +30,5 @@ angular.module('cath')
     }
   },
 ]);
+
+

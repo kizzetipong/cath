@@ -18,7 +18,7 @@ angular.module('cath')
   })
 
   .when('/cases/new', {
-    controller: 'CaseController',
+    controller: 'CaseNewController',
     templateUrl: 'views/caseNew.html',
   })
 
