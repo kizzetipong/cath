@@ -2,9 +2,11 @@
 
 angular.module('cath')
 .controller('introSliderController', ['$rootScope', '$scope', 'myService', function ($rootScope, $scope, myService) {
+  var imageScale = 1 / 2;
+  // var imageScale = 1 / 3;
   $scope.dataReady = false;
   $scope.calcWidth = $(window).width();
-  $scope.calcHeight = $scope.calcWidth / 2;
+  $scope.calcHeight = $scope.calcWidth * imageScale;
 
   myService.fetchData('news').then(function (ret) {
     // TODO: mockData
@@ -35,17 +37,17 @@ angular.module('cath')
     $scope.$applyAsync();
 
     _.defer(function () {
-      $('#introCarousel').swiperight(function() {
+      $('#introCarousel').swiperight(function () {
         $(this).carousel('prev');
       });
-      $("#introCarousel").swipeleft(function() {
+      $('#introCarousel').swipeleft(function () {
         $(this).carousel('next');
       });
     });
   });
   $(window).resize(function () {
     $scope.calcWidth = $(window).width();
-    $scope.calcHeight = $scope.calcWidth / 2;
+    $scope.calcHeight = $scope.calcWidth * imageScale;
     $scope.$applyAsync();
   });
 }]);
