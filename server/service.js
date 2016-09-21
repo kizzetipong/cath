@@ -5,7 +5,7 @@ var context = require('./context.js');
 
 var postHandle = function (req, res) {
   if (req.params.serviceName !== null && req.params.serviceName !== '') {
-    var Service = require('../service/' + req.params.serviceName + '.js');
+    var Service = require('../node/' + req.params.serviceName + '.js');
     var serviceInstance = new Service();
     serviceInstance.service(new context(req), req.body, function (err, response, option) {
       if (option && option.headers) {
@@ -19,15 +19,16 @@ var postHandle = function (req, res) {
       if (!err) {
         res.send(response);
       } else {
-        res.status(500).send(err.message);
+        res.status(403).send(err.message);
       }
     });
   }
 };
 
 var getHandle =  function (req, res) {
+  
   if (req.params.serviceName !== null && req.params.serviceName !== '') {
-    var Service = require('../service/' + req.params.serviceName + '.js');
+    var Service = require('../node/' + req.params.serviceName + '.js');
     var serviceInstance = new Service();
     serviceInstance.service(new context(req), req.query, function (err, response, option) {
       if (!err) {
@@ -41,7 +42,7 @@ var getHandle =  function (req, res) {
         }
         res.send(response);
       } else {
-        res.status(500).send(err.message);
+        res.status(404).send(err.message);
       }
     });
   }

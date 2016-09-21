@@ -1,0 +1,192 @@
+<style>
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-bottom: 30px;  
+  #background: #FFFFFF;
+  #border: 2px solid #333;
+  #border-color: hsla(0, 0%, 0%, 0.5);
+  # border-radius: 5px;
+  #box-shadow: 5px 5px 3px #888888;
+  #cursor: pointer;
+}
+
+/*
+.grid-item:hover{
+  background: $main_color;;    
+}
+
+.grid-item:after{
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    opacity : 0.4;
+}*/
+
+.grid-test-report:after{
+    background-image: url('/images/sh_test_report.gif');    
+}
+
+.grid-my-product:after{
+    background-image: url('/images/sh_my_testcases.png');  
+}
+
+.grid-auto-progress:after{
+    background-image: url('/images/sh_auto_progress.png');  
+}
+
+.grid-tc-dist:after{
+    background-image: url('/images/sh_tc_dist.png');  
+}
+
+.grid-tc-import:after{
+    background-image: url('/images/sh_tc_import.gif');  
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;    
+}
+
+
+.grid-new-te:after{
+    background-image: url('/images/automate.jpg');  
+}
+
+.grid-item--width2 { width: 300px; }
+.grid-item--width3 { width: 300px; }
+.grid-item--width4 { width: 400px; }
+
+.grid-item--height2 { height: 220px; }
+.grid-item--height3 { height: 250px; }
+.grid-item--height4 { height: 2500px; }
+/* ---  grid-item  end  ---- */
+
+
+
+.favbtn  {
+    color: #fff;
+    background: #00ab51;
+    font-size: 16px;    
+    border: 2px solid #00ab51;
+    padding: 3px 12px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;    
+}
+
+.favbtn:hover {
+    color: green;
+    background: #ffffff;    
+text-decoration: none;    
+}
+
+.favbtn a {
+    background: #ffffff;    
+    text-decoration: none;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.box-headline {
+    font-size: 26px;
+    padding-left: 20px;
+    padding-top: 0px;    
+    line-height: 34px;
+    letter-spacing: -1px;
+    background: #415463;
+    color: #ffffff;
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 27px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    font-weight: normal;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    letter-spacing: .5px;
+}
+
+.box-detail-headline {
+    font-size: 26px;
+    line-height: 34px;
+    letter-spacing: -1px;
+    color: #ffffff;
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 27px;
+    font-weight: normal;
+    letter-spacing: .5px;
+}
+
+.box-detail{
+    padding: 20px 20px 10px 20px;
+    background: whitesmoke;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    min-height: 220px    
+}
+
+.box-detail-inner {
+    min-height: 200px;    
+}
+
+
+h2 {
+    font-size: 26px;
+    padding-left: 20px;
+    padding-top: 0px;    
+    line-height: 34px;
+    letter-spacing: -1px;
+}
+
+</style>
+
+
+<div class="case-list container" ng-if="dataReady" style="width:100%;background-color:red>
+    <div class="row" ">
+             
+             <h2 class="box-headline">{{type}}             
+                <a href="/cases/new" class="favbtn pull-right" style="margin-top:-7px;margin-right: 8px;">SUBMIT {{type}}</a>
+             </h2>      
+        <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 120, "columnHeight": 120, "gutter": 20 }'>    
+            <div ng-repeat="(key, value) in list" >                  
+                    <div class="grid-item grid-item--width2 grid-item--height2" style="margin-top:15px">
+                        <a href="/cases/{{value.id}}">
+                            <ul class="ch-grid">                            
+                                    <div class="content-container">
+                                      <div style="padding-left:0px;"><img class="image-block" ng-src="{{value.img}}" width="100%" height="150"></div>
+                                      <div class="clear padding-top10"></div>
+                                      <h5 class="font-title block-padtop">{{value.headlineText}}</h5>
+                                    </div>
+                                    <div class="timestamp">End: {{value.date}}</div>
+
+                            </ul>
+                        </a>
+                    </div>                                                       
+            </div>
+        </div>        
+    </div>
+</div>
+
+

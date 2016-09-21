@@ -35,10 +35,10 @@ app.get(rootUrl, function (req, res) {
 });
 
 // handle services
-app.post('/service/:serviceName', serviceCtrl.post);
-app.get('/service/:serviceName', serviceCtrl.get);
-app.post(rootUrl + '/service/:serviceName', serviceCtrl.post);
-app.get(rootUrl + '/service/:serviceName', serviceCtrl.get);
+app.post('/node/:serviceName', serviceCtrl.post);
+app.get('/node/:serviceName', serviceCtrl.get);
+app.post(rootUrl + '/node/:serviceName', serviceCtrl.post);
+app.get(rootUrl + '/node/:serviceName', serviceCtrl.get);
 
 app.all('/*', function (req, res) {
   // Just send the index.html for other files to support HTML5Mode
