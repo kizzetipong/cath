@@ -9,11 +9,11 @@ CaseService.prototype.init = function () {
 };
 
 CaseService.prototype.service = function (context, payload, serviceCallback) {
-  
+
   if (!payload || !payload.id) {
     serviceCallback('ERROR Msg', null);
   }
-  else {      
+  else {
 
     var retAry = [];
     var mysql      = require('mysql');
@@ -30,8 +30,8 @@ CaseService.prototype.service = function (context, payload, serviceCallback) {
       if (!err) {
         rows.forEach(function(r){
 
-            retAry.push( 
-                {   
+            retAry.push(
+                {
                   id: r.id,
                   stage: 'investigations',
                   headlineText: r.headline,
@@ -42,8 +42,8 @@ CaseService.prototype.service = function (context, payload, serviceCallback) {
                 }
             );
 
-        });    
-        serviceCallback(null, retAry);        
+        });
+        serviceCallback(null, retAry);
       } else {
         console.log('Error while performing Query', err);
       }

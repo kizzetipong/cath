@@ -28,10 +28,10 @@ angular.module('cath')
   })
 
   .when('/cases/s/:type?', {
-    controller: 'CaseController',
+    controller: 'CaseViewController',
     templateUrl: 'views/caseViewList.html',
   })
-  
+
   .when('/cases/:stage/c/:catalog?', {
     controller: 'NewsController',
     templateUrl: 'views/newsView.html',

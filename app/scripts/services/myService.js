@@ -11,8 +11,8 @@ angular.module('cath')
 
         $.ajax({
           method: 'POST',
-          url: '/service/cases',
-          data: {catalog: cat},
+          url: '/node/mynodeservice',
+          data: { catalog: cat },
           success: $.proxy(function (ret) {
             deferred.resolve(ret);
           }, this),
