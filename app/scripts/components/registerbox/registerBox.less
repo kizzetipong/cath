@@ -3,6 +3,62 @@
   min-width: @minWidth;
   margin: 0 auto;
   height: 100%;
-  padding: 20px 0px;
-  background-color: @grey01;
+  padding: 10px 0px 20px 0px;
+  background-color: @red;
+  color: white;
+
+  .header-title {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .half {
+    display: inline-block;
+    width: 48%;
+  }
+
+  .full {
+    width: 96%;
+  }
+
+  .form-group {
+    padding: 0px 5px;
+    input {
+      color: black;
+      width: 100%;
+    }
+    textarea {
+      resize: vertical;
+      color: black;
+      width: 100%;
+      .transition(all 2s ease);
+
+      &:focus {
+        background: @grey01;
+      }
+    }
+  }
+  .upload-icon {
+    text-align: center;
+    i {
+      font-size: 216px;
+      color: @grey01;
+    }
+  }
+
+  div.submit-button {
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    height: 30px;
+    width: 200px;
+    margin: 0 auto;
+    color: @red;
+    background-color: @grey02;
+    border-radius: 10px;
+    border: 1px solid #7373e5;
+    span {
+      vertical-align: middle;
+    }
+  }
 }
