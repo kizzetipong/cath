@@ -79,7 +79,7 @@ MyNodeService.prototype.service = function (context, payload, serviceCallback) {
         {
           caseId: '003',
           stage: 'settlements',
-          headlineText: 'Settlements 1',
+          headlineText: 'Settlements 3',
           date: '03/08/2016',
           img: '/assets/images/settlements/1.jpg',
           briefText: 'A settlement has been reached between BMW of North America and the Class of consumers',
@@ -97,7 +97,7 @@ MyNodeService.prototype.service = function (context, payload, serviceCallback) {
         {
           caseId: '005',
           stage: 'settlements',
-          headlineText: 'Settlements 2',
+          headlineText: 'Settlements 3',
           date: '03/08/2016',
           img: '/assets/images/settlements/2.jpg',
           briefText: 'A settlement has been reached between BMW of North America and the Class of consumers',

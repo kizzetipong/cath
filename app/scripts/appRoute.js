@@ -16,14 +16,22 @@ angular.module('cath')
     controller: 'NewsController',
     templateUrl: 'views/newsView.html',
   })
-  .when('/cases/:caseId?', {
-    controller: 'NewsController',
-    templateUrl: 'views/newsView.html',
+
+  .when('/cases/new', {
+    controller: 'CaseNewController',
+    templateUrl: 'views/caseNew.html',
   })
-  .when('/cases/s/:stage?', {
-    controller: 'CasesController',
-    templateUrl: 'views/casesView.html',
+
+  .when('/cases/:id?', {
+    controller: 'CaseController',
+    templateUrl: 'views/caseView.html',
   })
+
+  .when('/cases/s/:type?', {
+    controller: 'CaseViewController',
+    templateUrl: 'views/caseViewList.html',
+  })
+
   .when('/cases/:stage/c/:catalog?', {
     controller: 'NewsController',
     templateUrl: 'views/newsView.html',

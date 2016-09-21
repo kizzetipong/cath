@@ -7,6 +7,6 @@ bower_components
 /app/index.html
 /app/assets/css/*.css
 /app/assets/css/*.css.map
-/app/assets/fonts
+/app/assets/less/bootstrap
 
 /test/reports

@@ -22,10 +22,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride());
 
 
-app.use('/reports', express.static(__dirname + '/test/reports'));
+app.use('/reportss', express.static(__dirname + '/test/reports'));
 app.use('/reports', function (req, res) {
   res.status(404).end();
 });
+/*
+app.use('/service/cases', function (req, res, next) {
+  console.log('Request Type:', req.method);
+  res.status(200).end();
+});
+*/
+
 
 app.set('port', 9999);
 
@@ -47,10 +54,10 @@ app.get(rootUrl, function (req, res) {
 });
 
 // handle services
-app.post('/service/:serviceName', serviceCtrl.post);
-app.get('/service/:serviceName', serviceCtrl.get);
-app.post(rootUrl + '/service/:serviceName', serviceCtrl.post);
-app.get(rootUrl + '/service/:serviceName', serviceCtrl.get);
+app.post('/node/:serviceName', serviceCtrl.post);
+app.get('/node/:serviceName', serviceCtrl.get);
+app.post(rootUrl + '/node/:serviceName', serviceCtrl.post);
+app.get(rootUrl + '/node/:serviceName', serviceCtrl.get);
 
 app.all('/*', function (req, res) {
   // Just send the index.html for other files to support HTML5Mode
