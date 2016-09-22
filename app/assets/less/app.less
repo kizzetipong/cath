@@ -5,6 +5,8 @@
   src:url("../fonts/ThaiSansNeue-Regular.ttf") format("truetype");
 }
 
+@imgMinHeight: 700px;
+
 body {
   font-family: "Sukhumvit Set", "Thai Sans Neue", sans-serif;
   font-size: 18px;
@@ -24,7 +26,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     align-items: baseline;
-    min-height: 600px;
+    min-height: @imgMinHeight;
     .flex-item {
       flex: 1 1 auto;
     }
@@ -38,11 +40,16 @@ body {
 
   .how-to-container {
     background-color: transparent;
-    min-height: 600px;
-    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    min-height: @imgMinHeight;
+    .flex-item {
+      flex: 1 1 auto;
+    }
     img.step {
       width: 100%;
-      min-height: 600px;
+      min-height: @imgMinHeight;
       opacity: 1;
       z-index: 20;
     }
