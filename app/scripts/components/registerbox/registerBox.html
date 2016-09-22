@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <p class="header-title">มาร่วมกับเรา</p>
+        <p class="header-title">ให้เราช่วยคุณฟ้อง</p>
       </div>
       <div class="col-sm-8">
         <div class="col-sm-12">
@@ -22,15 +22,22 @@
             <div class="error-notice"></div>
           </div>
           <div class="form-group required half">
-            <label for="tel">หมายเลขโทรศัพท์มือถือ</label>
+            <label for="tel">โทรศัพท์มือถือ</label>
             <input type="tel" ng-model="mobile" id="mobile" placeholder="0812345678">
             <div class="error-notice"></div>
           </div>
         </div>
         <div class="col-sm-12">
           <div class="form-group required full">
-            <label for="text">ปัญหาของคุณ</label>
-            <textarea type="textarea" ng-attr-rows="{{textRows || '2'}}" ng-focus="textRows=5;" ng-blur="showCatalog= !!info;" ng-model="info" placeholder="เล่าเรื่องราวของคุณให้เราฟัง"></textarea>
+            <label for="text">อยากฟ้องอะไร เล่าได้ <i class="fa fa-info-circle" aria-hidden="true"></i></label>
+            <textarea type="textarea" ng-attr-rows="{{textRows || '2'}}" ng-focus="textRows=5;" ng-change="showCatalog= !!info;" ng-model="info" placeholder="เล่าเรื่องราวของคุณให้เราฟัง"></textarea>
+            <div class="error-notice"></div>
+          </div>
+        </div>
+        <div class="col-sm-12" ng-show="showCatalog">
+          <div class="form-group required full">
+            <label for="text">ค่าเสียหายที่อยากได้</label>
+            <input type="damages" ng-model="damages" id="damages" placeholder="Ex. 200000">
             <div class="error-notice"></div>
           </div>
         </div>
@@ -58,7 +65,8 @@
         <p style="text-align: center;">Upload Photos</p>
       </div>
       <div class="col-sm-12">
-        <div class="submit-button" ng-click="doSomething()"><span>ส่งเรื่องมาหาเรา</span></div>
+        <div class="submit-button" ng-click="doSomething()"><span>ส่งฟ้อง</span></div>
+         <p style="text-align: center;">Privacy policy <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
       </div>
     </div>
   </div>
