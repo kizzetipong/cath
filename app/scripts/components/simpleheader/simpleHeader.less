@@ -1,4 +1,5 @@
 .simple-header {
+  @navMaxWidth: 680px;
   background-color: white;
   color: @red;
   a a:hover, a:visited, a:link, a:active {
@@ -13,7 +14,7 @@
       color: white!important;
     }
   }
-  .logo {
+  .top-section {
     width: 100%;
     .inline-flex;
     padding-top: 5px;
@@ -21,15 +22,69 @@
     align-items: center;
     -webkit-justify-content: center;
     justify-content: center;
+    .logo {
+      height: 100px;
+      .icon-container > img {
+        height: 100%;
+      }
+    }
   }
-  .menu {
+  ul.menu {
+    list-style-type: none;
+    overflow: hidden;
     font-size: 24px;
     .inline-flex;
-    .menu-item {
+    li {
       .flex-item;
       text-align: center;
       white-space: nowrap;
       padding: 5px 5px;
+    }
+
+    li.menu-icon {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: @navMaxWidth) {
+    .menu-container {
+      position: absolute;
+      top: 5px;
+      right: 0;
+    }
+
+    .top-section {
+      justify-content: flex-start;
+      .logo {
+        height: 50px;
+        padding-left: 10px;
+      }
+    }
+    ul.menu {
+      li.menu-item {
+        display: none;
+      }
+      li.menu-icon {
+        text-align: right;
+        display: inline-block;
+      }
+
+      &.expand-menu {
+        position: relative;
+        li.icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        li {
+          float: none;
+          display: block;
+        }
+        li a {
+          display: block;
+          text-align: right;
+        }
+      }
     }
   }
 }

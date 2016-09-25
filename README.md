@@ -18,8 +18,9 @@ Just for fun
 0. Make sure that RAM on droplet is enough for running server (add swap file if necessary)
 0. Use command 'grunt build' to create deployment folder on '/dist'
 0. Open folder '/dist'
-0. Use command 'node server_host.js'
+0. User forever module to run server with command 'forever start server_host.js'
 0. Web app will be opened on default port 80
+0. Use command 'forever restartall' to restart server
 
 # How to deploy to Firebase
 0. Open cmd (or git bash) on root of this directory
