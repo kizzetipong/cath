@@ -3,8 +3,7 @@
     <a class="logo" href="#">
       <span class="icon-container"><img alt="Brand" ng-src="../assets/images/logo_{{theme}}.png"></span>
     </a>
-    <div style="position: absolute; width: 200px; margin-right: 5px; right: 10%;">
-      <!-- TODO: mode mobile-->
+    <div class="search-container">
       <search-box></search-box>
     </div>
   </div>
@@ -16,8 +15,13 @@
         <li class="menu-item"><a href="/cases/s/all">ร่วมฟ้อง</a></li>
         <li class="menu-item"><a href="/news/catalog/all">กฎหมายน่ารู้</a></li>
         <li class="menu-item"><a href="/faqs">ถามได้</a></li>
+        <li class="menu-icon" ng-click="expandSearch = true; expandMenu = false;">
+          <div class="search" ng-class="{ 'expand-search': expandSearch }">
+            <search-box></search-box>
+          </div>
+        </li>
         <li class="menu-icon">
-          <a href="javascript:void(0);" ng-click="toggleMenu()">&#9776;</a>
+          <a href="javascript:void(0);" ng-click="expandMenu = !expandMenu; expandSearch = false;">&#9776;</a>
         </li>
       </ul>
       <div class="col-sm-1 col-md-2 col-lg-3"></div>
