@@ -47,18 +47,24 @@
   }
 
   div.submit-button {
-    text-decoration: none;
     text-align: center;
-    cursor: pointer;
-    height: 30px;
-    width: 200px;
-    margin: 0 auto;
-    color: @red;
-    background-color: @grey02;
-    border-radius: 10px;
-    border: 1px solid #7373e5;
-    span {
-      vertical-align: middle;
+    button {
+      width: 150px;
+      font-size: x-large;
+    }
+  }
+  .icon-popover {
+    curson: pointer;
+    .popover {
+      .popover-title {
+        color: white;
+        font-weight: bold;
+        letter-spacing: 4px;
+        background-color: @red;
+      }
+      .popover-content {
+        color: @red;
+      }
     }
   }
 }

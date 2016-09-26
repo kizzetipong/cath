@@ -2,16 +2,24 @@
   @navMaxWidth: 680px;
   background-color: white;
   color: @red;
-  a a:hover, a:visited, a:link, a:active {
+  a, a:visited, a:link, a:active {
     text-decoration: none;
     color: @red;
+  }
+
+  a:hover {
+    color: @red400!important;
   }
 
   &.bg-red {
     background-color: @red!important;
     color: white!important;
-    a a:hover, a:visited, a:link, a:active {
+    a, a:visited, a:link, a:active {
       color: white!important;
+    }
+
+    a:hover {
+      color: @grey02!important;
     }
   }
   .top-section {

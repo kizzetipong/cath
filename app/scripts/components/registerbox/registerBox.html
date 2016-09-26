@@ -29,7 +29,7 @@
         </div>
         <div class="col-sm-12">
           <div class="form-group required full">
-            <label for="text">อยากฟ้องอะไร เล่าได้ <i class="fa fa-info-circle" aria-hidden="true"></i></label>
+            <label for="text">อยากฟ้องอะไร เล่าได้ <span class="icon-popover"><i class="fa fa-info-circle" aria-hidden="true" data-toggle="popover" title="เขียนฟ้องยังไง?" data-placement="top" data-trigger="hover" data-content="เขียนฟ้องยังไง? เขียนฟ้องยังไง? เขียนฟ้องยังไง? เขียนฟ้องยังไง? เขียนฟ้องยังไง? เขียนฟ้องยังไง?"></i></span></label>
             <textarea type="textarea" ng-attr-rows="{{textRows || '2'}}" ng-focus="textRows=5;" ng-change="showCatalog= !!info;" ng-model="info" placeholder="เล่าเรื่องราวของคุณให้เราฟัง"></textarea>
             <div class="error-notice"></div>
           </div>
@@ -65,8 +65,8 @@
         <p style="text-align: center;">Upload Photos</p>
       </div>
       <div class="col-sm-12">
-        <div class="submit-button" ng-click="doSomething()"><span>ส่งฟ้อง</span></div>
-         <p style="text-align: center;">Privacy policy <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+        <div class="submit-button" ng-click="doSomething()"><button type="button" class="btn btn-primary">ส่งฟ้อง</button></div>
+         <p style="text-align: center;">Privacy policy <span class="icon-popover"><i class="fa fa-info-circle" data-toggle="popover" title="Privacy policy" data-placement="top" data-trigger="hover" data-content="Privacy policy Privacy policy Privacy policy Privacy policy Privacy policy Privacy policy"></i></span></p>
       </div>
     </div>
   </div>
