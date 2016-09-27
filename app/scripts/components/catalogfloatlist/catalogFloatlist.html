@@ -2,7 +2,7 @@
   <div class="row">
     <div ng-repeat="(key, value) in list" class="list col-md-4 col-sm-6 col-xs-12">
       <div class="content-container">
-        <a href="/news/{{value.newsId}}">
+        <a href="/news/{{value.id}}">
           <div style="padding-left:20px;"><img class="image-block" ng-src="{{value.img}}"></div>
           <div class="clear padding-top10"></div>
           <h4 class="headline-text">{{value.headlineText}}</h4>
@@ -11,7 +11,7 @@
           <p>{{value.briefText}}</p>
         </div>
       </div>
-      <div class="timestamp">{{value.date}}</div>
+      <!-- <div class="timestamp">{{value.date}}</div> -->
     </div>
   </div>
 </div>
