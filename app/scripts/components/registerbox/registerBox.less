@@ -31,34 +31,39 @@
       resize: vertical;
       color: black;
       width: 100%;
-      .transition(all 2s ease);
+      .transition(all 0.5s ease);
 
       &:focus {
         background: @grey01;
       }
     }
   }
-  .upload-icon {
+  .upload-image {
     text-align: center;
-    i {
-      font-size: 216px;
-      color: @grey01;
+    img {
+      width: 250px;
     }
   }
 
   div.submit-button {
-    text-decoration: none;
     text-align: center;
-    cursor: pointer;
-    height: 30px;
-    width: 200px;
-    margin: 0 auto;
-    color: @red;
-    background-color: @grey02;
-    border-radius: 10px;
-    border: 1px solid #7373e5;
-    span {
-      vertical-align: middle;
+    button {
+      width: 150px;
+      font-size: x-large;
+    }
+  }
+  .icon-popover {
+    curson: pointer;
+    .popover {
+      .popover-title {
+        color: white;
+        font-weight: bold;
+        letter-spacing: 4px;
+        background-color: @red;
+      }
+      .popover-content {
+        color: @red;
+      }
     }
   }
 }
