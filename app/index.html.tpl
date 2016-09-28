@@ -19,11 +19,6 @@
       <div ng-view="" autoscroll></div>
     </div>
     <div class="footer">
-      <div class="sitemap-container">
-        <site-map></site-map>
-        <div style="height: 270px;"></div>
-        <div class="reserved">© 2016 FongDi. All right reserved.  |  <a href="/legal-notice">Legal Notice</a>  |  <a href="/contactus">Contact Us</a></div>
-      </div>
     </div>
 
     <!-- build:js({.,app}) web/scripts/vendor.js -->
