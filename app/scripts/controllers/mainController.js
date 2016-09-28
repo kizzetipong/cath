@@ -5,6 +5,7 @@ angular.module('cath')
   function ($rootScope, $scope, $routeParams) {
     $scope.init = function () {
       $scope.params = $routeParams;
+      console.log($scope.params);
     };
 
     $scope.init();
