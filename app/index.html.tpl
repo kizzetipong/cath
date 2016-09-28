@@ -18,11 +18,11 @@
     <div class="app-container">
       <div ng-view="" autoscroll></div>
     </div>
-    <hr class="footer-hr">
     <div class="footer">
-      <div class="container">
+      <div class="sitemap-container">
         <site-map></site-map>
-        <p>© 2016 FongDi. All right reserved.  |  <a href="/legal-notice">Legal Notice</a>  |  <a href="/contactus">Contact Us</a></p>
+        <div style="height: 270px;"></div>
+        <div class="reserved">© 2016 FongDi. All right reserved.  |  <a href="/legal-notice">Legal Notice</a>  |  <a href="/contactus">Contact Us</a></div>
       </div>
     </div>
 
