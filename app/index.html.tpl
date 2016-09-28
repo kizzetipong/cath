@@ -53,6 +53,8 @@
     <script src="scripts/components/navheader/navHeaderController.js"></script>
     <script src="scripts/components/articledisplay/articleDisplay.js"></script>
     <script src="scripts/components/articledisplay/articleDisplayController.js"></script>
+    <script src="scripts/components/articleslist/articlesList.js"></script>
+    <script src="scripts/components/articleslist/articlesListController.js"></script>
     <script src="scripts/components/catalogslider/catalogSlider.js"></script>
     <script src="scripts/components/catalogslider/catalogSliderController.js"></script>
     <script src="scripts/components/catalogfloatlist/catalogFloatlist.js"></script>
