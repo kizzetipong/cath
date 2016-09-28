@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- build:css(.tmp) web/assets/css/app.css -->
     <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="redactor.css" />
     <!-- endbuild -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   </head>
@@ -27,6 +28,7 @@
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) web/scripts/libs.js -->
+    <script src="redactor.js"></script>
     <script src="scripts/libs/jquery.mobile.custom.min.js"></script>
     <!-- endbuild -->
 
