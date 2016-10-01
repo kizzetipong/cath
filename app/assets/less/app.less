@@ -24,21 +24,21 @@ body {
 
   .intro-container {
     background-color: @red;
-    display: flex;
-    flex-flow: row wrap;
+    .displayFlex;
+    .flex-flow(row, wrap);
     align-items: baseline;
     min-height: @imgMinHeight;
 
     .title-container {
       padding: 0 10%;
       .displayFlex(inline-flex);
-      flex-direction: row;
+      .flex-direction(row);
       @media screen and (max-width: 1100px) {
-        flex-direction: column;
+        .flex-direction(column);
       }
 
       img {
-        flex: 1 1 auto;
+        .flex;
         width: 100%;
         height: 100%;
         margin: auto;
@@ -55,7 +55,7 @@ body {
   .how-to-container {
     background-color: @lightred01;
     display: flex;
-    flex-flow: row wrap;
+    .flex-flow(row, wrap);
     align-items: center;
     min-height: @imgMinHeight;
     img.step {
@@ -68,8 +68,8 @@ body {
 
   .articles-container {
     background-color: @lightred02;
-    display: flex;
-    flex-flow: column wrap;
+    .displayFlex;
+    .flex-flow(column, wrap);
     justify-content: space-around;
   }
   .sitemap-container {
