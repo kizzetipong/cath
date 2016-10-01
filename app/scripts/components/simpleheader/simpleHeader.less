@@ -24,7 +24,7 @@
   }
   .top-section {
     width: 100%;
-    .inline-flex;
+    .displayFlex(inline-flex);
     padding-top: 5px;
     -webkit-align-items: center;
     align-items: center;
@@ -47,9 +47,9 @@
     list-style-type: none;
     overflow: hidden;
     font-size: 24px;
-    .inline-flex;
+    .displayFlex(inline-flex);
     li {
-      .flex-item;
+      .flex(1);
       text-align: center;
       white-space: nowrap;
       padding: 5px 5px;
@@ -68,7 +68,7 @@
     }
 
     .top-section {
-      justify-content: flex-start;
+      .justify-content(flex-start);
       .logo {
         height: 50px;
         padding-left: 10px;

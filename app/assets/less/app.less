@@ -8,7 +8,7 @@
 @imgMinHeight: 670px;
 
 body {
-  font-family: "Sukhumvit Set", "Thai Sans Neue", sans-serif;
+  font-family: "Thai Sans Neue", "Sukhumvit Set", sans-serif;
   font-size: 18px;
   letter-spacing: 2px;
 }
@@ -28,13 +28,10 @@ body {
     flex-flow: row wrap;
     align-items: baseline;
     min-height: @imgMinHeight;
-    .flex-item {
-      flex: 1 1 auto;
-    }
 
     .title-container {
       padding: 0 10%;
-      display: inline-flex;
+      .displayFlex(inline-flex);
       flex-direction: row;
       @media screen and (max-width: 1100px) {
         flex-direction: column;
@@ -61,9 +58,6 @@ body {
     flex-flow: row wrap;
     align-items: center;
     min-height: @imgMinHeight;
-    .flex-item {
-      flex: 1 1 auto;
-    }
     img.step {
       width: 100%;
       min-height: @imgMinHeight;

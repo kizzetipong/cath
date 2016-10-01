@@ -35,15 +35,8 @@
           </div>
         </div>
         <div class="col-sm-12" ng-show="showCatalog">
-          <div class="form-group required full">
-            <label for="text">ค่าเสียหายที่อยากได้</label>
-            <input type="damages" ng-model="damages" id="damages" placeholder="Ex. 200000">
-            <div class="error-notice"></div>
-          </div>
-        </div>
-        <div class="col-sm-12" ng-show="showCatalog">
           <label for="checkboxes">ประเภทของปัญหา</label>
-          <div id="checkboxes">
+          <div id="checkboxes" class="checkboxes">
             <label class="checkbox-inline">
               <input type="checkbox" ng-model="check_residences" > ที่อยู่อาศัย
             </label>
@@ -56,6 +49,13 @@
             <label class="checkbox-inline">
               <input type="checkbox" ng-model="check_insurance"> ประกัน
             </label>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group required full">
+            <label for="text">ค่าเสียหายที่อยากได้</label>
+            <input type="damages" ng-model="damages" id="damages" placeholder="Ex. 200000">
+            <div class="error-notice"></div>
           </div>
         </div>
       </div>
