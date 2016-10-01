@@ -9,6 +9,7 @@
     <!-- build:css(.tmp) web/assets/css/app.css -->
     <link rel="stylesheet" href="assets/css/app.css">
     <!-- endbuild -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   </head>
   <body ng-app="cath">
