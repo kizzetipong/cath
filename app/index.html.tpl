@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="">
   <head>
     <meta charset="utf-8">
     <base href="/">
@@ -13,14 +13,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   </head>
   <body ng-app="cath">
-    <div>
-      <!-- <nav-header></nav-header> -->
-    </div>
-    <div class="app-container">
-      <div ng-view="" autoscroll></div>
-    </div>
-    <div class="footer">
-    </div>
+    <simple-header bg-red="true">
+      <div class="app-container">
+        <div ng-view="" autoscroll></div>
+      </div>
+      <div class="footer">
+      </div>
+    </simple-header>
 
     <!-- build:js({.,app}) web/scripts/vendor.js -->
     <!-- bower:js -->
