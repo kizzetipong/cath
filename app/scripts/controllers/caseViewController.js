@@ -3,11 +3,12 @@
 angular.module('cath')
 .controller('CaseViewController', ['$rootScope', '$scope', '$routeParams',
   function ($rootScope, $scope, $routeParams) {
-    $scope.init = function () {
-      $scope.params = $routeParams;
-      $scope.stage = $scope.params.stage || 'all';
-    };
+  $scope.init = function () {
+    $rootScope.mainBg = '';
+    $scope.params = $routeParams;
+    $scope.stage = $scope.params.stage || 'all';
+  };
 
-    $scope.init();
+  $scope.init();
   },
 ]);

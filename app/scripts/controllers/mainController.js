@@ -5,6 +5,7 @@ angular.module('cath')
   function ($rootScope, $scope, $routeParams) {
     $scope.init = function () {
       $scope.params = $routeParams;
+      $rootScope.mainBg = 'red';
       console.log($scope.params);
     };
 

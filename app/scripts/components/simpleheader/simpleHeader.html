@@ -1,16 +1,20 @@
 <header ng-class="{'bg-red' : bgRed}">
-  <div class="cd-logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div>
+  <div class="cd-logo">
+    <a class="logo" href="#">
+      <span class="icon-container"><img alt="Brand" ng-src="../assets/images/logo_{{theme}}.png"></span>
+    </a>
+  </div>
 
   <nav class="cd-main-nav-wrapper">
-    <ul class="cd-main-nav">
-      <li><a href="#0">About</a></li>
-      <li><a href="#0">Projects</a></li>
-      <li><a href="#0">Blog</a></li>
-      <li><a href="#0">Contact</a></li>
+    <ul class="cd-main-nav" ng-class="{'bg-red' : bgRed}">
+      <li><a href="/">หน้าแรก</a></li>
+      <li><a href="/cases/s/all">ร่วมฟ้อง</a></li>
+      <li><a href="/news/catalog/all">กฎหมายน่ารู้</a></li>
+      <li><a href="/faqs">ถามได้</a></li>
     </ul> <!-- .cd-main-nav -->
   </nav> <!-- .cd-main-nav-wrapper -->
   
-  <a href="#0" class="cd-nav-trigger"><span></span></a>
+  <a href="#0" class="cd-nav-trigger" ng-class="{'bg-red' : bgRed}"><span></span></a>
 </header>
 
 <div class="simple-header" ng-class="{'bg-red' : bgRed}">

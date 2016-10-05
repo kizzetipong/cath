@@ -1,4 +1,11 @@
 @navMaxWidth: 680px;
+
+@media screen and (max-width: @navMaxWidth) {
+  .simple-header {
+    display: none;
+  }
+}
+
 .simple-header {
   background-color: white;
   color: @red;
@@ -114,11 +121,6 @@
   }
 }
 
-@media screen and (min-width: @navMaxWidth) {
-  header {
-    display: none;
-  }
-}
 header {
   position: fixed;
   z-index: 3;
@@ -126,7 +128,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #33414a;
+  background-color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Force Hardware Acceleration */
@@ -183,9 +185,10 @@ header::before {
   backface-visibility: hidden;
 }
 .cd-logo img {
+  height: 50px;
   display: block;
   max-width: 100%;
-  margin-top: 14px;
+  margin-top: 2px;
 }
 @media only screen and (min-width: 1024px) {
   .cd-logo {
@@ -222,7 +225,7 @@ header::before {
   -webkit-transition: background-color 0.3s 0.3s;
   -moz-transition: background-color 0.3s 0.3s;
   transition: background-color 0.3s 0.3s;
-  background-color: #ffffff;
+  background-color: @red;
 }
 .cd-nav-trigger span::before, .cd-nav-trigger span::after {
   /* upper and lower lines of the menu icon */
@@ -230,7 +233,7 @@ header::before {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: @red;
   /* Force Hardware Acceleration */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -300,7 +303,7 @@ header::before {
   font-size: 1.8rem;
   padding: .9em 2em .9em 1em;
   border-bottom: 1px solid #33414a;
-  color: #ffffff;
+  color: white;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   -moz-transition: -moz-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
@@ -453,7 +456,7 @@ header::before {
   .cd-main-nav .cd-subnav-trigger::before, .cd-main-nav .cd-subnav-trigger::after {
     top: 22px;
     right: 17px;
-    background-color: #ffffff;
+    background-color: @red;
     /* change transform-origin to rotate the arrow */
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
@@ -564,10 +567,10 @@ header::before {
 }
 
 .cd-main-content {
+  margin-top: 50px;
   position: relative;
   z-index: 2;
   min-height: 100vh;
-  background-color: #f2f2f2;
   -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s;
@@ -590,6 +593,16 @@ header::before {
     transform: translateX(0);
   }
 }
+
+@media screen and (min-width: @navMaxWidth) {
+  header {
+    display: none;
+  }
+  .cd-main-content {
+    margin-top: 0px;
+  }
+}
+
 
 .no-js .cd-nav-trigger, .no-js .cd-subnav-trigger {
   display: none;

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   </head>
   <body ng-app="cath">
-    <simple-header bg-red="true">
+    <simple-header bg-red="{{mainBg}}">
       <div class="app-container">
         <div ng-view="" autoscroll></div>
       </div>
