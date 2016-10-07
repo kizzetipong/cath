@@ -9,8 +9,8 @@
 .search-responsive {
   position: absolute;
   right: 60px;
-  display: inline-flex;
-  align-items: center;
+  .displayFlex(inline-flex);
+  .align-items(center);
   height: 100%;
   width: 36px;
   &.expand-search {
@@ -131,12 +131,9 @@
 }
 
 header {
-  position: fixed;
   z-index: 3;
   height: 50px;
   width: 100%;
-  top: 0;
-  left: 0;
   background-color: white;
   &.bg-red {
     background-color: @red;
@@ -590,7 +587,6 @@ header::before {
 }
 
 .cd-main-content {
-  margin-top: 50px;
   position: relative;
   z-index: 2;
   min-height: 100vh;
