@@ -6,6 +6,22 @@
   }
 }
 
+.search-responsive {
+  position: absolute;
+  right: 60px;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  width: 36px;
+  &.expand-search {
+    width: 190px;
+    >* {
+      width: 100%;
+    }
+  }
+  .transition(all 0.3s ease);
+}
+
 .simple-header {
   background-color: white;
   color: @red;
@@ -89,13 +105,6 @@
       li.menu-icon {
         text-align: right;
         display: inline-block;
-        .search {
-          width: 36px;
-          &.expand-search {
-            .transition(all 0.3s ease);
-            width: 250px;
-          }
-        }
       }
 
       &.expand-menu {
@@ -600,73 +609,5 @@ header::before {
   }
   .cd-main-content {
     margin-top: 0px;
-  }
-}
-
-
-.no-js .cd-nav-trigger, .no-js .cd-subnav-trigger {
-  display: none;
-}
-
-.no-js header {
-  position: relative;
-  height: auto;
-}
-
-.no-js .cd-logo img {
-  margin-bottom: 14px;
-}
-
-.no-js .cd-main-nav {
-  position: static;
-  width: 100%;
-  height: auto;
-  visibility: visible;
-  overflow: visible;
-}
-.no-js .cd-main-nav li {
-  display: inline-block;
-}
-.no-js .cd-main-nav li:last-child {
-  display: block;
-}
-.no-js .cd-main-nav .go-back {
-  display: none;
-}
-.no-js .cd-main-nav li ul {
-  position: static;
-  width: 100%;
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
-}
-@media only screen and (min-width: 1024px) {
-  .no-js .cd-main-nav {
-    height: 80px;
-  }
-  .no-js .cd-main-nav li ul {
-    position: absolute;
-    top: 80px;
-  }
-  .no-js .cd-main-nav li ul li {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-  .no-js .cd-main-nav li ul li:last-child {
-    display: none;
-  }
-}
-
-.no-js .cd-main-content {
-  padding-top: 0;
-}
-@media only screen and (min-width: 1024px) {
-  .no-js .cd-main-content {
   }
 }

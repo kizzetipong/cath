@@ -4,7 +4,9 @@
       <span class="icon-container"><img alt="Brand" ng-src="../assets/images/logo_{{theme}}.png"></span>
     </a>
   </div>
-
+  <div class="search-responsive" ng-class="{ 'expand-search': expandSearch }" ng-click="expandSearch = true;">
+    <search-box expanding="{{expandSearch}}"></search-box>
+  </div>
   <nav class="cd-main-nav-wrapper">
     <ul class="cd-main-nav" ng-class="{'bg-red' : bgRed}">
       <li><a href="/">หน้าแรก</a></li>
@@ -13,8 +15,8 @@
       <li><a href="/faqs">ถามได้</a></li>
     </ul> <!-- .cd-main-nav -->
   </nav> <!-- .cd-main-nav-wrapper -->
-  
-  <a href="#0" class="cd-nav-trigger" ng-class="{'bg-red' : bgRed}"><span></span></a>
+
+  <a href="#0" class="cd-nav-trigger" ng-class="{'bg-red' : bgRed}" ng-click="expandSearch = false;"><span></span></a>
 </header>
 
 <div class="simple-header" ng-class="{'bg-red' : bgRed}">
@@ -29,19 +31,11 @@
   <div class="container menu-container">
   <div class="row">
     <div class="col-sm-1 col-md-2 col-lg-3"></div>
-    <ul ng-class="{ 'expand-menu': expandMenu }" class="menu col-xs-12 col-sm-10 col-md-8 col-lg-6">
-    <li class="menu-item"><a href="/">หน้าแรก</a></li>
-    <li class="menu-item"><a href="/cases/s/all">ร่วมฟ้อง</a></li>
-    <li class="menu-item"><a href="/news/catalog/all">กฎหมายน่ารู้</a></li>
-    <li class="menu-item"><a href="/faqs">ถามได้</a></li>
-    <li class="menu-icon" ng-click="expandSearch = true; expandMenu = false;">
-      <div class="search" ng-class="{ 'expand-search': expandSearch }">
-      <search-box></search-box>
-      </div>
-    </li>
-    <li class="menu-icon">
-      <a href="javascript:void(0);" ng-click="expandMenu = !expandMenu; expandSearch = false;">&#9776;</a>
-    </li>
+    <ul class="menu col-xs-12 col-sm-10 col-md-8 col-lg-6">
+      <li class="menu-item"><a href="/">หน้าแรก</a></li>
+      <li class="menu-item"><a href="/cases/s/all">ร่วมฟ้อง</a></li>
+      <li class="menu-item"><a href="/news/catalog/all">กฎหมายน่ารู้</a></li>
+      <li class="menu-item"><a href="/faqs">ถามได้</a></li>
     </ul>
     <div class="col-sm-1 col-md-2 col-lg-3"></div>
   </div>

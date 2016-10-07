@@ -6,6 +6,7 @@ angular.module('cath')
     templateUrl: 'scripts/components/searchbox/searchBox.html',
     restrict: 'E',
     scope: {
+      expanding: '@',
     },
     controller: 'searchBoxController',
   };

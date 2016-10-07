@@ -12,7 +12,7 @@ angular.module('cath')
 
   $scope.iconClick = function (e) {
     $scope.searchText = $(e.currentTarget).next().val();
-    if ($scope.searchText) {
+    if ($scope.expanding && $scope.searchText) {
       $scope.navigate($scope.searchText);
     }
   };
