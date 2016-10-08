@@ -28,6 +28,14 @@ angular.module('cath')
           $('.cd-main-content').toggleClass('nav-is-visible');
         });
 
+        $('.cd-main-nav a').on('click', function(event){
+          if($('header').hasClass('nav-is-visible')) $('.moves-out').removeClass('moves-out');
+          
+          $('header').removeClass('nav-is-visible');
+          $('.cd-main-nav').removeClass('nav-is-visible');
+          $('.cd-main-content').removeClass('nav-is-visible');
+        });
+
         //mobile version - go back to main navigation
         $('.go-back').on('click', function(event){
           event.preventDefault();
