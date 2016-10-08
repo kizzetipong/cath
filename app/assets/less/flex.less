@@ -74,6 +74,7 @@
 
 .align-items(@value: stretch) when (@value = center), (@value = baseline), (@value = stretch) {
   -webkit-box-align: @value; // Webkit Old
+  -webkit-flex-align: @value;
   -moz-box-align: @value; // Mozilla Old
   -ms-flex-align: @value; // IE 10 Mid
 
@@ -102,7 +103,7 @@
 }
 
 .align-self(@value: auto) when (@value = auto), (@value = center), (@value = baseline), (@value = stretch) {
-  -ms-flex-item--align: @value; // IE 10 Mid
+  -ms-flex-item-align: @value; // IE 10 Mid
 }
 
 .align-self(@value: auto) when (@value = flex-end) {
@@ -111,6 +112,7 @@
 
 .align-self(@value: auto) {
   -webkit-align-self: @value; // Webkit Standard
+  -webkit-flex-align-self: @value;
   -moz-align-self: @value; // Mozilla Standard
   -ms-align-self: @value; // IE 11 Standard
   align-self: @value; // Standard
