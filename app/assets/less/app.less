@@ -73,25 +73,47 @@ body {
     .steps {
       text-align: center;
       margin: auto 1%;
-
-      @media screen and (min-width: 800px) and (max-width: 900px) {
-        margin: auto 5%;
-      }
-      @media screen and (min-width: 900px) and (max-width: 1000px) {
-        margin: auto 10%;
-      }
-      @media screen and (min-width: 1000px) {
-        margin: auto 15%;
-      }
       img.step {
-        width: 60%;
+        display: block;
+        width: 80%;
         margin: 25px auto;
         opacity: 1;
         z-index: 20;
         &.or {
           display: inline-block;
-          width: 30%;
+          width: 38%;
           margin: 25px 5%;
+        }
+      }
+
+      @media screen and (min-width: 700px) and (max-width: 900px) {
+        margin: auto 5%;
+        img.step {
+          width: 70%;
+          &.or {
+            width: 35%;
+            margin: 25px 7%;
+          }
+        }
+      }
+      @media screen and (min-width: 900px) and (max-width: 1000px) {
+        margin: auto 10%;
+        img.step {
+          width: 60%;
+          &.or {
+            width: 30%;
+            margin: 25px 9%;
+          }
+        }
+      }
+      @media screen and (min-width: 1000px) {
+        margin: auto 15%;
+        img.step {
+          width: 50%;
+          &.or {
+            width: 25%;
+            margin: 25px 10%;
+          }
         }
       }
     }
