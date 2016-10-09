@@ -12,7 +12,8 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta http-equiv='content-language' content='th' />
     <meta name='revisit-after' content='7 days' />
-    <META name='Distribution' content='Global' />
+    <meta name='Distribution' content='Global' />
+    <meta property="fb:pages" content="1199108503443090" />
     <!-- build:css(.tmp) web/assets/css/app.css -->
     <link rel="stylesheet" href="assets/css/app.css">
     <!-- endbuild -->
