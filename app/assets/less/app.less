@@ -76,14 +76,19 @@ body {
       img.step {
         display: block;
         width: 80%;
-        margin: 25px auto;
+        margin: 50px auto;
         opacity: 1;
         z-index: 20;
         &.or {
           display: inline-block;
           width: 38%;
-          margin: 25px 5%;
+          margin: auto 5%;
         }
+      }
+
+      .or-wrapper {
+        display: block;
+        margin: 50px auto;
       }
 
       @media screen and (min-width: 700px) and (max-width: 900px) {
@@ -92,7 +97,7 @@ body {
           width: 70%;
           &.or {
             width: 35%;
-            margin: 25px 7%;
+            margin: auto 7%;
           }
         }
       }
@@ -102,17 +107,27 @@ body {
           width: 60%;
           &.or {
             width: 30%;
-            margin: 25px 9%;
+            margin: auto 9%;
           }
         }
       }
-      @media screen and (min-width: 1000px) {
+      @media screen and (min-width: 1000px) and (max-width: 1300px) {
         margin: auto 15%;
         img.step {
           width: 50%;
           &.or {
             width: 25%;
-            margin: 25px 10%;
+            margin: auto 10%;
+          }
+        }
+      }
+      @media screen and (min-width: 1300px) {
+        margin: auto 15%;
+        img.step {
+          width: 40%;
+          &.or {
+            width: 20%;
+            margin: auto 12%;
           }
         }
       }
