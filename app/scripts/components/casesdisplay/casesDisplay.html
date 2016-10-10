@@ -1,0 +1,22 @@
+<div class="cases-display" ng-if="dataReady">
+<h2>{{data.headlineText}}</h2>
+ <div class="panel panel-default" style="margin:10px 10px 10px 10px;width:95%">
+      <div class="panel-heading" style="background: #415463;border-color:#415463" ><font class="box-detail-headline">WHO’S AFFECTED</font></div>
+      <div class="panel-body " >
+        <div class="box-detail">
+            <div class="box-detail-inner">
+                <img src="{{data.img}}" width="240" height="180" style="margin-top:0px">
+                {{data.briefText}}
+            </div>
+            <p style="margin:10px 0px 10px 0px;align:left;">
+                <a href="/member-home/my-favorites/?szbl-favorite=342601&amp;hash=eefc029dfb" class="favbtn">JOIN INVESTIGATION</a>
+            </p>
+        </div>
+
+        <div ng-bind-html="detail"></div>
+        <p style="margin:20px 0px 10px 0px;align:left;">
+            <a href="/member-home/my-favorites/?szbl-favorite=342601&amp;hash=eefc029dfb" class="favbtn">JOIN INVESTIGATION</a>
+        </p>
+       </div>
+</div>
+</div>

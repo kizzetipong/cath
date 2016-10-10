@@ -6,7 +6,7 @@ angular.module('cath')
     templateUrl: 'scripts/components/caseslist/casesList.html',
     restrict: 'E',
     scope: {
-      stage: '@',
+      type: '@',
     },
     controller: 'casesListController',
   };

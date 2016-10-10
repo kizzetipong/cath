@@ -23,12 +23,12 @@ angular.module('cath')
   })
 
   .when('/cases/:id?', {
-//    controller: 'CasesViewController',
+    controller: 'CaseController',
     templateUrl: 'views/caseView.html',
   })
 
   .when('/cases/s/:type?', {
-  //  controller: 'CaseController',
+    controller: 'CaseViewController',
     templateUrl: 'views/caseViewList.html',
   })
 
