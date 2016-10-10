@@ -9,18 +9,18 @@ CaseListService.prototype.init = function () {
 };
 
 CaseListService.prototype.service = function (context, payload, serviceCallback) {
-  
+
   if (!payload || !payload.type) {
     serviceCallback('ERROR Msg', null);
   }
-  else {      
+  else {
 
     var retAry = [];
     var mysql      = require('mysql');
     var connection = mysql.createConnection({
       host     : 'localhost',
       user     : 'root',
-      password : 'pwd123',
+      password : 'tmtrobot',
       database : 'class_action'
     });
 
@@ -36,35 +36,37 @@ CaseListService.prototype.service = function (context, payload, serviceCallback)
     var QMAP = {
         submitted : [0, 200],
         investigations : [200, 400],
-        settlements : [400, 1000],        
+        settlements : [400, 1000],
     };
     var sql = 'SELECT * from cases';
-    
+
     if (payload.type in QMAP) {
         sql += ' where status>='+QMAP[payload.type][0]+' and status<'+QMAP[payload.type][1];
     }
-    
+
     console.log(sql);
 
 
-    
+
     connection.connect();
     connection.query(sql, function(err, rows, fields) {
       if (!err) {
         rows.forEach(function(r){
 
-            retAry.push( 
-                {   
+            retAry.push(
+                {
                   id: r.id,
                   status: r.status,
-                  type: payload.type,                  
+                  type: payload.type,
                   headlineText: r.headline,
+                  briefText: r.brief_text,
+                  detail: r.detail,
                   date: r.expired_at,
                   img: r.head_img,
                 }
             );
-        });    
-        serviceCallback(null, retAry);        
+        });
+        serviceCallback(null, retAry);
       } else {
         console.log('Error while performing Query', err);
       }

@@ -20,7 +20,7 @@ CaseService.prototype.service = function (context, payload, serviceCallback) {
     var connection = mysql.createConnection({
       host     : 'localhost',
       user     : 'root',
-      password : 'pwd123',
+      password : 'tmtrobot',
       database : 'class_action'
     });
 

@@ -1,16 +1,23 @@
+
+
 <div class="cases-list" ng-if="dataReady">
+
   <div ng-repeat="(key, value) in list" class="section col-md-12 col-sm-12 col-xs-12" ng-class="{ 'bg-grey' : (key % 2) === 1 }">
+    
     <div class="content-container">
       <div class="col-lg-1 col-md-1 col-sm-0 col-xs-0"></div>
       <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 section image-section">
-        <img class="image-block" ng-src="{{value.img}}">
-        <h3>{{value.headlineText}}</h3>
-        <div class="">
-          <p>{{value.briefText}}</p>
-        </div>
+        <a href="/cases/{{value.id}}">
+          <img class="image-block" ng-src="{{value.img}}">
+          <h3>{{value.headlineText}}</h3>
+          <div class="">
+            <p>{{value.briefText}}</p>
+          </div>
+        </a>
       </div>
       <div class="col-lg-7 col-md-7 col-sm-8 col-xs-12 section text-section">
-        <h3>{{value.moreText}}</h3>
+
+        <div ng-bind-html="value.detail">-</div>
         <div class="icons">
           <div class="icon">
             <div class="icon-wrap">

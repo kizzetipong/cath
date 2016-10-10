@@ -8,7 +8,7 @@ angular.module('cath')
     return {
       fetchList: function (type) {
         var deferred = new $.Deferred();
-        
+
         $.ajax({
           method: 'POST',
           url: '/node/case_list',
@@ -23,7 +23,7 @@ angular.module('cath')
         });
         return deferred.promise();
       },
-      
+
       fetchData: function (id) {
         var deferred = new $.Deferred();
 
@@ -41,7 +41,7 @@ angular.module('cath')
         });
         return deferred.promise();
       },
-      
+
       getLatestData: function () {
         return data;
       },
