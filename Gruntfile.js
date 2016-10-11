@@ -49,6 +49,9 @@ module.exports = function (grunt) {
       server: {
         files: ['service.js', 'service/*.js', 'node/*.js'],
         tasks: ['express:dev'],
+        options: {
+          spawn: false,
+        },
       },
       livereload: {
         options: {
