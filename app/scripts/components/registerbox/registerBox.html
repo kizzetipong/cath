@@ -61,8 +61,42 @@
       </div>
 
       <div class="col-sm-4">
-        <div class="upload-image"><img src="/assets/images/sys/photo_upload.png"></div>
+        <div class="upload-image">
+          <label for="file-input">
+            <img src="/assets/images/sys/photo_upload.png" />
+          </label>
+          <input id="file-input" type="file" nv-file-select="" uploader="uploader" multiple /><br/>
+        </div>
         <p style="text-align: center;">Upload Photos</p>
+        <table class="table">
+        <thead ng-if="uploader.queue.length > 0">
+          <tr>
+            <th width="50%">Name</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in uploader.queue">
+            <td>
+              <strong>{{ item.file.name }}</strong>
+            </td>
+            <td class="text-center">
+              <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+              <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+              <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+            </td>
+            <td nowrap>
+              <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                <span class="glyphicon glyphicon-upload"></span> Upload
+              </button>
+              <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                <span class="glyphicon glyphicon-trash"></span> Remove
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       </div>
       <div class="col-sm-12">
         <div class="submit-button" ng-click="doSomething()"><button type="button" class="btn btn-primary">ส่งฟ้อง</button></div>

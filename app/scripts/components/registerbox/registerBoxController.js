@@ -1,9 +1,12 @@
 'use strict';
 
 angular.module('cath')
-.controller('registerBoxController', ['$rootScope', '$scope', function ($rootScope, $scope) {
+.controller('registerBoxController', ['$scope', 'FileUploader', function ($scope, FileUploader) {
+  $scope.uploader = new FileUploader({
+    url: 'node/uploadfile',
+  });
+
   _.defer(function () {
-    // $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
-  })
+  });
 }]);
