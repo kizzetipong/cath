@@ -76,6 +76,8 @@
     <script src="scripts/components/steplist/stepListController.js"></script>
     <script src="scripts/components/searchbox/searchBox.js"></script>
     <script src="scripts/components/searchbox/searchBoxController.js"></script>
+    <script src="scripts/components/sitemap/sitemap.js"></script>
+    <script src="scripts/components/sitemap/sitemapController.js"></script>
     <script src="scripts/components/subscriber/subscriber.js"></script>
     <script src="scripts/components/subscriber/subscriberController.js"></script>
     <script src="templates.js"></script>
@@ -85,6 +87,14 @@
     <script src="http://localhost:35729/livereload.js"></script>
     <!-- endbuild -->
 
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v2.8&appId=687329278084857";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <!-- <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
     <script>
       var config = {
