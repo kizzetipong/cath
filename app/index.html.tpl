@@ -25,8 +25,11 @@
       <div class="app-container">
         <div ng-view="" autoscroll></div>
       </div>
-      <div class="footer">
-      </div>
+      <section id="sitemap">
+        <div class="sitemap-container">
+          <sitemap></sitemap>
+        </div>
+      </section>
     </simple-header>
 
     <!-- build:js({.,app}) web/scripts/vendor.js -->

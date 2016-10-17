@@ -1,8 +1,6 @@
-
-
 <div class="cases-list" ng-if="dataReady">
 
-  <div ng-repeat="(key, value) in list" class="section col-md-12 col-sm-12 col-xs-12" ng-class="{ 'bg-grey' : (key % 2) === 1 }">
+  <div ng-repeat="(key, value) in list" ng-class="{ 'bg-grey' : (key % 2) === 1 }" class="section-block col-md-12 col-sm-12 col-xs-12">
     
     <div class="content-container">
       <div class="col-lg-1 col-md-1 col-sm-0 col-xs-0"></div>
