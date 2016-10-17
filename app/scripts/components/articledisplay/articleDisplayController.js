@@ -13,5 +13,6 @@ angular.module('cath')
     $scope.detail = ret[0].detail;
     $scope.$applyAsync();    
 
+    $scope.authorImage = '/assets/images/sys/writer-large.png'; //TODO: Mockdata
   });
 }]);
