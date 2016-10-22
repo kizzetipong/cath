@@ -6,7 +6,7 @@ angular.module('cath')
     templateUrl: 'scripts/components/articledisplay/articleDisplay.html',
     restrict: 'E',
     scope: {
-      size: '@',
+      newsId: '@',
     },
     controller: 'articleDisplayController',
   };

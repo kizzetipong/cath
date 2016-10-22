@@ -6,6 +6,10 @@
       width: 80%;
       height: 50%;
       border-radius: 5px;
+      @media screen and (max-width: @navMaxWidth) {
+        width: 100%;
+        border-radius: 0;
+      }
       opacity: 1;
       visibility: inherit;
       z-index: 20;
@@ -83,5 +87,11 @@
     .author-image {
       height: 100px;
     }
+  }
+  .error-box {
+    text-align: center;
+    padding: 20px;
+    font-size: 32px;
+    color: @red;
   }
 }

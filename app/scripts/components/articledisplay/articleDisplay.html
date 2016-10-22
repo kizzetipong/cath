@@ -1,33 +1,36 @@
 <div class="article-display">
-  <div class="container">
-    <div class="row">
-      <div class="header">
-        <h2>{{data.headlineText}}</h2>
-      </div>
-      <div class="image-large-container">
-        <img class="image-large" src="{{data.img}}"></img>
-      </div>
-      <div class="col-md-12 col-xs-12">
-        <div class="wrapper">
-          <h4>{{data.briefText}}</h4>
-          <p class="blank-space"></p>
-          <div ng-bind-html="detail"></div>
-          <p class="blank-space"></p>
+  <div ng-show="dataReady && !errorMsg" class="article-container">
+    <div class="container">
+      <div class="row">
+        <div class="header">
+          <h2>{{data.headlineText}}</h2>
         </div>
-      </div>
-    </div>
-  </div>
-  <section id="author">
-    <div class="author-container">
-      <div class="container">
-        <div class="row">
-          <div class="block"><img class="author-image" src="{{authorImage}}"></div>
-          <div class="block desc">
-            <h4>Mr. Lorem Ipsum</h4>
-            <p>Lerem Ipsum ลอเรม อิปซั่ม Lerem Ipsum ลอเรม อิปซั่ม Lerem Ipsum ลอเรม อิปซั่ม Lerem Ipsum ลอเรม อิปซั่ม</p>
+        <div class="image-large-container">
+          <img class="image-large" src="{{data.img}}"></img>
+        </div>
+        <div class="col-md-12 col-xs-12">
+          <div class="wrapper">
+            <h4>{{data.briefText}}</h4>
+            <p class="blank-space"></p>
+            <div ng-bind-html="detail"></div>
+            <p class="blank-space"></p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+    <section id="author">
+      <div class="author-container">
+        <div class="container">
+          <div class="row">
+            <div class="block"><img class="author-image" src="{{authorImage}}"></div>
+            <div class="block desc">
+              <h4>Mr. Lorem Ipsum</h4>
+              <p>Lerem Ipsum ลอเรม อิปซั่ม Lerem Ipsum ลอเรม อิปซั่ม Lerem Ipsum ลอเรม อิปซั่ม Lerem Ipsum ลอเรม อิปซั่ม</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div ng-show="errorMsg" class="error-box"">ไม่พบบทความนี้</div>
 </div>
