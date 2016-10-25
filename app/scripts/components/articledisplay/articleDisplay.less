@@ -15,6 +15,14 @@
       z-index: 20;
     }
   }
+  .social-container {
+    > div {
+      margin-bottom: 10px;
+      @media (max-width: @screen-sm-max) {
+        text-align: center;
+      }
+    }
+  }
   .header {
     h2 {
       font-size: 28px;
@@ -66,15 +74,25 @@
   .author-containerS {
     .displayFlex(inline-flex);
     padding: 10px 30px;
+
     img {
       cursor: pointer;
       height: 48px;
     }
     .name {
-      padding-right: 20px;
+      padding: 0 20px;
       font-size: 28px;
       font-weight: bold;
       color: @grey05;
+    }
+
+    @media (max-width: @screen-sm-max) {
+      .flex-direction(column-reverse);
+      img {
+        height: auto;
+        width: 72px;
+        margin: auto;
+      }
     }
   }
 
