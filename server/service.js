@@ -26,7 +26,7 @@ var postHandle = function (req, res) {
 };
 
 var getHandle =  function (req, res) {
-  
+
   if (req.params.serviceName !== null && req.params.serviceName !== '') {
     var Service = require('../node/' + req.params.serviceName + '.js');
     var serviceInstance = new Service();
@@ -48,13 +48,23 @@ var getHandle =  function (req, res) {
   }
 };
 
-var shareHandle = function (req, res) {
+var uploadHandle = function (req, res) {
   if (req.params.serviceName !== null && req.params.serviceName !== '') {
-    var Service = require('/Apps/shared-services/service/' + req.params.serviceName + '/' + req.params.method);
+    var Service = require('../node/' + req.params.serviceName + '.js');
     var serviceInstance = new Service();
-    serviceInstance.service(new context(req), req.query, function (err, response, option) {
+    serviceInstance.service(req, res, function (err, response, option) {
+      if (option && option.headers) {
+        if (option.headers['Content-Type'] !== null && option.headers['Content-Type'] !== undefined) {
+          res.setHeader('Content-Type', option.headers['Content-Type']);
+        }
+        if (option.headers['Content-Disposition'] !== null && option.headers['Content-Disposition'] !== undefined) {
+          res.setHeader('Content-Disposition', option.headers['Content-Disposition']);
+        }
+      }
       if (!err) {
         res.send(response);
+      } else {
+        res.status(403).send(err.message);
       }
     });
   }
@@ -62,4 +72,4 @@ var shareHandle = function (req, res) {
 
 module.exports.post = postHandle;
 module.exports.get = getHandle;
-module.exports.share = shareHandle;
+module.exports.upload = uploadHandle;

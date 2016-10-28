@@ -3,7 +3,11 @@
 angular.module('cath')
 .controller('registerBoxController', ['$scope', 'FileUploader', function ($scope, FileUploader) {
   $scope.uploader = new FileUploader({
-    url: 'node/uploadfile',
+    url: 'node/upload/uploadfile',
+    formData: [
+      { user: 'USER1' },
+      { info: 'moreinfo' },
+    ],
   });
 
   _.defer(function () {
