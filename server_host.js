@@ -5,7 +5,20 @@ var compression = require('compression');
 var express = require('express');
 var http = require('http');
 var methodOverride = require('method-override');
+var multer = require('multer');
 var serviceCtrl = require('./server/service.js');
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './uploads/');
+  },
+  filename: function (req, file, cb) {
+    var originalname = file.originalname;
+    var extension = originalname.split('.');
+    var filename = req.body.user + Date.now() + '.' + extension[extension.length - 1];
+    cb(null, filename);
+  }
+});
 
 var app = express();
 var server = http.createServer(app, { 'log level': 0, 'match origin protocol': 'yes' });
@@ -19,6 +32,7 @@ app.use(rootUrl + '/web', express.static(path));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride());
+app.use(require('prerender-node').set('prerenderToken', '2WCRutJAdOGa72kpzvFp'));
 
 app.set('port', 80);
 
@@ -35,6 +49,7 @@ app.get(rootUrl, function (req, res) {
 });
 
 // handle services
+app.post('/node/upload/:serviceName', multer({ storage: storage }).single('file'), serviceCtrl.upload);
 app.post('/node/:serviceName', serviceCtrl.post);
 app.get('/node/:serviceName', serviceCtrl.get);
 app.post(rootUrl + '/node/:serviceName', serviceCtrl.post);

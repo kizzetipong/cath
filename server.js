@@ -20,7 +20,6 @@ var storage = multer.diskStorage({
   }
 });
 
-
 var app = express();
 var server = http.createServer(app, { 'log level': 0, 'match origin protocol': 'yes' });
 var path = __dirname + '/app';
@@ -34,7 +33,7 @@ app.use(rootUrl + '/web', express.static(path));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride());
-
+app.use(require('prerender-node').set('prerenderServiceUrl', 'http://localhost:3000/').set('prerenderToken', '2WCRutJAdOGa72kpzvFp'));
 
 app.use('/reportss', express.static(__dirname + '/test/reports'));
 app.use('/reports', function (req, res) {

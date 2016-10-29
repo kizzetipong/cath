@@ -14,6 +14,7 @@
     <meta name='revisit-after' content='7 days' />
     <meta name='Distribution' content='Global' />
     <meta property="fb:pages" content="1199108503443090" />
+    <meta name="fragment" content="!">
     <!-- build:css(.tmp) web/assets/css/app.css -->
     <link rel="stylesheet" href="assets/css/app.css">
     <!-- endbuild -->
