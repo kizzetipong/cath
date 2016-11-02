@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <base href="/">
     <title>FongDi ฟ้องดิ ฟ้องได้</title>
-    <meta name="description" content="fongdi, ฟ้องดิ, ฟ้องได้, class action, รวมกลุ่มฟ้อง, ฟรี, กฎหมายน่ารู้" />
-    <meta name="keywords" content= "fongdi, ฟ้องดิ, ฟ้องได้, class action, รวมกลุ่มฟ้อง, กฎหมายน่ารู้, law" />
+    <meta name="description" content="fongdi, ฟ้องดิ, ฟ้องได้, class action, การดําเนินคดีแบบกลุ่ม, รวมกลุ่มฟ้อง, กฎหมายน่ารู้" />
+    <meta name="keywords" content= "fongdi, ฟ้องดิ, ฟ้องได้, class action, การดําเนินคดีแบบกลุ่ม, รวมกลุ่มฟ้อง, กฎหมายน่ารู้" />
     <meta name="COPYRIGHT" content='สงวนลิขสิทธิ์โดย FongDi' />
     <meta name="author" content="Fongdi" />
     <meta name="viewport" content="width=device-width">
@@ -40,6 +40,8 @@
 
     <!-- build:js({.tmp,app}) web/scripts/libs.js -->
     <script src="scripts/libs/jquery.mobile.custom.min.js"></script>
+    <script src="scripts/libs/redactor/redactor.min.js"></script>
+    <script src="scripts/libs/redactor/source.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) web/scripts/app.js -->
