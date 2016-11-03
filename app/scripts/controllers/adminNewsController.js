@@ -5,6 +5,12 @@ angular.module('cath')
   function ($rootScope, $scope, $routeParams, $sce, newscatalogService) {
   $scope.init = function () {
     $scope.dataReady = false;
+    $scope.content = '';
+    $scope.rOptions = {
+      fixed: true,
+      imageUpload: 'node/upload/admin/uploadfile',
+      blurCallback: $scope.test,
+    };
     $rootScope.mainBg = '';
     $scope.params = $routeParams;
     $scope.loadData();
@@ -27,7 +33,19 @@ angular.module('cath')
       $scope.errorMsg = 'NewsId is not available';
       $scope.$applyAsync();
     }
-  }
+  };
+
+  $scope.getContent = function () {
+    $scope.content = $('#editor-redactor').redactor().getCode();
+    console.log($scope.content);
+  };
+
+  $scope.saveContent = function () {
+    $scope.content = $('#editor-redactor').redactor().getCode();
+    alert($scope.content);
+    // TODO: save other fields
+    // TODO: save into db
+  };
 
   $scope.init();
   },
