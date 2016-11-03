@@ -8,7 +8,7 @@ var methodOverride = require('method-override');
 var multer = require('multer');
 var serviceCtrl = require('./server/service.js');
 
-var storage = multer.diskStorage({
+var storage_user = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './uploads/');
   },
@@ -16,6 +16,17 @@ var storage = multer.diskStorage({
     var originalname = file.originalname;
     var extension = originalname.split('.');
     var filename = req.body.user + Date.now() + '.' + extension[extension.length - 1];
+    cb(null, filename);
+  }
+});
+
+var storage_admin = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './uploads/admin/');
+  },
+  filename: function (req, file, cb) {
+    var originalname = file.originalname;
+    var filename = originalname;
     cb(null, filename);
   }
 });
@@ -49,7 +60,8 @@ app.get(rootUrl, function (req, res) {
 });
 
 // handle services
-app.post('/node/upload/:serviceName', multer({ storage: storage }).single('file'), serviceCtrl.upload);
+app.post('/node/upload/:serviceName', multer({ storage: storage_user }).single('file'), serviceCtrl.upload);
+app.post('/node/upload/admin/:serviceName', multer({ storage: storage_admin }).single('file'), serviceCtrl.upload);
 app.post('/node/:serviceName', serviceCtrl.post);
 app.get('/node/:serviceName', serviceCtrl.get);
 app.post(rootUrl + '/node/:serviceName', serviceCtrl.post);

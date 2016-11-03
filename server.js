@@ -8,14 +8,26 @@ var methodOverride = require('method-override');
 var multer = require('multer');
 var serviceCtrl = require('./server/service.js');
 
-var storage = multer.diskStorage({
+var storage_user = multer.diskStorage({
   destination: function (req, file, cb) {
+    console.log(file);
     cb(null, './uploads/');
   },
   filename: function (req, file, cb) {
     var originalname = file.originalname;
     var extension = originalname.split('.');
     var filename = req.body.user + Date.now() + '.' + extension[extension.length - 1];
+    cb(null, filename);
+  }
+});
+
+var storage_admin = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './uploads/admin/');
+  },
+  filename: function (req, file, cb) {
+    var originalname = file.originalname;
+    var filename = originalname;
     cb(null, filename);
   }
 });
@@ -27,6 +39,7 @@ var rootUrl = '';
 
 app.use(compression());
 app.use(rootUrl + '/bower_components', express.static('./bower_components'));
+app.use(rootUrl + '/uploads', express.static('./uploads'));
 app.use(rootUrl, express.static(path));
 app.use(rootUrl + '/web', express.static(path));
 
@@ -39,13 +52,6 @@ app.use('/reportss', express.static(__dirname + '/test/reports'));
 app.use('/reports', function (req, res) {
   res.status(404).end();
 });
-/*
-app.use('/service/cases', function (req, res, next) {
-  console.log('Request Type:', req.method);
-  res.status(200).end();
-});
-*/
-
 
 app.set('port', 9999);
 
@@ -67,7 +73,8 @@ app.get(rootUrl, function (req, res) {
 });
 
 // handle services
-app.post('/node/upload/:serviceName', multer({ storage: storage }).single('file'), serviceCtrl.upload);
+app.post('/node/upload/:serviceName', multer({ storage: storage_user }).single('file'), serviceCtrl.upload);
+app.post('/node/upload/admin/:serviceName', multer({ storage: storage_admin }).single('file'), serviceCtrl.upload);
 app.post('/node/:serviceName', serviceCtrl.post);
 app.get('/node/:serviceName', serviceCtrl.get);
 app.post(rootUrl + '/node/:serviceName', serviceCtrl.post);

@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <base href="/">
-    <title>FongDi ฟ้องดิ ฟ้องได้</title>
-    <meta name="description" content="fongdi, ฟ้องดิ, ฟ้องได้, class action, การดําเนินคดีแบบกลุ่ม, รวมกลุ่มฟ้อง, กฎหมายน่ารู้" />
+    <title>FongDi ฟ้องดิ ฟ้องได้ | www.fongdi.com | เราช่วยคุณดำเนินคดีแบบกลุ่ม</title>
+    <meta name="description" content="Fongdi | ฟ้องดิ ฟ้องได้ | การดําเนินคดีแบบกลุ่ม | Class Action | รวมกลุ่มฟ้อง | กฎหมายน่ารู้" />
     <meta name="keywords" content= "fongdi, ฟ้องดิ, ฟ้องได้, class action, การดําเนินคดีแบบกลุ่ม, รวมกลุ่มฟ้อง, กฎหมายน่ารู้" />
-    <meta name="COPYRIGHT" content='สงวนลิขสิทธิ์โดย FongDi' />
+    <meta name="COPYRIGHT" content="สงวนลิขสิทธิ์โดย FongDi ฟ้องดิ ฟ้องได้" />
     <meta name="author" content="Fongdi" />
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -15,6 +15,11 @@
     <meta name='Distribution' content='Global' />
     <meta property="fb:pages" content="1199108503443090" />
     <meta name="fragment" content="!">
+    <meta property="og:site_name" content="http://www.fongdi.com" />
+    <meta property="og:url" content="http://www.fongdi.com" />
+    <meta property="og:title" content="FongDi ฟ้องดิ ฟ้องได้ | www.fongdi.com | เราช่วยคุณดำเนินคดีแบบกลุ่ม" />
+    <meta property="og:description" content="Fongdi | ฟ้องดิ ฟ้องได้ | การดําเนินคดีแบบกลุ่ม | Class Action | รวมกลุ่มฟ้อง | กฎหมายน่ารู้" />
+    <meta itemprop="description" content="Fongdi | ฟ้องดิ ฟ้องได้ | การดําเนินคดีแบบกลุ่ม | Class Action | รวมกลุ่มฟ้อง | กฎหมายน่ารู้">
     <!-- build:css(.tmp) web/assets/css/app.css -->
     <link rel="stylesheet" href="assets/css/app.css">
     <!-- endbuild -->
@@ -40,8 +45,7 @@
 
     <!-- build:js({.tmp,app}) web/scripts/libs.js -->
     <script src="scripts/libs/jquery.mobile.custom.min.js"></script>
-    <script src="scripts/libs/redactor/redactor.min.js"></script>
-    <script src="scripts/libs/redactor/source.js"></script>
+    <script src="scripts/libs/redactor/redactor.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) web/scripts/app.js -->
@@ -53,6 +57,7 @@
     <script src="scripts/controllers/caseViewController.js"></script>
     <script src="scripts/controllers/newsCatalogController.js"></script>
     <script src="scripts/controllers/newsController.js"></script>
+    <script src="scripts/controllers/adminNewsController.js"></script>
     <script src="scripts/factory/firebaseFactory.js"></script>
     <script src="scripts/factory/dataFactory.js"></script>
     <script src="scripts/services/myService.js"></script>

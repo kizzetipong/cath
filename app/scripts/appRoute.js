@@ -7,7 +7,6 @@ angular.module('cath')
     controller: 'MainController',
     templateUrl: 'views/mainView.html',
   })
-  // TODO: implement routes
   .when('/news/catalog/:catalog?/', {
     controller: 'NewsCatalogController',
     templateUrl: 'views/newsCatalogView.html',
@@ -54,6 +53,15 @@ angular.module('cath')
   })
   .when('/comps', {
     templateUrl: 'views/compsDisplay.html',
+  })
+  // TODO: Routes for Admin
+  .when('/admin/news/:articleId?/', {
+    controller: 'AdminNewsController',
+    templateUrl: 'views/adminNewsView.html',
+  })
+  .when('/admin/news/catalog/:catalog?/', {
+    controller: 'NewsCatalogController',
+    templateUrl: 'views/newsCatalogView.html',
   })
   .otherwise({
     redirectTo: '/',
