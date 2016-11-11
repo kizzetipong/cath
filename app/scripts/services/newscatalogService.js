@@ -12,7 +12,7 @@ angular.module('cath')
         $.ajax({
           method: 'POST',
           url: '/node/news_list',
-          data: {type: type},
+          data: { type: type },
           success: $.proxy(function (ret) {
             deferred.resolve(ret);
           }, this),
@@ -30,7 +30,7 @@ angular.module('cath')
         $.ajax({
           method: 'POST',
           url: '/node/news',
-          data: {id: id},
+          data: { id: id },
           success: $.proxy(function (ret) {
             deferred.resolve(ret);
           }, this),

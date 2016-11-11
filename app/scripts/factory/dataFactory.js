@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cath').factory('dataFactory', ['$q',
-  function($q) {
+  function ($q) {
     var dataModel = {
       user: {},
     };
@@ -13,7 +13,7 @@ angular.module('cath').factory('dataFactory', ['$q',
     dataModel.getUser = function () {
       return _.get('user');
     };
-    
+
     return dataModel;
-  }
+  },
 ]);

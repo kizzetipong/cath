@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cath').factory('firebaseFactory', ['$q',
-  function($q) {
+  function ($q) {
     var firebaseModel = {
     };
     firebaseModel.messageList = document.getElementById('messages');
@@ -57,7 +57,7 @@ angular.module('cath').factory('firebaseFactory', ['$q',
 
         console.log(userName + 'is signed in');
 
-        //TODO: gather data from signin and process next
+        // TODO: gather data from signin and process next
 
         /*
         // Set the user's profile pic and name.
@@ -96,12 +96,12 @@ angular.module('cath').factory('firebaseFactory', ['$q',
       // Display a message to the user using a Toast.
       var data = {
         message: 'You must sign-in first',
-        timeout: 2000
+        timeout: 2000,
       };
       firebaseModel.signInSnackbar.MaterialSnackbar.showSnackbar(data);
       return false;
     };
-    
+
     return firebaseModel;
-  }
+  },
 ]);

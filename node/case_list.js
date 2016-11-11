@@ -1,6 +1,6 @@
 'use strict';
 
-var _ = require('lodash');
+var mysql = require('mysql');
 
 function CaseListService() {
 }
@@ -9,19 +9,16 @@ CaseListService.prototype.init = function () {
 };
 
 CaseListService.prototype.service = function (context, payload, serviceCallback) {
-
+  var retAry = [];
+  var connection;
   if (!payload || !payload.type) {
     serviceCallback('ERROR Msg', null);
-  }
-  else {
-
-    var retAry = [];
-    var mysql      = require('mysql');
-    var connection = mysql.createConnection({
-      host     : 'localhost',
-      user     : 'root',
-      password : 'tmtrobot',
-      database : 'class_action'
+  } else {
+    connection = mysql.createConnection({
+      host: 'localhost',
+      user: 'root',
+      password: 'tmtrobot',
+      database: 'class_action',
     });
 
 /*
@@ -34,36 +31,33 @@ CaseListService.prototype.service = function (context, payload, serviceCallback)
 */
 
     var QMAP = {
-        submitted : [0, 200],
-        investigations : [200, 400],
-        settlements : [400, 1000],
+      submitted: [0, 200],
+      investigations: [200, 400],
+      settlements: [400, 1000],
     };
     var sql = 'SELECT * from cases';
 
     if (payload.type in QMAP) {
-        sql += ' where status>='+QMAP[payload.type][0]+' and status<'+QMAP[payload.type][1];
+      sql += ' where status>=' + QMAP[payload.type][0] + ' and status<' + QMAP[payload.type][1];
     }
 
     console.log(sql);
 
-
-
     connection.connect();
-    connection.query(sql, function(err, rows, fields) {
+    connection.query(sql, function (err, rows, fields) {
       if (!err) {
-        rows.forEach(function(r){
-
-            retAry.push(
-                {
-                  id: r.id,
-                  status: r.status,
-                  type: payload.type,
-                  headlineText: r.headline,
-                  briefText: r.brief_text,
-                  detail: r.detail,
-                  date: r.expired_at,
-                  img: r.head_img,
-                }
+        rows.forEach(function (r) {
+          retAry.push(
+            {
+              id: r.id,
+              status: r.status,
+              type: payload.type,
+              headlineText: r.headline,
+              briefText: r.brief_text,
+              detail: r.detail,
+              date: r.expired_at,
+              img: r.head_img,
+            }
             );
         });
         serviceCallback(null, retAry);
