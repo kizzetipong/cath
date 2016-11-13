@@ -17,8 +17,10 @@ NewsListService.prototype.service = function (context, payload, serviceCallback)
     connection = mysql.createConnection({
       host: 'localhost',
       port: 3306,
-      user: 'root',
-      password: 'tmtrobot',
+      // user: 'root',
+      // password: 'tmtrobot',
+      user: 'classaction',
+      password: 'pwd123',
       database: 'class_action',
     });
 

@@ -42,9 +42,12 @@ angular.module('cath')
 
   $scope.saveContent = function () {
     $scope.content = $('#editor-redactor').redactor().getCode();
-    alert($scope.content);
+    $scope.detail = $scope.content;
+    $scope.data.detail = $scope.detail;
+    newscatalogService.saveData($scope.data).then(function (ret) {
+      console.log(ret);
+    });
     // TODO: save other fields
-    // TODO: save into db
   };
 
   $scope.init();
