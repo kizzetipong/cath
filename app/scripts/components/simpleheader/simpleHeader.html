@@ -1,4 +1,4 @@
-<header ng-class="{'bg-red' : bgRed}">
+<header ng-class="{'bg-red' : bgRed}" ng-hide="hideMenu">
   <div class="cd-logo">
     <a class="logo" href="#">
       <span class="icon-container"><img alt="Brand" ng-src="../assets/images/logo_{{theme}}.png" alt="FongDi ฟ้องได้"></span>
@@ -19,7 +19,7 @@
   <a href="#0" class="cd-nav-trigger" ng-class="{'bg-red' : bgRed}" ng-click="expandSearch = false;"><span></span></a>
 </header>
 
-<div class="simple-header" ng-class="{'bg-red' : bgRed}">
+<div class="simple-header" ng-class="{'bg-red' : bgRed}" ng-hide="hideMenu">
   <div class="top-section">
   <a class="logo" href="#">
     <span class="icon-container"><img alt="Brand" ng-src="../assets/images/logo_{{theme}}.png" alt="FongDi ฟ้องได้"></span>
