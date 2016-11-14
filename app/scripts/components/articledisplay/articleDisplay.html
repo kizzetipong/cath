@@ -1,8 +1,9 @@
-<update-meta property="Title" content="{{data.headlineText}}"></update-meta>
+<update-meta name="Title" content="{{data.headlineText}}"></update-meta>
 <update-meta property="og:title" content="{{data.headlineText}}"></update-meta>
-<update-meta property="description" content="{{data.briefText}}"></update-meta>
+<update-meta name="description" content="{{data.briefText}}"></update-meta>
 <update-meta property="og:description" content="{{data.briefText}}"></update-meta>
-<update-meta property="keywords" content="fongdi, ฟ้องดิ, ฟ้องได้, กฎหมายน่ารู้, คดีผู้บริโภค, บทความ"></update-meta>
+<update-meta itemprop="description" content="{{data.briefText}}"></update-meta>
+<update-meta name="keywords" content="fongdi, ฟ้องดิ, ฟ้องได้, กฎหมายน่ารู้, คดีผู้บริโภค, บทความ"></update-meta>
 <div class="article-display">
   <div ng-show="dataReady && !errorMsg" class="article-container">
     <div class="container">
