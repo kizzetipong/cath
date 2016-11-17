@@ -24,28 +24,8 @@ NewsListService.prototype.service = function (context, payload, serviceCallback)
       database: 'class_action',
     });
 
-/*
-    status:
-        0   : submitted
-        100 : verifying
-        200 : opened
-        300 : in_process
-        400 : closed
-*/
 
-    var QMAP = {
-      submitted: [0, 200],
-      investigations: [200, 400],
-      settlements: [400, 1000],
-    };
     var sql = 'SELECT * from news';
-
-    if (payload.type in QMAP) {
-      sql += ' where status>=' + QMAP[payload.type][0] + ' and status<' + QMAP[payload.type][1];
-    }
-
-    console.log(sql);
-    console.log(connection);
 
     connection.connect();
     connection.query(sql, function (err, rows, fields) {
@@ -59,7 +39,6 @@ NewsListService.prototype.service = function (context, payload, serviceCallback)
           retAry.push(
             {
               id: r.id,
-              status: r.status,
               type: payload.type,
               headlineText: r.headline,
               briefText: brief_text,

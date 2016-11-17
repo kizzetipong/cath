@@ -33,7 +33,7 @@ NewsService.prototype.service = function (context, payload, serviceCallback) {
             retAry.push(
               {
                 id: r.id,
-                stage: 'investigations',
+                type: r.type,
                 headlineText: r.headline,
                 detail: r.detail,
                 date: r.expired_at,
