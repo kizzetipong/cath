@@ -80,6 +80,8 @@
     <script src="scripts/components/casesdisplay/casesDisplayController.js"></script>
     <script src="scripts/components/introslider/introSlider.js"></script>
     <script src="scripts/components/introslider/introSliderController.js"></script>
+    <script src="scripts/components/loginmodal/loginModal.js"></script>
+    <script src="scripts/components/loginmodal/loginModalController.js"></script>
     <script src="scripts/components/registerbox/registerBox.js"></script>
     <script src="scripts/components/registerbox/registerBoxController.js"></script>
     <script src="scripts/components/simpleheader/simpleHeader.js"></script>
