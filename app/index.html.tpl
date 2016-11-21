@@ -38,6 +38,7 @@
         </div>
       </section>
     </simple-header>
+    <login-modal></login-modal>
 
     <!-- build:js({.,app}) web/scripts/vendor.js -->
     <!-- bower:js -->
