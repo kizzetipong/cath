@@ -18,6 +18,8 @@
     <meta name="fragment" content="!">
     <meta property="og:site_name" content="http://www.fongdi.com" />
     <meta property="og:url" content="http://www.fongdi.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://www.fongdi.com/assets/images/sys/head-wrap.png" />
     <meta property="og:title" content="FongDi ฟ้องดิ ฟ้องได้ | fongdi.com | เราช่วยคุณดำเนินคดีแบบกลุ่ม" />
     <meta property="og:description" content="FongDi ฟ้องได้ รวมฟ้องกลุ่มง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค" />
     <meta itemprop="description" content="FongDi ฟ้องได้ รวมฟ้องกลุ่มง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค">
