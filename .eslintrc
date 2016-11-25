@@ -14,3 +14,4 @@ globals:
   angular: false
   JET: false
   firebase: false
+  FB: false

@@ -5,4 +5,7 @@ angular.module('cath')
   'AppConfig', {
     DB_URL: '/',
   }
-);
+)
+.config(function (facebookProvider) {
+  facebookProvider.setAppID('687329278084857');
+});
