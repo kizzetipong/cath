@@ -36,8 +36,8 @@ angular.module('cath').provider('facebook', function () {
     fbInit(appID);
 
     return {
-      graph: function (path, cb) {
-        FB.api(path, function (response) {
+      graph: function (path, cb, paramObj, method) {
+        FB.api(path, method || 'get', paramObj, function (response) {
           cb(response);
         });
       },
@@ -56,20 +56,26 @@ angular.module('cath').provider('facebook', function () {
           cb(response);
         });
       },
-      login: function (cb) {
+      login: function (cb, scope) {
         if (!fbReady) {
           self.$get().login(cb);
           console.log('fb not ready');
           return;
         }
         FB.login(function (response) {
-          if (response.authResponse) {
-            self.auth = response.authResponse;
-            cb(self.auth);
+          if (response.status === 'connected') {
+            if (response.authResponse) {
+              self.auth = response.authResponse;
+              cb(self.auth);
+            } else {
+              console.log('connected: Facebook login failed', response);
+            }
+          } else if (response.status === 'not_authorized') {
+            console.log('not_authorized: Facebook login failed', response);
           } else {
             console.log('Facebook login failed', response);
           }
-        }, { scope: 'manage_notifications' });
+        }, scope);
       },
       logout: function () {
         FB.logout(function (response) {
