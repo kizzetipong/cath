@@ -2,13 +2,12 @@
   <div class="row clearfix">
     <div ng-repeat="(key, value) in list" class="list col-lg-4 col-md-6 col-sm-6 col-xs-12">
       <div class="content-container">
-        <a href="/news/{{value.id}}">
-          <div style="padding-left:20px;"><img class="image-block" ng-src="{{value.img}}"></div>
-          <div class="clear padding-top10"></div>
-          <h4 class="headline-text">{{value.headlineText}}</h4>
-        </a>
-        <div class="font-normal-gray">
-          <p>{{value.briefText}}</p>
+        <div class="image-ctn">
+          <a style="padding-left:20px;" href="/news/{{value.id}}"><img class="image-block" ng-src="{{value.img}}"></a>
+        </div>
+        <div class="text-ctn">
+          <div class="headline-text"><a href="/news/{{value.id}}">{{value.headlineText}}</a></div>
+          <div class="brief-text">{{value.briefText}}</div>
         </div>
       </div>
       <!-- <div class="timestamp">{{value.date}}</div> -->

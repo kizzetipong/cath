@@ -1,7 +1,7 @@
 .catalog-floatlist {
   .list {
     float: left;
-    min-height: 370px;
+    min-height: 380px;
 
     -webkit-animation-name: scaleIn;
     -webkit-animation-iteration-count: 1;
@@ -16,6 +16,30 @@
     .timestamp {
       margin-top: -5px;
       font-size: 7px;
+    }
+
+    .image-ctn {
+      padding-bottom: 20px;
+      @media (max-width: @screen-sm-min) {
+        text-align: center;
+      }
+    }
+
+    .text-ctn {
+      .headline-text {
+        font-size: 22px;
+        @media (max-width: @screen-sm-min) {
+          text-align: center;
+        }
+      }
+
+      .brief-text {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
     }
 
     img.image-block {

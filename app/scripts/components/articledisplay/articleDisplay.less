@@ -31,8 +31,11 @@
     margin-top: 20px;
     > div {
       margin-bottom: 10px;
+      &.author {
+        text-align: right;
+      }
       @media (max-width: @screen-sm-max) {
-        text-align: center;
+        text-align: center!important;
       }
     }
   }
@@ -80,6 +83,7 @@
     img {
       cursor: pointer;
       height: 48px;
+      border-radius: 50%;
     }
     .name {
       padding: 0 20px;
@@ -163,6 +167,7 @@
     }
     .author-image {
       height: 100px;
+      border-radius: 50%;
     }
   }
   .error-box {

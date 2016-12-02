@@ -15,7 +15,7 @@
             <img class="image-large" src="{{data.img}}"></img>
           </div>
         </div>
-        <div class="row social-container">
+        <div class="social-container">
           <div class="col-md-8 col-sm-12">
             <div class="icons-social">
               <div class="icon">
@@ -38,10 +38,10 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-12">
+          <div class="col-md-4 col-sm-12 author">
             <div class="author-containerS">
-              <div class="name">Lorem Ipsum</div>
-              <img class="author-imageS" src="{{authorImageS}}">
+              <div class="name">{{author.penname}}</div>
+              <img class="author-imageS" src="{{author.authorImageS}}">
             </div>
           </div>
         </div>
@@ -59,10 +59,10 @@
       <div class="author-container">
         <div class="container">
           <div class="row">
-            <div class="block"><img class="author-image" src="{{authorImage}}"></div>
+            <div class="block"><img class="author-image" src="{{author.authorImage}}"></div>
             <div class="block desc">
-              <h4>Mr. Lorem Ipsum</h4>
-              <p>Lerem Ipsum ลอเรม อิปซั่ม Lerem Ipsum ลอเรม อิปซั่ม Lerem Ipsum ลอเรม อิปซั่ม Lerem Ipsum ลอเรม อิปซั่ม</p>
+              <h4>{{author.penname}}</h4>
+              <p>{{author.shortBio}}</p>
             </div>
           </div>
         </div>

@@ -9,16 +9,21 @@ angular.module('cath')
     newscatalogService.fetchData($scope.newsId).then(function (ret) {
       if (ret && ret.length > 0) {
         $scope.data = ret[0];
-        $scope.detail = $sce.trustAsHtml(ret[0].detail);
+        $scope.detail = $sce.trustAsHtml($scope.data.detail);
         $scope.dataReady = true;
         $scope.thisURL = window.location.href;
 
-        //TODO: newsId should keep author id and service should also retrieve author data
-        //TODO: This is Mockdata
-        $scope.authorImageS = '/assets/images/sys/writer_small.png';
-        $scope.authorImage = '/assets/images/sys/writer-large.png';
-      }
-      else {
+        // TODO: newsId should keep author id and service should also retrieve author data
+        // TODO: This is Mockdata
+        if ($scope.data.author_id) {
+          $scope.author = {
+            penname: 'บัดดี้',
+            shortBio: 'ผู้เฝ้าระวัง แห่งเวปฟ้องได้',
+            authorImageS: '/assets/images/sys/authors/buddy_s.png',
+            authorImage: '/assets/images/sys/authors/buddy.png',
+          };
+        }
+      } else {
         $scope.errorMsg = 'Cannot retrieve data from NewsId ' + $scope.NewsId;
       }
       $scope.$applyAsync();

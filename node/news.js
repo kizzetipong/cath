@@ -39,8 +39,10 @@ NewsService.prototype.service = function (context, payload, serviceCallback) {
                 date: r.expired_at,
                 img: r.head_img,
                 briefText: r.brief_text,
+                content_img: r.content_img,
+                author_id: r.author_id,
               }
-              );
+            );
           });
           serviceCallback(null, retAry);
         } else {
@@ -52,11 +54,11 @@ NewsService.prototype.service = function (context, payload, serviceCallback) {
         [payload.headlineText, payload.img, payload.briefText, payload.detail, payload.id], function (err, result) {
           if (err) {
             serviceCallback(err, null);
-          }
-          else {
+          } else {
             serviceCallback(null, { status: 200, message: 'changed ' + result.changedRows + ' rows' });
           }
-      });
+        }
+      );
     }
 
     connection.end();
