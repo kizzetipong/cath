@@ -12,7 +12,7 @@
         <div class="header">
           <h2>{{data.headlineText}}</h2>
           <div class="image-large-container">
-            <img class="image-large" src="{{data.img}}"></img>
+            <img class="image-large" src="{{data.img}}" alt="{{data.headlineText}}"></img>
           </div>
         </div>
         <div class="social-container">
@@ -20,19 +20,19 @@
             <div class="icons-social">
               <div class="icon">
                 <div class="icon-wrap">
-                  <img src="/assets/images/sys/social_fb.png">
+                  <img src="/assets/images/sys/social_fb.png" alt="Fongdi on Facebook">
                   <div class="amount fb">22</div>
                 </div>
               </div>
               <div class="icon">
                 <div class="icon-wrap">
-                  <img src="/assets/images/sys/social_twitter.png">
+                  <img src="/assets/images/sys/social_twitter.png" alt="Fongdi on Twitter">
                   <div class="amount tw">22</div>
                 </div>
               </div>
               <div class="icon">
                 <div class="icon-wrap">
-                  <img src="/assets/images/sys/social_gplus.png">
+                  <img src="/assets/images/sys/social_gplus.png" alt="Fongdi on Google+">
                   <div class="amount gp">22</div>
                 </div>
               </div>
@@ -41,7 +41,7 @@
           <div class="col-md-4 col-sm-12 author">
             <div class="author-containerS">
               <div class="name">{{author.penname}}</div>
-              <img class="author-imageS" src="{{author.authorImageS}}">
+              <img class="author-imageS" src="{{author.authorImageS}}" alt="{{author.shortBio}}">
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@
       <div class="author-container">
         <div class="container">
           <div class="row">
-            <div class="block"><img class="author-image" src="{{author.authorImage}}"></div>
+            <div class="block"><img class="author-image" src="{{author.authorImage}}" alt="{{author.shortBio}}"></div>
             <div class="block desc">
               <h4>{{author.penname}}</h4>
               <p>{{author.shortBio}}</p>
