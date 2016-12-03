@@ -44,11 +44,22 @@
       }
     }
 
+    @media (max-width: 400px) {
+      min-height: auto;
+      margin-bottom: 30px;
+    }
+
     img.image-block {
       width: 320px;
       height: 240px;
       margin: auto;
       border-radius: 5%;
+
+      @media (max-width: 400px) {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+      }
 
       .transition(all 1s ease);
       &:hover {

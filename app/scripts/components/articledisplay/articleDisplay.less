@@ -113,12 +113,14 @@
 
   .icons-social {
     .displayFlex(inline-flex);
-    padding: 10px 30px;
+    padding: 10px 0px;
     .icon {
       .flex;
+      + div {
+        padding-left: 20px;
+      }
       .icon-wrap {
         .displayFlex(inline-flex);
-        padding-right: 20px;
         > * {
           padding-right: 20px;
         }
