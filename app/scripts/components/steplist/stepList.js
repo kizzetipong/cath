@@ -7,6 +7,5 @@ angular.module('cath')
     restrict: 'E',
     scope: {
     },
-    controller: 'stepListController',
   };
 });

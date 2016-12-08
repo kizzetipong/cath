@@ -1,51 +1,79 @@
 .step-list {
-  .canvas-red {
-    background: @red;
-    border-radius: 5px;
+  background-color: @lightred01;
+  display: flex;
+  .flex-flow(row, wrap);
+  .align-items(center);
+  min-height: @imgMinHeight;
+  .arrow-l {
+    -ms-transform: rotate(35deg); /* IE 9 */
+    -webkit-transform: rotate(35deg); /* Chrome, Safari, Opera */
+    transform: rotate(35deg);
+  }
+  .arrow-r {
+    -ms-transform: rotate(325deg); /* IE 9 */
+    -webkit-transform: rotate(325deg); /* Chrome, Safari, Opera */
+    transform: rotate(325deg);
+  }
+  .steps {
+    text-align: center;
+    margin: auto 1%;
+    img.step {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      opacity: 1;
+      z-index: 20;
+      &.or {
+        display: inline-block;
+        width: 38%;
+        margin: auto 5%;
+      }
+    }
 
-    @media (max-width: @screen-xs-max) {
-      background: inherit;
+    .or-wrapper {
+      display: block;
+      margin: 0 auto;
     }
-  }
-  .row div {
-    padding: 0 20px;
-    color:#000;
-    min-height: 100px
-  }
-  .about-box {
-    margin: 20px 0;
-    color:#999999;
-    padding:0;
-  }
-  .col-xs-0 {
-    @media (max-width: @screen-xs-max) {
-      display: none!important;
+
+    @media screen and (min-width: 700px) and (max-width: 900px) {
+      margin: auto 5%;
+      img.step {
+        width: 70%;
+        &.or {
+          width: 35%;
+          margin: auto 7%;
+        }
+      }
     }
-  }
-  .icon-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .num {
-    display: inline-block;
-    span {
-      display:block;
-      width:30px;
-      height:30px;
-      border-radius:50%;
-      border:2px solid @red;
-      font-family: 'Sanomat Sans Web';
-      font-weight: 500;
-      font-style: normal;
-      font-stretch: normal;
-      font-size:1em;
-      color:@red;
-      text-align:center;
-      line-height:29px;
+    @media screen and (min-width: 900px) and (max-width: 1000px) {
+      margin: auto 10%;
+      img.step {
+        width: 60%;
+        &.or {
+          width: 30%;
+          margin: auto 9%;
+        }
+      }
     }
-    :hover {
-      cursor:pointer;
+    @media screen and (min-width: 1000px) and (max-width: 1300px) {
+      margin: auto 15%;
+      img.step {
+        width: 50%;
+        &.or {
+          width: 25%;
+          margin: auto 10%;
+        }
+      }
+    }
+    @media screen and (min-width: 1300px) {
+      margin: auto 15%;
+      img.step {
+        width: 40%;
+        &.or {
+          width: 20%;
+          margin: auto 12%;
+        }
+      }
     }
   }
 }
