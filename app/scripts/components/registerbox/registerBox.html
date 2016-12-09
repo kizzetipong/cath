@@ -28,26 +28,50 @@
           </div>
         </div>
         <div class="col-sm-12">
+          <div class="form-group required half">
+            <label for="text">อยากฟ้องใคร บอกหน่อย <span class="icon-popover"><i class="fa fa-info-circle" aria-hidden="true" data-toggle="popover" title="อยากฟ้องใคร บอกหน่อย" data-placement="top" data-trigger="hover" data-content=" บอกชื่อ บริษัท องค์กรหรือหน่วยงานที่ต้องการร้องเรียนให้เราทราบด้วย"></i></span></label>
+            <input type="accused" ng-model="accused" id="accused" placeholder=" ชื่อที่ต้องการร้องเรียน">
+            <div class="error-notice"></div>
+          </div>
+          <div class="form-group required half">
+            <label for="text">ค่าเสียหายที่อยากได้</label>
+            <input type="damages" ng-model="damages" id="damages" placeholder=" เช่น 200000">
+            <div class="error-notice"></div>
+          </div>
+        </div>
+        <div class="col-sm-12">
           <div class="form-group required full">
-            <label for="text">อยากฟ้องอะไร เล่าได้ <span class="icon-popover"><i class="fa fa-info-circle" aria-hidden="true" data-toggle="popover" title="เขียนฟ้องยังไง?" data-placement="top" data-trigger="hover" data-content="เขียนฟ้องยังไง? เขียนฟ้องยังไง? เขียนฟ้องยังไง? เขียนฟ้องยังไง? เขียนฟ้องยังไง? เขียนฟ้องยังไง?"></i></span></label>
+            <label for="text">อยากฟ้องอะไร เล่าได้ <span class="icon-popover"><i class="fa fa-info-circle" aria-hidden="true" data-toggle="popover" title="อยากฟ้องอะไร เล่าได้" data-placement="top" data-trigger="hover" data-content=" เล่ารายละเอียดเกี่ยวกับความเดือดร้อน หรือความเสียหายที่ได้รับจากการซื้อสินค้า หรือใช้บริการ พร้อมระบุวันเวลาที่เกิดเหตุมาด้วยนะครับ เช่น ผมไปซื้อรถยนต์ยี่ห้อxxx มูลค่า 1,000,000 บาท เมื่อวันที่ 1 มี.ค. 2559 จาก yyy มาแล้ว ปรากฎว่าขับไปได้เพียง 3 เดือน แอร์พังโดยไม่ทราบสาเหตุ และทางบริษัทก็ปฏิเสธไม่รับผิดชอบใด ๆเลย"></i></span></label>
             <textarea type="textarea" ng-attr-rows="{{textRows || '2'}}" ng-focus="textRows=5;" ng-change="showCatalog= !!info;" ng-model="info" placeholder=" เล่าเรื่องราวของคุณให้เราฟัง"></textarea>
             <div class="error-notice"></div>
           </div>
         </div>
         <div class="col-sm-12" ng-show="showCatalog">
-          <label for="checkboxes">ประเภทของปัญหา</label>
-          <div id="checkboxes" class="checkboxes">
-            <label class="checkbox-inline">
-              <input type="checkbox" ng-model="check_residences" > ที่อยู่อาศัย
+          <label for="radios">ประเภทของปัญหา</label>
+          <div id="radios" class="radios">
+            <label class="radio-inline">
+              <input type="radio" ng-model="catalog" value="residences" > บ้าน คอนโด
             </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" ng-model="check_cars"> รถยนต์
+            <label class="radio-inline">
+              <input type="radio" ng-model="catalog" value="creditcard" > บัตรเครดิต
             </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" ng-model="check_banks"> ธนาคาร
+            <label class="radio-inline">
+              <input type="radio" ng-model="catalog" value="loans" > เงินกู้
             </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" ng-model="check_insurance"> ประกัน
+            <label class="radio-inline">
+              <input type="radio" ng-model="catalog" value="insurance" > ประกัน
+            </label>
+            <label class="radio-inline">
+              <input type="radio" ng-model="catalog" value="beautyclinic"> สถานเสริมความงาม
+            </label>
+            <label class="radio-inline">
+              <input type="radio" ng-model="catalog" value="cosmetics"> เครื่องสำอางค์
+            </label>
+            <label class="radio-inline">
+              <input type="radio" ng-model="catalog" value="drugs"> ยาต่าง ๆ
+            </label>
+            <label class="radio-inline">
+              <input type="radio" ng-model="catalog" value="others"> อื่น ๆ
             </label>
           </div>
         </div>
@@ -100,7 +124,7 @@
       </div>
       <div class="col-sm-12">
         <div class="submit-button" ng-click="doSomething()"><button type="button" class="btn btn-primary">ส่งฟ้อง</button></div>
-         <p style="text-align: center;">Privacy policy <span class="icon-popover"><i class="fa fa-info-circle" data-toggle="popover" title="Privacy policy" data-placement="top" data-trigger="hover" data-content="Privacy policy Privacy policy Privacy policy Privacy policy Privacy policy Privacy policy"></i></span></p>
+         <p style="text-align: center; margin-top: 10px;">นโยบายคุ้มครองข้อมูลส่วนบุคคล <span class="icon-popover"><i class="fa fa-info-circle" data-toggle="popover" title="นโยบายคุ้มครองข้อมูลส่วนบุคคล" data-placement="top" data-trigger="hover" data-content="“ฟ้องได้” จะเก็บรักษาข้อมูลส่วนบุคคลของท่านไว้เป็นความลับ เว้นแต่เป็นการเปิดเผยในส่วนของรายละเอียดที่เกี่ยวกับการฟ้องร้องคดี ที่ทางฟ้องได้จะต้องขอรับคำปรึกษาจากนักกฎหมายหรือทนายความที่ได้เกี่ยวข้องและมีการทำสัญญารักษาความลับกับ “ฟ้องได้” แล้วเท่านั้น"></i></span></p>
       </div>
     </div>
   </div>
