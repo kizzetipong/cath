@@ -10,7 +10,6 @@ var serviceCtrl = require('./server/service.js');
 
 var storageUser = multer.diskStorage({
   destination: function (req, file, cb) {
-    console.log(file);
     cb(null, './uploads/');
   },
   filename: function (req, file, cb) {
