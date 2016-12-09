@@ -16,6 +16,27 @@ angular.module('cath')
         headers: headers,
       };
     },
+    onWhenAddingFileFailed: function (item, filter) {
+      console.log('Fail to add file');
+      if (filter.name === 'enforceMaxFileSize') {
+        console.log(item.name, ' have exceed max size');
+      }
+      if (filter.name === 'fileTypeException') {
+        console.log(item.name, ' is not image file');
+      }
+    },
+  });
+  $scope.uploader.filters.push({
+    name: 'enforceMaxFileSize',
+    fn: function (item) {
+      return item.size <= 1048576; // 1 MB
+    },
+  });
+  $scope.uploader.filters.push({
+    name: 'fileTypeException',
+    fn: function (item) {
+      return /\.(png|jpeg|jpg|gif)$/i.test(item.name);
+    },
   });
 
   $scope.submitComplaint = function () {
