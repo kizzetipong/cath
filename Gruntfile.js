@@ -245,18 +245,18 @@ module.exports = function (grunt) {
             cwd: './bower_components/bootstrap/less',
             dest: '<%= yeoman.app %>/assets/less/bootstrap',
             src: [
-              '**'
-            ]
+              '**',
+            ],
           },
           {
             expand: true,
             cwd: './bower_components/bootstrap/fonts',
             dest: '<%= yeoman.app %>/assets/fonts',
             src: [
-              '**'
-            ]
-          }
-        ]
+              '**',
+            ],
+          },
+        ],
       },
       styles: {
         files: [{
@@ -323,6 +323,14 @@ module.exports = function (grunt) {
         singleRun: false,
       },
     },
+
+    mkdir: {
+      dist: {
+        options: {
+          create: ['dist/uploads', 'dist/uploads/admin'],
+        },
+      },
+    },
   });
 
   grunt.registerTask('prepare', [
@@ -375,6 +383,7 @@ module.exports = function (grunt) {
     'imagemin',
     'usemin',
     'htmlmin',
+    'mkdir:dist',
   ]);
 
   grunt.registerTask('deploy', [
