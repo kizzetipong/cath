@@ -25,7 +25,7 @@ NewsListService.prototype.service = function (context, payload, serviceCallback)
     });
 
 
-    var sql = 'SELECT * from news';
+    var sql = 'SELECT * from news where status=1';
 
     connection.connect();
     connection.query(sql, function (err, rows, fields) {
