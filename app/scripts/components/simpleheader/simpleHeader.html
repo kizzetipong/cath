@@ -1,6 +1,6 @@
 <header ng-class="{'bg-red' : bgRed}" ng-hide="hideMenu">
   <div class="cd-logo">
-    <a class="logo" href="#">
+    <a class="logo" href="/">
       <span class="icon-container"><img alt="ฟ้องได้" ng-src="../assets/images/logo_{{theme}}.png" alt="FongDi ฟ้องได้"></span>
     </a>
   </div>
@@ -9,7 +9,7 @@
   </div>
   <nav class="cd-main-nav-wrapper">
     <ul class="cd-main-nav" ng-class="{'bg-red' : bgRed}">
-      <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
+      <!-- <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li> -->
       <li><a href="/">หน้าแรก</a></li>
       <li><a href="/cases/s/all">ร่วมฟ้อง</a></li>
       <li><a href="/news/catalog/all">กฎหมายน่ารู้</a></li>
@@ -22,7 +22,7 @@
 
 <div class="simple-header" ng-class="{'bg-red' : bgRed}" ng-hide="hideMenu">
   <div class="top-section">
-    <a class="logo" href="#">
+    <a class="logo" href="/">
       <span class="icon-container"><img alt="ฟ้องได้" ng-src="../assets/images/logo_{{theme}}.png" alt="FongDi ฟ้องได้"></span>
     </a>
     <div class="search-container clearfix">
@@ -41,9 +41,9 @@
       <div class="col-sm-1 col-md-2 col-lg-3"></div>
     </div>
   </div>
-  <div class="loginBtn-container">
+  <!-- <div class="loginBtn-container">
     <button type="button" class="btn btn-primary btn-sharp" id="loginBtn" data-toggle="modal" data-target="#login-modal" title="เข้าสู่ระบบ">Login</button>
-  </div>
+  </div> -->
 </div>
 
 <main ng-transclude class="cd-main-content">

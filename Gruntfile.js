@@ -259,6 +259,18 @@ module.exports = function (grunt) {
           },
         ],
       },
+      toastr: {
+        files: [
+          {
+            expand: true,
+            cwd: './bower_components/angular-toastr/dist',
+            dest: '<%= yeoman.app %>/assets/less',
+            src: [
+              'angular-toastr.min.css',
+            ],
+          },
+        ],
+      },
       styles: {
         files: [{
           expand: true,
@@ -336,6 +348,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('prepare', [
     'copy:bootstrap',
+    'copy:toastr',
   ]);
 
   grunt.registerTask('serve', 'Compile then start a connect web server', [

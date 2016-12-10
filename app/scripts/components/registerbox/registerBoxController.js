@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cath')
-.controller('registerBoxController', ['$scope', 'FileUploader', function ($scope, FileUploader) {
+.controller('registerBoxController', ['$scope', 'FileUploader', 'toastr', function ($scope, FileUploader, toastr) {
   $scope.submitData = {};
   $scope.uploader = new FileUploader({
     url: 'node/upload/uploadfile',
@@ -19,9 +19,15 @@ angular.module('cath')
     onWhenAddingFileFailed: function (item, filter) {
       console.log('Fail to add file');
       if (filter.name === 'enforceMaxFileSize') {
+        toastr.error(item.name + ' have exceed max size', 'Error', {
+          closeButton: true,
+        });
         console.log(item.name, ' have exceed max size');
       }
       if (filter.name === 'fileTypeException') {
+        toastr.error(item.name + ' is not image file', 'Error', {
+          closeButton: true,
+        });
         console.log(item.name, ' is not image file');
       }
     },

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cath', ['ngRoute', 'templateCache', 'ui.bootstrap', 'angularFileUpload', 'angular-redactor', 'updateMeta']);
+angular.module('cath', ['ngRoute', 'templateCache', 'ui.bootstrap', 'angularFileUpload', 'angular-redactor', 'updateMeta', 'toastr']);
 angular.module('templateCache', []);
 
 angular.module('cath').provider('facebook', function () {
