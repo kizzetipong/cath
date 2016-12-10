@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <base href="/">
-    <title>FongDi ฟ้องดิ ฟ้องได้ | fongdi.com | เราช่วยคุณดำเนินคดีแบบกลุ่ม</title>
-    <meta name="Title" content=" FongDi ฟ้องดิ ฟ้องได้ | fongdi.com | เราช่วยคุณดำเนินคดีแบบกลุ่ม ">
+    <title>FongDi ฟ้องได้ | fongdi.com | เแพลตฟอร์มเพื่อสังคมที่เป็นธรรม</title>
+    <meta name="Title" content=" FongDi ฟ้องได้ | fongdi.com | เแพลตฟอร์มเพื่อสังคมที่เป็นธรรม ">
     <meta name="description" content="FongDi ฟ้องได้ รวมฟ้องกลุ่มง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค" />
     <meta name="keywords" content= "fongdi, ฟ้องดิ, ฟ้องได้, class action, การดําเนินคดีแบบกลุ่ม, รวมกลุ่มฟ้อง, กฎหมายน่ารู้, คดีผู้บริโภค" />
     <meta name="COPYRIGHT" content="สงวนลิขสิทธิ์โดย FongDi ฟ้องดิ ฟ้องได้" />
