@@ -5,7 +5,7 @@
     <base href="/">
     <title>FongDi ฟ้องได้ | fongdi.com | เแพลตฟอร์มเพื่อสังคมที่เป็นธรรม</title>
     <meta name="Title" content=" FongDi ฟ้องได้ | fongdi.com | เแพลตฟอร์มเพื่อสังคมที่เป็นธรรม ">
-    <meta name="description" content="FongDi ฟ้องได้ รวมฟ้องกลุ่มง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค" />
+    <meta name="description" content="FongDi ฟ้องได้ รวมกลุ่มฟ้องง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค" />
     <meta name="keywords" content= "fongdi, ฟ้องดิ, ฟ้องได้, class action, การดําเนินคดีแบบกลุ่ม, รวมกลุ่มฟ้อง, กฎหมายน่ารู้, คดีผู้บริโภค" />
     <meta name="COPYRIGHT" content="สงวนลิขสิทธิ์โดย FongDi ฟ้องดิ ฟ้องได้" />
     <meta name="author" content="Fongdi" />
@@ -21,8 +21,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://www.fongdi.com/assets/images/sys/head-wrap.png" />
     <meta property="og:title" content="FongDi ฟ้องดิ ฟ้องได้ | fongdi.com | เราช่วยคุณดำเนินคดีแบบกลุ่ม" />
-    <meta property="og:description" content="FongDi ฟ้องได้ รวมฟ้องกลุ่มง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค" />
-    <meta itemprop="description" content="FongDi ฟ้องได้ รวมฟ้องกลุ่มง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค">
+    <meta property="og:description" content="FongDi ฟ้องได้ รวมกลุ่มฟ้องง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค" />
+    <meta itemprop="description" content="FongDi ฟ้องได้ รวมกลุ่มฟ้องง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค">
     <!-- build:css(.tmp) web/assets/css/app.css -->
     <link rel="stylesheet" href="assets/css/app.css">
     <!-- endbuild -->

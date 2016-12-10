@@ -33,7 +33,7 @@ NewsListService.prototype.service = function (context, payload, serviceCallback)
         rows.forEach(function (r) {
           var brief_text = '';
           if (r.brief_text != null) {
-            brief_text = r.brief_text.substring(0, 180) + '...';
+            brief_text = r.brief_text;
           }
 
           retAry.push(
