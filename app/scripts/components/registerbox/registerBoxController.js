@@ -62,11 +62,19 @@ angular.module('cath')
       data: $scope.submitData,
       success: $.proxy(function (ret) {
         console.log(ret);
-        // TODO : show success notice
+        toastr.success('คุณได้ทำการส่งข้อมูลเให้เราสำเร็จแล้ว เราจะติดต่อกลับไปหาท่าน', 'ส่งฟ้องสำเร็จ', {
+          closeButton: true,
+        });
+        $scope.submitData = {};
+        $scope.uploader.clearQueue();
+        $scope.$applyAsync();
       }, this),
       error: $.proxy(function (err) {
         console.log('ERROR', err);
-        // TODO : show error notice
+        toastr.error(err.statusText + ': ' + err.responseText, 'ส่งฟ้องผิดพลาด', {
+          closeButton: true,
+        });
+        // TODO: show error and correction
       }, this),
     });
   };

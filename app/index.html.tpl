@@ -6,8 +6,8 @@
     <title>FongDi ฟ้องได้ | fongdi.com | เแพลตฟอร์มเพื่อสังคมที่เป็นธรรม</title>
     <meta name="Title" content=" FongDi ฟ้องได้ | fongdi.com | เแพลตฟอร์มเพื่อสังคมที่เป็นธรรม ">
     <meta name="description" content="FongDi ฟ้องได้ รวมกลุ่มฟ้องง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค" />
-    <meta name="keywords" content= "fongdi, ฟ้องดิ, ฟ้องได้, class action, การดําเนินคดีแบบกลุ่ม, รวมกลุ่มฟ้อง, กฎหมายน่ารู้, คดีผู้บริโภค" />
-    <meta name="COPYRIGHT" content="สงวนลิขสิทธิ์โดย FongDi ฟ้องดิ ฟ้องได้" />
+    <meta name="keywords" content= "fongdi, ฟ้องได้, ฟ้องดิ, class action, การดําเนินคดีแบบกลุ่ม, รวมกลุ่มฟ้อง, กฎหมายน่ารู้, คดีผู้บริโภค" />
+    <meta name="COPYRIGHT" content="สงวนลิขสิทธิ์โดย FongDi ฟ้องได้" />
     <meta name="author" content="Fongdi" />
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -20,7 +20,7 @@
     <meta property="og:url" content="http://www.fongdi.com" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://www.fongdi.com/assets/images/sys/head-wrap.png" />
-    <meta property="og:title" content="FongDi ฟ้องดิ ฟ้องได้ | fongdi.com | เราช่วยคุณดำเนินคดีแบบกลุ่ม" />
+    <meta property="og:title" content="FongDi ฟ้องได้ | fongdi.com | เราช่วยคุณดำเนินคดีแบบกลุ่ม" />
     <meta property="og:description" content="FongDi ฟ้องได้ รวมกลุ่มฟ้องง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค" />
     <meta itemprop="description" content="FongDi ฟ้องได้ รวมกลุ่มฟ้องง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค">
     <!-- build:css(.tmp) web/assets/css/app.css -->

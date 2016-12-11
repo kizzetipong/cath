@@ -8,29 +8,29 @@
         <div class="col-sm-12">
           <div class="form-group required half">
             <label for="first_name">ชื่อ</label>
-            <input type="text" ng-model="submitData.first_name" id="first_name" placeholder=" ชื่อ">
+            <input type="text" ng-model="submitData.first_name" required id="first_name" placeholder=" ชื่อ">
           </div>
           <div class="form-group required half">
             <label for="last_name">นามสกุล</label>
-            <input type="text" ng-model="submitData.last_name" id="last_name" placeholder=" นามสกุล">
+            <input type="text" ng-model="submitData.last_name" required id="last_name" placeholder=" นามสกุล">
           </div>
         </div>
         <div class="col-sm-12">
           <div class="form-group required half">
             <label for="email">อีเมล</label>
-            <input type="email" ng-model="submitData.email" id="email" placeholder=" name@example.com">
+            <input type="email" ng-model="submitData.email" required id="email" placeholder=" name@example.com">
             <div class="error-notice"></div>
           </div>
           <div class="form-group required half">
             <label for="tel">โทรศัพท์มือถือ</label>
-            <input type="tel" ng-model="submitData.mobile" id="mobile" placeholder=" 0812345678">
+            <input type="tel" ng-model="submitData.mobile" required id="mobile" placeholder=" 0812345678">
             <div class="error-notice"></div>
           </div>
         </div>
         <div class="col-sm-12">
           <div class="form-group required half">
             <label for="text">อยากฟ้องใคร บอกหน่อย <span class="icon-popover"><i class="fa fa-info-circle" aria-hidden="true" data-toggle="popover" title="อยากฟ้องใคร บอกหน่อย" data-placement="top" data-trigger="hover" data-content=" บอกชื่อ บริษัท องค์กรหรือหน่วยงานที่ต้องการร้องเรียนให้เราทราบด้วย"></i></span></label>
-            <input type="accused" ng-model="submitData.accused" id="accused" placeholder=" ชื่อที่ต้องการร้องเรียน">
+            <input type="accused" ng-model="submitData.accused" required id="accused" placeholder=" ชื่อที่ต้องการร้องเรียน">
             <div class="error-notice"></div>
           </div>
           <div class="form-group required half">
