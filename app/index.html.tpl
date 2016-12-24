@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <base href="/">
-    <title>FongDi ฟ้องได้ | fongdi.com | เแพลตฟอร์มเพื่อสังคมที่เป็นธรรม</title>
-    <meta name="Title" content=" FongDi ฟ้องได้ | fongdi.com | เแพลตฟอร์มเพื่อสังคมที่เป็นธรรม ">
+    <title>FongDi ฟ้องได้ | fongdi.com | แพลตฟอร์มเพื่อสังคมที่เป็นธรรม</title>
+    <meta name="Title" content=" FongDi ฟ้องได้ | www.fongdi.com | แพลตฟอร์มเพื่อสังคมที่เป็นธรรม ">
     <meta name="description" content="FongDi ฟ้องได้ รวมกลุ่มฟ้องง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค" />
     <meta name="keywords" content= "fongdi, ฟ้องได้, ฟ้องดิ, class action, การดําเนินคดีแบบกลุ่ม, รวมกลุ่มฟ้อง, กฎหมายน่ารู้, คดีผู้บริโภค" />
     <meta name="COPYRIGHT" content="สงวนลิขสิทธิ์โดย FongDi ฟ้องได้" />
@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta http-equiv='content-language' content='th' />
-    <meta name='revisit-after' content='7 days' />
+    <meta name='revisit-after' content='3 days' />
     <meta name='Distribution' content='Global' />
     <meta property="fb:pages" content="1199108503443090" />
     <meta name="fragment" content="!">
@@ -20,7 +20,7 @@
     <meta property="og:url" content="http://www.fongdi.com" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://www.fongdi.com/assets/images/sys/head-wrap.png" />
-    <meta property="og:title" content="FongDi ฟ้องได้ | fongdi.com | เราช่วยคุณดำเนินคดีแบบกลุ่ม" />
+    <meta property="og:title" content="FongDi ฟ้องได้ | www.fongdi.com | แพลตฟอร์มเพื่อสังคมที่เป็นธรรม" />
     <meta property="og:description" content="FongDi ฟ้องได้ รวมกลุ่มฟ้องง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค" />
     <meta itemprop="description" content="FongDi ฟ้องได้ รวมกลุ่มฟ้องง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค">
     <!-- build:css(.tmp) web/assets/css/app.css -->
