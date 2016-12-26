@@ -45,6 +45,13 @@ angular.module('cath')
     },
   });
 
+  // TODO: validate data before submit
+  $scope.validateData = function (sData) {
+    if (sData) {
+      sData.damages = _.parseInt(_.replace(sData.damages, ',', '')) || undefined;
+    }
+  };
+
   $scope.submitComplaint = function () {
     if ($scope.uploader.queue && $scope.uploader.queue.length > 0) {
       $scope.submitData.files = _($scope.uploader.queue)
@@ -53,8 +60,7 @@ angular.module('cath')
       .value()
       .toString();
     }
-    // TODO: validate data before submit
-    console.log($scope.submitData);
+    $scope.validateData($scope.submitData);
 
     $.ajax({
       method: 'POST',
@@ -71,7 +77,7 @@ angular.module('cath')
       }, this),
       error: $.proxy(function (err) {
         console.log('ERROR', err);
-        toastr.error(err.statusText + ': ' + err.responseText, 'ส่งฟ้องผิดพลาด', {
+        toastr.error('โปรดติดต่อเจ้าหน้าที่: ' + err.statusText + ': ' + err.responseText, 'ส่งฟ้องผิดพลาด', {
           closeButton: true,
         });
         // TODO: show error and correction

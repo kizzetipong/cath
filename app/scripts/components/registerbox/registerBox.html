@@ -20,9 +20,9 @@
             <div class="form-group required half">
               <label for="email">อีเมล</label>
               <input type="email" ng-model="submitData.email" name="uEmail" required id="email" placeholder=" name@example.com">
-              <div ng-show="cForm.$submitted || cForm.uEmail.$touched" class="error-notice">
+              <!-- <div ng-show="cForm.$submitted || cForm.uEmail.$touched" class="error-notice">
                 <span ng-show="cForm.uEmail.$error.email">This is not a valid email<span>
-              </div>
+              </div> -->
             </div>
             <div class="form-group required half">
               <label for="tel">โทรศัพท์มือถือ</label>
@@ -44,7 +44,7 @@
           </div>
           <div class="col-sm-12">
             <div class="form-group required full">
-              <label for="text">อยากฟ้องอะไร เล่าได้ <span class="icon-popover"><i class="fa fa-info-circle" aria-hidden="true" data-toggle="popover" title="อยากฟ้องอะไร เล่าได้" data-placement="top" data-trigger="hover" data-content=" เล่ารายละเอียดเกี่ยวกับความเดือดร้อน หรือความเสียหายที่ได้รับจากการซื้อสินค้า หรือใช้บริการ พร้อมระบุวันเวลาที่เกิดเหตุมาด้วยนะครับ เช่น ผมไปซื้อรถยนต์ยี่ห้อxxx มูลค่า 1,000,000 บาท เมื่อวันที่ 1 มี.ค. 2559 จาก yyy มาแล้ว ปรากฎว่าขับไปได้เพียง 3 เดือน แอร์พังโดยไม่ทราบสาเหตุ และทางบริษัทก็ปฏิเสธไม่รับผิดชอบใด ๆเลย"></i></span></label>
+              <label for="text">อยากฟ้องอะไร เล่าได้ <span class="icon-popover"><i class="fa fa-info-circle" aria-hidden="true" data-toggle="popover" title="อยากฟ้องอะไร เล่าได้" data-placement="top" data-trigger="hover" data-content=" เล่ารายละเอียดเกี่ยวกับความเดือดร้อน หรือความเสียหายที่ได้รับจากการซื้อสินค้า หรือใช้บริการ พร้อมระบุวันเวลาที่เกิดเหตุมาด้วยนะครับ เช่น ผมไปซื้อรถยนต์ยี่ห้อxxx มูลค่า 1,000,000 บาท เมื่อวันที่ 1 มี.ค. 2559 จาก yyy มาแล้ว ปรากฎว่าขับไปได้เพียง 3 เดือน แอร์พังโดยไม่ทราบสาเหตุ และทางบริษัทก็ปฏิเสธไม่รับผิดชอบใดๆ เลย"></i></span></label>
               <textarea type="textarea" ng-attr-rows="{{textRows || '2'}}" ng-focus="textRows=5;" ng-change="showCatalog= !!submitData.info;" ng-model="submitData.info" placeholder=" เล่าเรื่องราวของคุณให้เราฟัง"></textarea>
               <div class="error-notice"></div>
             </div>
