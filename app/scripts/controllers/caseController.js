@@ -5,7 +5,6 @@ angular.module('cath')
   function ($rootScope, $scope, $routeParams) {
     $scope.init = function () {
       $rootScope.mainBg = '';
-      
       $scope.params = $routeParams;
       $scope.id = $scope.params.id || '';
     };

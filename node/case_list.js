@@ -43,8 +43,6 @@ CaseListService.prototype.service = function (context, payload, serviceCallback)
       sql += ' where status>=' + QMAP[payload.type][0] + ' and status<' + QMAP[payload.type][1];
     }
 
-    console.log(sql);
-
     connection.connect();
     connection.query(sql, function (err, rows, fields) {
       if (!err) {
@@ -56,7 +54,9 @@ CaseListService.prototype.service = function (context, payload, serviceCallback)
               type: payload.type,
               headlineText: r.headline,
               briefText: r.brief_text,
+              teaser: r.teaser,
               detail: r.detail,
+              formId: r.form_id,
               date: r.expired_at,
               img: r.head_img,
             }

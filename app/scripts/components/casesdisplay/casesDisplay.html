@@ -1,22 +1,62 @@
+<update-meta name="Title" content="{{data.headlineText}} | FongDi ฟ้องได้ รวมฟ้องกลุ่มง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม "></update-meta>
+<update-meta property="og:title" content="{{data.headlineText}} | FongDi ฟ้องได้ รวมฟ้องกลุ่มง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม "></update-meta>
+<update-meta name="description" content="{{data.briefText}} | FongDi ฟ้องได้"></update-meta>
+<update-meta property="og:description" content="{{data.briefText}} | FongDi ฟ้องได้"></update-meta>
+<update-meta property="og:image" content="http://www.fongdi.com{{data.img}}"></update-meta>
+<update-meta itemprop="description" content="{{data.briefText}} | FongDi ฟ้องได้"></update-meta>
+<update-meta name="keywords" content="fongdi, ฟ้องได้, ฟ้องดิ, การดำเนินคดีแบบกลุ่ม, ฟ้องร้องคดีผู้บริโภค, class action"></update-meta>
 <div class="cases-display" ng-if="dataReady">
-<h2>{{data.headlineText}}</h2>
- <div class="panel panel-default" style="margin:10px 10px 10px 10px;width:95%">
-      <div class="panel-heading" style="background: #415463;border-color:#415463" ><font class="box-detail-headline">WHO’S AFFECTED</font></div>
-      <div class="panel-body " >
-        <div class="box-detail">
-            <div class="box-detail-inner">
-                <img src="{{data.img}}" width="240" height="180" style="margin-top:0px">
-                {{data.briefText}}
-            </div>
-            <p style="margin:10px 0px 10px 0px;align:left;">
-                <a href="/member-home/my-favorites/?szbl-favorite=342601&amp;hash=eefc029dfb" class="favbtn">JOIN INVESTIGATION</a>
-            </p>
+  <div ng-show="dataReady && !errorMsg" class="article-container">
+    <div class="container">
+      <div class="row">
+        <div class="header">
+          <div class="image-large-container">
+            <img class="image-large" src="{{data.img}}" alt="{{data.headlineText}}"></img>
+          </div>
         </div>
-
-        <div ng-bind-html="detail"></div>
-        <p style="margin:20px 0px 10px 0px;align:left;">
-            <a href="/member-home/my-favorites/?szbl-favorite=342601&amp;hash=eefc029dfb" class="favbtn">JOIN INVESTIGATION</a>
-        </p>
-       </div>
-</div>
+        <div class="detail-container col-md-12 col-xs-12">
+          <div class="wrapper">
+            <div class="text-center">
+              <h2>{{data.headlineText}}</h2>
+              <div>{{data.briefText}}</div>
+            </div>
+            <h2>{{data.teaser}}</h2>
+            <div class="text-center">
+              <div class="icons">
+                <div class="icon">
+                  <div class="icon-wrap">
+                    <!-- <div class="amount">22</div> -->
+                    <img class="icon-link" ng-click="" src="/assets/images/sys/icon_people.png">
+                  </div>
+                  <div class="icon-desc">ผู้ร่วมฟ้อง</div>
+                </div>
+                <div class="icon">
+                  <div class="icon-wrap"><img class="icon-link" ng-click="" src="/assets/images/sys/icon_comment.png"></div>
+                  <div class="icon-desc">ความคิดเห็น</div>
+                </div>
+                <div class="icon">
+                  <div class="icon-wrap">
+                    <!-- <div class="amount">43</div> -->
+                    <img class="icon-link" ng-click="" src="/assets/images/sys/icon_fighting.png"></i>
+                  </div>
+                  <div class="icon-desc">ให้กำลังใจ</div>
+                </div>
+                <div class="icon">
+                  <div class="icon-wrap"><img class="icon-link" ng-click="" src="/assets/images/sys/icon_share.png"></div>
+                  <div class="icon-desc">บอกต่อ</div>
+                </div>
+              </div>
+            </div>
+            <p class="blank-space"></p>
+            <div class="detail" ng-bind-html="detail"></div>
+            <p class="blank-space"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <case-form form-id="{{data.formId}}"></case-form>
+  </div>
+  <div ng-show="errorMsg" class="error-box">
+    <div class="alert alert-warning" role="alert">ไม่พบบทความนี้</div>
+  </div>
 </div>

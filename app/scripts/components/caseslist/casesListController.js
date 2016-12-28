@@ -13,7 +13,7 @@ angular.module('cath')
         if ($scope.list && $scope.list.length > 0) {
           $scope.errorMsg = '';
           for (var i = 0; i < $scope.list.length; i++) {
-            $scope.list[i].briefText = $scope.list[i].briefText == null ? '' : $scope.list[i].briefText.substring(0, 100) + '...';
+            $scope.list[i].briefText = $scope.list[i].briefText || '';
             $scope.list[i].detail = $sce.trustAsHtml($scope.list[i].detail.substring(0, 600) + '...');
           }
           $scope.dataReady = true;

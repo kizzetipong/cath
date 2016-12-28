@@ -1,0 +1,32 @@
+<div class="case-form" ng-if="dataReady">
+  <div ng-show="dataReady && !errorMsg" class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="header-title">ร่วมฟ้องกลุ่มคดีนี้</h2>
+      </div>
+      <form name="cForm" novalidate class="form">
+        <div class="col-sm-12">
+          <div class="col-sm-12" ng-repeat="(key, value) in template" >
+            <div class="form-group required full">
+              <label for="{{value.field}}">{{value.title}}</label>
+              <input ng-if="value.type === 'string'" type="text" ng-model="submitData[value.field]" required id="{{value.field}}" placeholder=" {{value.title}}">
+              <input ng-if="value.type === 'number'" type="text" ng-model="submitData[value.field]" required id="{{value.field}}" placeholder=" {{value.title}}">
+              <input ng-if="value.type === 'email'" type="email" ng-model="submitData[value.field]" required id="{{value.field}}" placeholder=" name@example.com">
+              <div ng-if="value.type === 'radio'" id="{{value.field}}" class="radios">
+                <label class="radio-inline" ng-repeat="(keyR, valueR) in value.options" >
+                  <input type="radio" ng-model="submitData[value.field]" value="{{valueR.value}}"> {{valueR.text}}
+                </label>
+              </div>
+            </div>
+          </div>
+        <div class="col-sm-12">
+          <div class="submit-button"><button type="button" ng-click="submitForm()" class="btn btn-primary">ร่วมฟ้อง</button></div>
+           <p style="text-align: center; margin-top: 10px;">นโยบายคุ้มครองข้อมูลส่วนบุคคล <span class="icon-popover"><i class="fa fa-info-circle" data-toggle="popover" title="นโยบายคุ้มครองข้อมูลส่วนบุคคล" data-placement="top" data-trigger="hover" data-content="“ฟ้องได้” จะเก็บรักษาข้อมูลส่วนบุคคลของท่านไว้เป็นความลับ เว้นแต่เป็นการเปิดเผยในส่วนของรายละเอียดที่เกี่ยวกับการฟ้องร้องคดี ที่ทางฟ้องได้จะต้องขอรับคำปรึกษาจากนักกฎหมายหรือทนายความที่ได้เกี่ยวข้องและมีการทำสัญญารักษาความลับกับ “ฟ้องได้” แล้วเท่านั้น"></i></span></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div ng-show="errorMsg" class="error-box">
+    <div class="alert alert-warning" role="alert">ไม่พบฟอรม์เข้าร่วมคดีกลุ่มนี้</div>
+  </div>
+</div>

@@ -33,10 +33,12 @@ CaseService.prototype.service = function (context, payload, serviceCallback) {
               id: r.id,
               stage: 'investigations',
               headlineText: r.headline,
+              briefText: r.brief_text,
+              teaser: r.teaser,
               detail: r.detail,
+              formId: r.form_id,
               date: r.expired_at,
               img: r.head_img,
-              briefText: r.brieft_text,
             }
             );
         });
