@@ -61,6 +61,7 @@
     <script src="scripts/controllers/caseViewController.js"></script>
     <script src="scripts/controllers/newsCatalogController.js"></script>
     <script src="scripts/controllers/newsController.js"></script>
+    <script src="scripts/controllers/adminCasesController.js"></script>
     <script src="scripts/controllers/adminNewsController.js"></script>
     <script src="scripts/factory/firebaseFactory.js"></script>
     <script src="scripts/factory/dataFactory.js"></script>

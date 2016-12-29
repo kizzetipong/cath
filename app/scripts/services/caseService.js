@@ -30,9 +30,26 @@ angular.module('cath')
         var deferred = new $.Deferred();
 
         $.ajax({
-          method: 'POST',
+          method: 'GET',
           url: '/node/case',
           data: { id: id },
+          success: $.proxy(function (ret) {
+            deferred.resolve(ret);
+          }, this),
+          error: $.proxy(function () {
+            console.log('ERROR');
+            deferred.resolve([]);
+          }, this),
+        });
+        return deferred.promise();
+      },
+
+      saveData: function (sData) {
+        var deferred = new $.Deferred();
+        $.ajax({
+          method: 'POST',
+          url: '/node/case',
+          data: sData,
           success: $.proxy(function (ret) {
             deferred.resolve(ret);
           }, this),

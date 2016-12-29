@@ -70,6 +70,10 @@ angular.module('cath')
     controller: 'NewsCatalogController',
     templateUrl: 'views/newsCatalogView.html',
   })
+  .when('/admin/cases/:caseId?/', {
+    controller: 'AdminCasesController',
+    templateUrl: 'views/adminCasesView.html',
+  })
   .otherwise({
     redirectTo: '/',
   });
