@@ -50,17 +50,18 @@ CaseService.prototype.service = function (context, payload, serviceCallback) {
           console.log('Error while performing Query', err);
         }
       });
-    } else if (method === 'POST') {
-      connection.query('UPDATE cases SET headline = ?, head_img = ?, brief_text = ?, detail = ? where id= ?',
-        [payload.headlineText, payload.img, payload.briefText, payload.detail, payload.id], function (err, result) {
-          if (err) {
-            serviceCallback(err, null);
-          } else {
-            serviceCallback(null, { status: 200, message: 'changed ' + result.changedRows + ' rows' });
-          }
-        }
-      );
     }
+    // else if (method === 'POST') {
+    //   connection.query('UPDATE cases SET headline = ?, head_img = ?, brief_text = ?, detail = ? where id= ?',
+    //     [payload.headlineText, payload.img, payload.briefText, payload.detail, payload.id], function (err, result) {
+    //       if (err) {
+    //         serviceCallback(err, null);
+    //       } else {
+    //         serviceCallback(null, { status: 200, message: 'changed ' + result.changedRows + ' rows' });
+    //       }
+    //     }
+    //   );
+    // }
 
     connection.end();
   }
