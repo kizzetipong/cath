@@ -17,6 +17,10 @@
                   <input type="radio" ng-model="submitData[value.field]" value="{{valueR.value}}"> {{valueR.text}}
                 </label>
               </div>
+              <select ng-if="value.type === 'dropdown'" ng-model="submitData[value.field]" required id="{{value.field}}" >
+                <option value="">---โปรดเลือก---</option>
+                <option ng-repeat="(keyR, valueR) in value.options" value="{{valueR.value}}">{{valueR.text}}</option>
+              </select>
             </div>
           </div>
         <div class="col-sm-12">
