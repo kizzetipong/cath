@@ -41,6 +41,11 @@ angular.module('cath').provider('facebook', function () {
           cb(response);
         });
       },
+      ui: function (options, cb) {
+        FB.ui(options, function (response) {
+          cb(response);
+        });
+      },
       getAuth: function () {
         return self.auth;
       },

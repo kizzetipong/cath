@@ -14,9 +14,9 @@ angular.module('cath')
           url: '/node/case_list',
           data: { type: type },
           success: $.proxy(function (ret) {
-            // deferred.resolve(ret);
+            deferred.resolve(ret);
             // TODO: temporary hide mocked cases
-            deferred.resolve([]);
+            // deferred.resolve([]);
           }, this),
           error: $.proxy(function () {
             console.log('ERROR');

@@ -2,8 +2,8 @@
 'use strict';
 
 angular.module('cath')
-.controller('casesDisplayController', ['$scope', '$sce', 'caseService',
-  function ($scope, $sce, caseService) {
+.controller('casesDisplayController', ['$scope', '$sce', 'caseService', 'facebook',
+  function ($scope, $sce, caseService, facebook) {
     $scope.dataReady = false;
     $scope.errorMsg = '';
 
@@ -23,5 +23,14 @@ angular.module('cath')
       $scope.errorMsg = 'NewsId is not available';
       $scope.$applyAsync();
     }
+
+    $scope.shareFB = function () {
+      facebook.ui({
+        method: 'share',
+        href: 'https://www.fongdi.com/cases/' + $scope.id,
+      }, function (response) {
+        console.log(response);
+      });
+    };
   },
 ]);
