@@ -1,10 +1,10 @@
-<update-meta name="Title" content="{{data.headlineText}} | FongDi ฟ้องได้ รวมฟ้องกลุ่มง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม "></update-meta>
-<update-meta property="og:title" content="{{data.headlineText}} | FongDi ฟ้องได้ รวมฟ้องกลุ่มง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม "></update-meta>
-<update-meta name="description" content="{{data.briefText}} | FongDi ฟ้องได้"></update-meta>
-<update-meta property="og:description" content="{{data.briefText}} | FongDi ฟ้องได้"></update-meta>
-<update-meta property="og:image" content="http://www.fongdi.com{{data.img}}"></update-meta>
-<update-meta itemprop="description" content="{{data.briefText}} | FongDi ฟ้องได้"></update-meta>
-<update-meta name="keywords" content="fongdi, ฟ้องได้, ฟ้องดิ, การดำเนินคดีแบบกลุ่ม, ฟ้องร้องคดีผู้บริโภค, class action"></update-meta>
+<update-meta ng-if="dataReady" name="Title" content="{{data.headlineText}} | FongDi ฟ้องได้ รวมฟ้องกลุ่มง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม "></update-meta>
+<update-meta ng-if="dataReady" property="og:title" content="{{data.headlineText}} | FongDi ฟ้องได้ รวมฟ้องกลุ่มง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม "></update-meta>
+<update-meta ng-if="dataReady" name="description" content="{{data.briefText}} | FongDi ฟ้องได้"></update-meta>
+<update-meta ng-if="dataReady" property="og:description" content="{{data.briefText}} | FongDi ฟ้องได้"></update-meta>
+<update-meta ng-if="dataReady" property="og:image" content="http://www.fongdi.com{{data.img}}"></update-meta>
+<update-meta ng-if="dataReady" itemprop="description" content="{{data.briefText}} | FongDi ฟ้องได้"></update-meta>
+<update-meta ng-if="dataReady" name="keywords" content="fongdi, ฟ้องได้, ฟ้องดิ, การดำเนินคดีแบบกลุ่ม, ฟ้องร้องคดีผู้บริโภค, class action"></update-meta>
 <div class="cases-display" ng-if="dataReady">
   <div ng-show="dataReady && !errorMsg" class="article-container">
     <div class="container">
