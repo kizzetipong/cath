@@ -6,6 +6,7 @@ angular.module('cath')
   function ($scope, $sce, caseService, facebook) {
     $scope.dataReady = false;
     $scope.errorMsg = '';
+    $scope.sCount = '--';
 
     if ($scope.id) {
       caseService.fetchData($scope.id).then(function (ret) {
@@ -19,15 +20,22 @@ angular.module('cath')
         }
         $scope.$applyAsync();
       });
+
+      caseService.getCount().then(function (ret) {
+        if (ret && ret.count) {
+          $scope.sCount = ret.count;
+          $scope.$applyAsync();
+        }
+      });
     } else {
       $scope.errorMsg = 'NewsId is not available';
       $scope.$applyAsync();
     }
 
-    $scope.shareFB = function () {
+    $scope.shareFB = function (id) {
       facebook.ui({
         method: 'share',
-        href: 'https://www.fongdi.com/cases/' + $scope.id,
+        href: 'https://www.fongdi.com/cases/' + id,
       }, function (response) {
         console.log(response);
       });

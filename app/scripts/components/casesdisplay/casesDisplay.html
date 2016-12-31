@@ -21,16 +21,16 @@
               <div>{{data.briefText}}</div>
             </div>
             <h2>{{data.teaser}}</h2>
-            <!-- <div class="text-center">
+            <div class="text-center">
               <div class="icons">
                 <div class="icon">
                   <div class="icon-wrap">
-                    <div class="amount">22</div>
+                    <div class="amount">{{sCount}}</div>
                     <img class="icon-link" ng-click="" src="/assets/images/sys/icon_people.png">
                   </div>
                   <div class="icon-desc">ผู้ร่วมฟ้อง</div>
                 </div>
-                <div class="icon">
+                <!-- <div class="icon">
                   <div class="icon-wrap"><img class="icon-link" ng-click="" src="/assets/images/sys/icon_comment.png"></div>
                   <div class="icon-desc">ความคิดเห็น</div>
                 </div>
@@ -40,13 +40,13 @@
                     <img class="icon-link" ng-click="" src="/assets/images/sys/icon_fighting.png"></i>
                   </div>
                   <div class="icon-desc">ให้กำลังใจ</div>
-                </div>
+                </div> -->
                 <div class="icon">
-                  <div class="icon-wrap"><img class="icon-link" ng-click="shareFB()" src="/assets/images/sys/icon_share.png"></div>
+                  <div class="icon-wrap"><img class="icon-link link" ng-click="shareFB(id)" src="/assets/images/sys/icon_share.png"></div>
                   <div class="icon-desc">บอกต่อ</div>
                 </div>
               </div>
-            </div> -->
+            </div>
             <p class="blank-space"></p>
             <div class="detail" ng-bind-html="detail"></div>
             <p class="blank-space"></p>

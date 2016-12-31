@@ -61,6 +61,31 @@ angular.module('cath')
         return deferred.promise();
       },
 
+      getCount: function (id) {
+        var deferred = new $.Deferred();
+        $.ajax({
+          method: 'GET',
+          url: '/node/submitted_count',
+          data: {
+            mode: 'form',
+            caseId: id,
+          },
+          success: $.proxy(function (ret) {
+            if (ret && ret[0]) {
+              deferred.resolve(ret[0]);
+            } else {
+              deferred.resolve([]);
+            }
+          }, this),
+          error: $.proxy(function () {
+            console.log('ERROR');
+            deferred.resolve([]);
+          }, this),
+        });
+        return deferred.promise();
+      },
+
+
       getLatestData: function () {
         return data;
       },

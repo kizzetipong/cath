@@ -2,10 +2,11 @@
 'use strict';
 
 angular.module('cath')
-.controller('casesListController', ['$scope', '$sce', 'caseService',
-  function ($scope, $sce, caseService) {
+.controller('casesListController', ['$scope', '$sce', 'caseService', 'facebook',
+  function ($scope, $sce, caseService, facebook) {
     $scope.dataReady = false;
     $scope.errorMsg = '';
+    $scope.sCount = '--';
 
     if ($scope.type) {
       caseService.fetchList($scope.type).then(function (ret) {
@@ -23,6 +24,22 @@ angular.module('cath')
 
         $scope.$applyAsync();
       });
+
+      caseService.getCount().then(function (ret) {
+        if (ret && ret.count) {
+          $scope.sCount = ret.count;
+          $scope.$applyAsync();
+        }
+      });
     }
+
+    $scope.shareFB = function (id) {
+      facebook.ui({
+        method: 'share',
+        href: 'https://www.fongdi.com/cases/' + id,
+      }, function (response) {
+        console.log(response);
+      });
+    };
   },
 ]);

@@ -41,7 +41,7 @@ angular.module('cath')
       },
       success: $.proxy(function (ret) {
         console.log(ret);
-        toastr.success('คุณได้ทำการส่งข้อมูลเให้เราสำเร็จแล้ว', 'ร่วมฟ้องกลุ่มสำเร็จ', {
+        toastr.success('คุณได้ทำการส่งข้อมูลให้เราสำเร็จแล้ว', 'ร่วมฟ้องกลุ่มสำเร็จ', {
           closeButton: true,
         });
         $scope.submitData = {};
