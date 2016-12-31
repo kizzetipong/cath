@@ -15,6 +15,7 @@
     <meta name='revisit-after' content='3 days' />
     <meta name='Distribution' content='Global' />
     <meta property="fb:pages" content="1199108503443090" />
+    <meta name="google-site-verification" content="85O0v7W9xbi2-YIZJ8zTnISrTikc48ns-A2dekuj4XI" />
     <meta name="fragment" content="!">
     <meta property="og:site_name" content="http://www.fongdi.com" />
     <meta property="og:url" content="http://www.fongdi.com" />
