@@ -27,16 +27,16 @@ ComplaintService.prototype.service = function (context, payload, serviceCallback
     connection.connect();
 
     if (method === 'GET') {
-      connection.query('SELECT * from complaints where id= ?', [payload.id], function (err, rows, fields) {
-        if (!err) {
-          rows.forEach(function (r) {
-            retAry.push(r);
-          });
-          serviceCallback(null, retAry);
-        } else {
-          console.log('Error while performing Query', err);
-        }
-      });
+      // connection.query('SELECT * from complaints where id= ?', [payload.id], function (err, rows, fields) {
+      //   if (!err) {
+      //     rows.forEach(function (r) {
+      //       retAry.push(r);
+      //     });
+      //     serviceCallback(null, retAry);
+      //   } else {
+      //     console.log('Error while performing Query', err);
+      //   }
+      // });
     } else if (method === 'POST') {
       console.log(payload);
       // TODO: should re-validate value
