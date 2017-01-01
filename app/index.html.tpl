@@ -20,9 +20,9 @@
     <meta property="og:site_name" content="http://www.fongdi.com" />
     <meta property="og:url" content="http://www.fongdi.com" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://www.fongdi.com/assets/images/investigations/1.png" />
-    <meta property="og:title" content="ร่วมฟ้อง ทรูวิชันส์ (True Visions) - FongDi ฟ้องได้ | www.fongdi.com | แพลตฟอร์มเพื่อสังคมที่เป็นธรรม" />
-    <meta property="og:description" content="ขอเชิญสมาชิกมาลงชื่อร่วมฟ้อง True Visions กรณีที่มีการเปลี่ยนแปลงช่องรายการโดยไม่บอกกล่าวล่วงหน้า อีกทั้งยังไม่มีมาตรการเยียวยาที่เป็นธรรมกับผู้บริโภค  #ฟ้องได้ #ไม่เสียค่าใช้จ่าย #ได้ความเป็นธรรม" />
+    <meta property="og:image" content="http://www.fongdi.com/assets/images/sys/head-wrap.png" />
+    <meta property="og:title" content="FongDi ฟ้องได้ | www.fongdi.com | แพลตฟอร์มเพื่อสังคมที่เป็นธรรม" />
+    <meta property="og:description" content="FongDi ฟ้องได้ รวมกลุ่มฟ้องง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค" />
     <meta itemprop="description" content="FongDi ฟ้องได้ รวมกลุ่มฟ้องง่ายๆ ไม่เสียค่าใช้จ่าย ได้ความเป็นธรรม | การดําเนินคดีแบบกลุ่ม Class Action รวมกลุ่มฟ้อง กฎหมายน่ารู้ ฟ้องร้องคดีแพ่ง คดีผู้บริโภค">
     <!-- build:css(.tmp) web/assets/css/app.css -->
     <link rel="stylesheet" href="assets/css/app.css">
