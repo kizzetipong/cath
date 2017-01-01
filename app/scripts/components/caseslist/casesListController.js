@@ -36,7 +36,7 @@ angular.module('cath')
     $scope.shareFB = function (id) {
       facebook.ui({
         method: 'share',
-        href: 'https://www.fongdi.com/cases/' + id,
+        href: 'http://www.fongdi.com/cases/' + id,
       }, function (response) {
         console.log(response);
       });
