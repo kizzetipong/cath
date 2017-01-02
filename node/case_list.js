@@ -51,6 +51,7 @@ CaseListService.prototype.service = function (context, payload, serviceCallback)
             {
               id: r.id,
               status: r.status,
+              code: r.code,
               type: payload.type,
               headlineText: r.headline,
               briefText: r.brief_text,

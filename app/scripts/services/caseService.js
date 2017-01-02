@@ -26,13 +26,13 @@ angular.module('cath')
         return deferred.promise();
       },
 
-      fetchData: function (id) {
+      fetchData: function (id, code) {
         var deferred = new $.Deferred();
 
         $.ajax({
           method: 'GET',
           url: '/node/case',
-          data: { id: id },
+          data: { id: id, code: code },
           success: $.proxy(function (ret) {
             deferred.resolve(ret);
           }, this),
@@ -61,7 +61,7 @@ angular.module('cath')
         return deferred.promise();
       },
 
-      getCount: function (id) {
+      getCount: function (id, code) {
         var deferred = new $.Deferred();
         $.ajax({
           method: 'GET',
@@ -69,6 +69,7 @@ angular.module('cath')
           data: {
             mode: 'form',
             caseId: id,
+            codeId: code,
           },
           success: $.proxy(function (ret) {
             if (ret && ret[0]) {

@@ -12,7 +12,7 @@ CaseService.prototype.service = function (context, payload, serviceCallback) {
   var method = context.request ? context.request.method : 'GET';
   var retAry = [];
   var connection;
-  if (!payload || !payload.id) {
+  if (!payload || !(payload.id || payload.code)) {
     serviceCallback('ERROR Msg', null);
   } else {
     connection = mysql.createConnection({
@@ -28,13 +28,14 @@ CaseService.prototype.service = function (context, payload, serviceCallback) {
     connection.connect();
 
     if (method === 'GET') {
-      connection.query('SELECT * from cases where id=' + payload.id, function (err, rows, fields) {
+      connection.query('SELECT * FROM cases WHERE id=? OR code=?', [payload.id, payload.code], function (err, rows, fields) {
         if (!err) {
           rows.forEach(function (r) {
             retAry.push(
               {
                 id: r.id,
-                stage: 'investigations',
+                status: r.status,
+                code: r.code,
                 headlineText: r.headline,
                 briefText: r.brief_text,
                 teaser: r.teaser,

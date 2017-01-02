@@ -1,4 +1,6 @@
-<update-meta property="og:url" content="http://www.fongdi.com/cases/{{id}}"></update-meta>
+<update-meta ng-if="id" property="og:url" content="http://www.fongdi.com/cases/{{id}}"></update-meta>
+<update-meta ng-if="code" property="og:url" content="http://www.fongdi.com/ร่วมฟ้อง/{{code}}"></update-meta>
 <div id="cases" class="app-container">
-  <cases-display id="{{id}}"></cases-display>
+  <cases-display ng-if="id" id="{{id}}"></cases-display>
+  <cases-display ng-if="code" code="{{code}}"></cases-display>
 </div>

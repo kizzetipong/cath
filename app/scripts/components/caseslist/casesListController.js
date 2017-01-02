@@ -33,10 +33,10 @@ angular.module('cath')
       });
     }
 
-    $scope.shareFB = function (id) {
+    $scope.shareFB = function (code) {
       facebook.ui({
         method: 'share',
-        href: 'http://www.fongdi.com/cases/' + id,
+        href: 'http://www.fongdi.com/ร่วมฟ้อง/' + code,
       }, function (response) {
         console.log(response);
       });

@@ -30,6 +30,12 @@ angular.module('cath')
     templateUrl: 'views/caseView.html',
   })
 
+  .when('/ร่วมฟ้อง/:code?', {
+    title: 'ร่วมฟ้อง | ',
+    controller: 'CaseController',
+    templateUrl: 'views/caseView.html',
+  })
+
   .when('/cases/s/:type?', {
     title: 'ร่วมฟ้อง | ',
     controller: 'CaseViewController',

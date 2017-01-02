@@ -29,9 +29,9 @@ SubmittedCountService.prototype.service = function (context, payload, serviceCal
 
     if (method === 'GET') {
       if (payload.mode === 'form') {
-        var qStr = 'select count(id) as count from forms_submitted';
-        qStr = payload.caseId ? (qStr + ' where form = (select form from case_forms where id= ?)') : qStr;
-        connection.query(qStr, [payload.caseId], function (err, rows, fields) {
+        var qStr = 'SELECT count(id) as count FROM forms_submitted';
+        qStr = payload.caseId ? (qStr + ' where form = (SELECT form_id FROM cases WHERE id=? OR code=?)') : qStr;
+        connection.query(qStr, [payload.caseId, payload.codeId], function (err, rows, fields) {
           if (!err) {
             rows.forEach(function (r) {
               retAry.push(r);

@@ -8,20 +8,20 @@ angular.module('cath')
     $scope.errorMsg = '';
     $scope.sCount = '--';
 
-    if ($scope.id) {
-      caseService.fetchData($scope.id).then(function (ret) {
+    if ($scope.id || $scope.code) {
+      caseService.fetchData($scope.id, $scope.code).then(function (ret) {
         if (ret && ret.length > 0) {
           ret[0].detail = $sce.trustAsHtml(ret[0].detail);
           $scope.data = ret[0];
           $scope.detail = ret[0].detail;
           $scope.dataReady = true;
         } else {
-          $scope.errorMsg = 'ไม่พบคดีกลุ่ม ' + $scope.id;
+          $scope.errorMsg = 'ไม่พบคดีกลุ่ม ' + ($scope.code || $scope.id);
         }
         $scope.$applyAsync();
       });
 
-      caseService.getCount().then(function (ret) {
+      caseService.getCount($scope.id, $scope.code).then(function (ret) {
         if (ret && ret.count) {
           $scope.sCount = ret.count;
           $scope.$applyAsync();
@@ -32,10 +32,16 @@ angular.module('cath')
       $scope.$applyAsync();
     }
 
-    $scope.shareFB = function (id) {
+    $scope.shareFB = function (code) {
+      var href = 'http://www.fongdi.com/';
+      if (code || $scope.data.code) {
+        href += 'ร่วมฟ้อง/' + (code || $scope.data.code);
+      } else {
+        href += 'cases/' + $scope.id;
+      }
       facebook.ui({
         method: 'share',
-        href: 'http://www.fongdi.com/cases/' + id,
+        href: href,
       }, function (response) {
         console.log(response);
       });

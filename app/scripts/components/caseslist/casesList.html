@@ -7,10 +7,10 @@
           <div class="col-lg-1 col-md-1 col-sm-0 col-xs-0"></div>
           <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 section image-section">
             <div class="image-ctn">
-              <a href="/cases/{{value.id}}"><img class="image-block" ng-src="{{value.img}}"></a>
+              <a href="/ร่วมฟ้อง/{{value.code}}"><img class="image-block" ng-src="{{value.img}}"></a>
             </div>
             <div class="text-ctn">
-              <div class="headline-text"><a href="/cases/{{value.id}}">{{value.headlineText}}</a></div>
+              <div class="headline-text"><a href="/ร่วมฟ้อง/{{value.code}}">{{value.headlineText}}</a></div>
               <!-- <div class="brief-text">{{value.briefText}}</div> -->
             </div>
           </div>
@@ -36,7 +36,7 @@
                 <div class="icon-desc">ให้กำลังใจ</div>
               </div> -->
               <div class="icon">
-                <div class="icon-wrap"><img class="icon-link link" ng-click="shareFB(value.id)" src="/assets/images/sys/icon_share.png"></div>
+                <div class="icon-wrap"><img class="icon-link link" ng-click="shareFB(value.code)" src="/assets/images/sys/icon_share.png"></div>
                 <div class="icon-desc">บอกต่อ</div>
               </div>
             </div>

@@ -7,6 +7,7 @@ angular.module('cath')
     restrict: 'E',
     scope: {
       id: '@',
+      code: '@',
     },
     controller: 'casesDisplayController',
   };
