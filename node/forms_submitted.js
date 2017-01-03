@@ -36,6 +36,8 @@ FormSubmittedService.prototype.service = function (context, payload, serviceCall
           // serviceCallback(null, retAry);
 
           // process data - START
+          var delim = '`';
+          var enter = '~';
           var ret = _(retAry)
             .map(function (item) {
               return JSON.parse(item.data);
@@ -45,10 +47,10 @@ FormSubmittedService.prototype.service = function (context, payload, serviceCall
 
           var strAry = [];
           _.forEach(ret, function (i) {
-            strAry.push((i.email || '') + ',' + (i.first_name || '') + ',' + (i.last_name || '') + ',' + (i.mobile || '') + ',' + (i.true_id || '') + ',' + (i.true_package || '') + ',' + (i.claim || ''));
+            strAry.push((i.email || '') + delim + (i.first_name || '') + delim + (i.last_name || '') + delim + (i.mobile || '') + delim + (i.true_id || '') + delim + (i.true_package || '') + delim + (i.claim || ''));
           });
 
-          var csvStr = strAry.join(';');
+          var csvStr = strAry.join(enter);
           serviceCallback(null, csvStr);
           // process data - END
         } else {
