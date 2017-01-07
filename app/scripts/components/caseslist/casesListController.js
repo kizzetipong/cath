@@ -7,10 +7,12 @@ angular.module('cath')
     $scope.dataReady = false;
     $scope.errorMsg = '';
     $scope.sCount = '--';
+    $scope.maxItems = parseInt($scope.maxItems, 10) || 0;
 
     if ($scope.type) {
       caseService.fetchList($scope.type).then(function (ret) {
         $scope.list = ($scope.type === 'all') ? ret : _.filter(ret, { type: $scope.type });
+        $scope.list = $scope.maxItems ? _.take($scope.list, $scope.maxItems) : $scope.list;
         if ($scope.list && $scope.list.length > 0) {
           $scope.errorMsg = '';
           for (var i = 0; i < $scope.list.length; i++) {
