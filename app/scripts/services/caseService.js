@@ -3,26 +3,29 @@
 angular.module('cath')
 .service('caseService', ['AppConfig',
   function ($appConfig) {
-    var data;
+    var list;
     this.url = $appConfig.DB_URL;
     return {
       fetchList: function (type) {
         var deferred = new $.Deferred();
 
-        $.ajax({
-          method: 'POST',
-          url: '/node/case_list',
-          data: { type: type },
-          success: $.proxy(function (ret) {
-            deferred.resolve(ret);
-            // TODO: temporary hide mocked cases
-            // deferred.resolve([]);
-          }, this),
-          error: $.proxy(function () {
-            console.log('ERROR');
-            deferred.resolve([]);
-          }, this),
-        });
+        if (this.getLatestList()) {
+          deferred.resolve(_.cloneDeep(this.getLatestList()));
+        } else {
+          $.ajax({
+            method: 'POST',
+            url: '/node/case_list',
+            data: { type: type },
+            success: $.proxy(function (ret) {
+              list = ret;
+              deferred.resolve(_.cloneDeep(ret));
+            }, this),
+            error: $.proxy(function () {
+              console.log('ERROR');
+              deferred.resolve([]);
+            }, this),
+          });
+        }
         return deferred.promise();
       },
 
@@ -87,8 +90,8 @@ angular.module('cath')
       },
 
 
-      getLatestData: function () {
-        return data;
+      getLatestList: function () {
+        return list;
       },
     };
   },
