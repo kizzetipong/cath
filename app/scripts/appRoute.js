@@ -64,9 +64,9 @@ angular.module('cath')
     controller: 'MainController',
     templateUrl: 'views/mainView.html',
   })
-  .when('/comps', {
-    templateUrl: 'views/compsDisplay.html',
-  })
+  // .when('/comps', {
+  //   templateUrl: 'views/compsDisplay.html',
+  // })
   // TODO: Routes for Admin
   .when('/admin/news/:articleId?/', {
     controller: 'AdminNewsController',
