@@ -46,5 +46,12 @@ angular.module('cath')
         console.log(response);
       });
     };
+
+    $scope.scrollTo = function (divId) {
+      var $div = $('#' + divId);
+      if ($div.length > 0) {
+        $('html, body').animate({ scrollTop: $div.offset().top }, 1000, 'easeInCirc');
+      }
+    };
   },
 ]);

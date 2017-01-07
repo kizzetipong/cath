@@ -26,7 +26,7 @@
                 <div class="icon">
                   <div class="icon-wrap">
                     <div class="amount">{{sCount}}</div>
-                    <img class="icon-link" ng-click="" src="/assets/images/sys/icon_people.png">
+                    <img class="icon-link link" ng-click="scrollTo('case-form')" src="/assets/images/sys/icon_people.png">
                   </div>
                   <div class="icon-desc">ผู้ร่วมฟ้องขณะนี้</div>
                 </div>
@@ -54,7 +54,7 @@
         </div>
       </div>
     </div>
-    <case-form form-id="{{data.formId}}"></case-form>
+    <case-form id="case-form" form-id="{{data.formId}}"></case-form>
   </div>
   <div ng-show="errorMsg" class="error-box">
     <div class="alert alert-warning" role="alert">ไม่พบหน้า "ร่วมฟ้อง" นี้</div>
