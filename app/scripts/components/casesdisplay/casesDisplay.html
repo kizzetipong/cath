@@ -11,16 +11,16 @@
       <div class="row">
         <div class="header">
           <div class="image-large-container">
-            <img class="image-large" src="{{data.img}}" alt="{{data.headlineText}}"></img>
+            <img class="image-large" src="{{data.img}}" alt="{{headlineText}}"></img>
           </div>
         </div>
         <div class="detail-container col-md-12 col-xs-12">
           <div class="wrapper">
             <div class="text-center">
-              <h2>{{data.headlineText}}</h2>
-              <div>{{data.briefText}}</div>
+              <h2>{{headlineText}}</h2>
+              <div>{{briefText}}</div>
             </div>
-            <h2>{{data.teaser}}</h2>
+            <h2>{{teaser}}</h2>
             <div class="text-center">
               <div class="icons">
                 <div class="icon">
@@ -28,7 +28,7 @@
                     <div class="amount">{{sCount}}</div>
                     <img class="icon-link link" ng-click="scrollTo('case-form')" src="/assets/images/sys/icon_people.png">
                   </div>
-                  <div class="icon-desc">ผู้ร่วมฟ้องขณะนี้</div>
+                  <div class="icon-desc">{{'ผู้ร่วมฟ้องขณะนี้' | translate}}</div>
                 </div>
                 <!-- <div class="icon">
                   <div class="icon-wrap"><img class="icon-link" ng-click="" src="/assets/images/sys/icon_comment.png"></div>
@@ -43,7 +43,7 @@
                 </div> -->
                 <div class="icon">
                   <div class="icon-wrap"><img class="icon-link link" ng-click="shareFB(code)" src="/assets/images/sys/icon_share.png"></div>
-                  <div class="icon-desc">บอกต่อ</div>
+                  <div class="icon-desc">{{'บอกต่อ' | translate}}</div>
                 </div>
               </div>
             </div>
@@ -54,9 +54,13 @@
         </div>
       </div>
     </div>
-    <case-form id="case-form" form-id="{{data.formId}}"></case-form>
+    <case-form id="case-form" lang="{{lang}}" form-id="{{data.formId}}"></case-form>
   </div>
   <div ng-show="errorMsg" class="error-box">
     <div class="alert alert-warning" role="alert">ไม่พบหน้า "ร่วมฟ้อง" นี้</div>
+  </div>
+  <div class="lang-switcher btn-group" role="group" aria-label="change language">
+    <button type="button" ng-click="changeLang('th')" class="btn btn-sm btn-default" ng-class="{'btn-red': lang === 'th'}">ภาษาไทย</button>
+    <button type="button" ng-click="changeLang('en')" class="btn btn-sm btn-default" ng-class="{'btn-red': lang === 'en'}">English</button>
   </div>
 </div>

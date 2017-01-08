@@ -2,18 +2,34 @@
 'use strict';
 
 angular.module('cath')
-.controller('casesDisplayController', ['$scope', '$sce', 'caseService', 'facebook',
-  function ($scope, $sce, caseService, facebook) {
+.controller('casesDisplayController', ['$scope', '$sce', 'caseService', 'facebook', '$translate',
+  function ($scope, $sce, caseService, facebook, $translate) {
     $scope.dataReady = false;
     $scope.errorMsg = '';
     $scope.sCount = '--';
+    $scope.lang = 'th';
+
+    $scope.$watch('lang', function (newValue) {
+      $translate.use(newValue);
+      if (newValue === 'en') {
+        $scope.detail = $scope.detailEn;
+        $scope.teaser = '';
+      } else {
+        $scope.detail = $scope.detailTh;
+        $scope.teaser = $scope.data.teaser;
+      }
+    });
 
     if ($scope.id || $scope.code) {
       caseService.fetchData($scope.id, $scope.code).then(function (ret) {
         if (ret && ret.length > 0) {
-          ret[0].detail = $sce.trustAsHtml(ret[0].detail);
+          $scope.detailTh = $sce.trustAsHtml(ret[0].detail);
+          $scope.detailEn = $sce.trustAsHtml(ret[0].detailEn);
           $scope.data = ret[0];
-          $scope.detail = ret[0].detail;
+          $scope.headlineText = $scope.data.headlineText;
+          $scope.briefText = $scope.data.briefText;
+          $scope.teaser = $scope.data.teaser;
+          $scope.detail = $scope.detailTh;
           $scope.dataReady = true;
         } else {
           $scope.errorMsg = 'ไม่พบคดีกลุ่ม ' + ($scope.code || $scope.id);
@@ -50,8 +66,13 @@ angular.module('cath')
     $scope.scrollTo = function (divId) {
       var $div = $('#' + divId);
       if ($div.length > 0) {
-        $('html, body').animate({ scrollTop: $div.offset().top }, 1000, 'easeInCirc');
+        $('html, body').animate({ scrollTop: $div.offset().top }, 1000, 'easeInOutCirc');
       }
+    };
+
+    $scope.changeLang = function (lang) {
+      $scope.lang = lang;
+      $scope.$applyAsync();
     };
   },
 ]);

@@ -7,6 +7,7 @@ angular.module('cath')
     restrict: 'E',
     scope: {
       formId: '@',
+      lang: '@',
     },
     controller: 'caseFormController',
   };

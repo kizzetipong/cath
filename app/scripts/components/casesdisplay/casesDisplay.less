@@ -185,4 +185,15 @@
     font-size: 32px;
     color: @red;
   }
+  .lang-switcher {
+    position: fixed;
+    bottom:-7px;
+    right:5px;
+    z-index: 1;
+    .transition(all 0.5s ease);
+
+    &:hover {
+      bottom: 0px !important;
+    }
+  }
 }

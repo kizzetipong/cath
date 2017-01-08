@@ -57,6 +57,7 @@ CaseListService.prototype.service = function (context, payload, serviceCallback)
               briefText: r.brief_text,
               teaser: r.teaser,
               detail: r.detail,
+              detailEn: r.detail_en,
               formId: r.form_id,
               date: r.expired_at,
               img: r.head_img,
