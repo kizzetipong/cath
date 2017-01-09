@@ -16,7 +16,7 @@ angular.module('cath')
         $scope.teaser = '';
       } else {
         $scope.detail = $scope.detailTh;
-        $scope.teaser = $scope.data.teaser;
+        $scope.teaser = _.get($scope.data, 'teaser');
       }
     });
 
