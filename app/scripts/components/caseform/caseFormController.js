@@ -34,10 +34,20 @@ angular.module('cath')
 
   $scope.validateData = function (sData) {
     // TODO: validate type of data before submit
+    return true;
   };
 
-  $scope.submitForm = function () {
-    $scope.validateData($scope.submitData);
+  $scope.submitForm = function (isValid) {
+    if (!isValid) {
+      alert('กรอกข้อมูลไม่ถูกต้อง');
+      return;
+    }
+
+    if (!$scope.validateData($scope.submitData)) {
+      alert('กรอกข้อมูลไม่ถูกต้อง');
+      return;
+    }
+
 
     $.ajax({
       method: 'POST',
