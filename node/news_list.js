@@ -25,7 +25,7 @@ NewsListService.prototype.service = function (context, payload, serviceCallback)
     });
 
 
-    var sql = 'SELECT * from news where status=1';
+    var sql = 'SELECT * FROM news WHERE status=1 ORDER BY ranked_at DESC, created_at DESC';
 
     connection.connect();
     connection.query(sql, function (err, rows, fields) {
