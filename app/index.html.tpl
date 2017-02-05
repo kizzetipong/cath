@@ -50,7 +50,6 @@
 
     <!-- build:js({.tmp,app}) web/scripts/libs.js -->
     <script src="scripts/libs/jquery.mobile.custom.min.js"></script>
-    <script src="scripts/libs/redactor/redactor.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) web/scripts/app.js -->

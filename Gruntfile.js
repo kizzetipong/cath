@@ -259,6 +259,26 @@ module.exports = function (grunt) {
           },
         ],
       },
+      summernote: {
+        files: [
+          {
+            expand: true,
+            cwd: './bower_components/summernote/dist',
+            dest: '<%= yeoman.app %>/assets/less',
+            src: [
+              'summernote.css',
+            ],
+          },
+          {
+            expand: true,
+            cwd: './bower_components/summernote/dist/fonts',
+            dest: '<%= yeoman.app %>/assets/fonts',
+            src: [
+              '**',
+            ],
+          },
+        ],
+      },
       toastr: {
         files: [
           {
@@ -349,6 +369,7 @@ module.exports = function (grunt) {
   grunt.registerTask('prepare', [
     'copy:bootstrap',
     'copy:toastr',
+    'copy:summernote',
   ]);
 
   grunt.registerTask('serve', 'Compile then start a connect web server', [

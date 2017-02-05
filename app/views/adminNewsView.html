@@ -1,5 +1,5 @@
 <div id="news" class="app-container">
-  <textarea id="editor-redactor" ng-if="dataReady" ng-model="detail" redactor="{{rOptions}}" cols="30" rows="10">{{detail}}</textarea>
+  <div id="summernote" ng-if="dataReady">{{detail}}</div>
 </div>
 <button ng-click="getContent()">Get Content</button><button ng-click="saveContent()">Save</button>
 <div>{{content}}</div>
