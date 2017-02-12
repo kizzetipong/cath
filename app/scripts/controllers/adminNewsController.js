@@ -1,14 +1,26 @@
 'use strict';
 
 angular.module('cath')
-.controller('AdminNewsController', ['$rootScope', '$scope', '$routeParams', 'newscatalogService',
-  function ($rootScope, $scope, $routeParams, newscatalogService) {
+.controller('AdminNewsController', ['$rootScope', '$scope', '$routeParams', 'newscatalogService', 'toastr',
+  function ($rootScope, $scope, $routeParams, newscatalogService, toastr) {
     $scope.init = function () {
       $scope.dataReady = false;
       $scope.content = '';
       $rootScope.mainBg = '';
       $scope.params = $routeParams;
       $scope.loadData();
+      $scope.loadLocalStorage();
+    };
+
+    $scope.loadLocalStorage = function () {
+      $scope.author_id = window.localStorage.getItem('author_id');
+      $scope.token = window.localStorage.getItem('token');
+    };
+
+    $scope.saveLocalStorage = function () {
+      window.localStorage.setItem('author_id', $scope.author_id);
+      window.localStorage.setItem('token', $scope.token);
+      toastr.info('ID / Token is saved');
     };
 
     $scope.loadData = function () {
@@ -52,6 +64,8 @@ angular.module('cath')
       $scope.content = $('#summernote').summernote('code');
       $scope.detail = $scope.content;
       $scope.data.detail = $scope.detail;
+      $scope.data.author_id = $scope.author_id;
+      $scope.data.token = $scope.token;
       newscatalogService.saveData($scope.data).then(function (ret) {
         console.log(ret);
       });

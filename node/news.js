@@ -1,6 +1,7 @@
 'use strict';
 
 var mysql = require('mysql');
+var md5 = require('md5');
 
 function NewsService() {
 }
@@ -12,6 +13,9 @@ NewsService.prototype.service = function (context, payload, serviceCallback) {
   var method = context.request ? context.request.method : 'GET';
   var retAry = [];
   var connection;
+  var tokens = {
+    1: 'ec3a2aeb99eee89affff1a02cd3a125e',
+  };
   if (!payload || !payload.id) {
     serviceCallback('ERROR Msg', null);
   } else {
@@ -49,18 +53,21 @@ NewsService.prototype.service = function (context, payload, serviceCallback) {
           console.log('Error while performing Query', err);
         }
       });
+    } else if (method === 'POST') {
+      if (payload.author_id && payload.token && tokens[payload.author_id] && tokens[payload.author_id] === md5(payload.token)) {
+        connection.query('UPDATE news SET headline = ?, head_img = ?, brief_text = ?, detail = ?, author_id = ? where id= ?',
+          [payload.headlineText, payload.img, payload.briefText, payload.detail, payload.author_id, payload.id], function (err, result) {
+            if (err) {
+              serviceCallback(err, null);
+            } else {
+              serviceCallback(null, { status: 200, message: 'changed ' + result.changedRows + ' rows' });
+            }
+          }
+        );
+      } else {
+        serviceCallback({ message: 'ERROR: token not valid' }, null);
+      }
     }
-    // else if (method === 'POST') {
-    //   connection.query('UPDATE news SET headline = ?, head_img = ?, brief_text = ?, detail = ? where id= ?',
-    //     [payload.headlineText, payload.img, payload.briefText, payload.detail, payload.id], function (err, result) {
-    //       if (err) {
-    //         serviceCallback(err, null);
-    //       } else {
-    //         serviceCallback(null, { status: 200, message: 'changed ' + result.changedRows + ' rows' });
-    //       }
-    //     }
-    //   );
-    // }
 
     connection.end();
   }

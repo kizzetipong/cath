@@ -1,3 +1,6 @@
+<label for="author_id">User ID:</label> <input id="author_id" ng-model="author_id">
+<label for="token">TOKEN:</label> <input id="token" ng-model="token">
+<button id="saveToken" ng-click="saveLocalStorage()">Save User</button>
 <div id="news" class="app-container">
   <div id="summernote" ng-if="dataReady">{{detail}}</div>
 </div>

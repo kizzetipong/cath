@@ -51,8 +51,8 @@ angular.module('cath')
           success: $.proxy(function (ret) {
             deferred.resolve(ret);
           }, this),
-          error: $.proxy(function () {
-            console.log('ERROR');
+          error: $.proxy(function (err) {
+            console.log(err.responseText);
             deferred.resolve([]);
           }, this),
         });
