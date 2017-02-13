@@ -271,7 +271,7 @@ module.exports = function (grunt) {
           },
           {
             expand: true,
-            cwd: './bower_components/summernote/dist/fonts',
+            cwd: './bower_components/summernote/dist/font',
             dest: '<%= yeoman.app %>/assets/fonts',
             src: [
               '**',
