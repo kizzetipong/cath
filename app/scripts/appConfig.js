@@ -36,4 +36,7 @@ angular.module('cath')
     'โปรดติดต่อเจ้าหน้าที่: ': 'Please contact our staff: ',
   });
   $translateProvider.preferredLanguage('th');
+})
+.config(function ($mdThemingProvider) {
+  $mdThemingProvider.theme('default').primaryPalette('red').accentPalette('orange').backgroundPalette('pink');
 });

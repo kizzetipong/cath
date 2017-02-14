@@ -68,6 +68,10 @@ angular.module('cath')
   //   templateUrl: 'views/compsDisplay.html',
   // })
   // TODO: Routes for Admin
+  .when('/admin/editor', {
+    controller: 'AdminController',
+    templateUrl: 'views/adminView.html',
+  })
   .when('/admin/news/:articleId?/', {
     controller: 'AdminNewsController',
     templateUrl: 'views/adminNewsView.html',

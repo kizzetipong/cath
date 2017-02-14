@@ -279,6 +279,18 @@ module.exports = function (grunt) {
           },
         ],
       },
+      material: {
+        files: [
+          {
+            expand: true,
+            cwd: './bower_components/angular-material',
+            dest: '<%= yeoman.app %>/assets/less',
+            src: [
+              'angular-material.css',
+            ],
+          },
+        ],
+      },
       toastr: {
         files: [
           {
@@ -370,6 +382,7 @@ module.exports = function (grunt) {
     'copy:bootstrap',
     'copy:toastr',
     'copy:summernote',
+    'copy:material',
   ]);
 
   grunt.registerTask('serve', 'Compile then start a connect web server', [
