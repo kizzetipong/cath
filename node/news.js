@@ -55,11 +55,12 @@ NewsService.prototype.service = function (context, payload, serviceCallback) {
       });
     } else if (method === 'POST') {
       if (payload.author_id && payload.token && tokens[payload.author_id] && tokens[payload.author_id] === md5(payload.token)) {
-        connection.query('UPDATE news SET headline = ?, head_img = ?, brief_text = ?, detail = ?, author_id = ? where id= ?',
-          [payload.headlineText, payload.img, payload.briefText, payload.detail, payload.author_id, payload.id], function (err, result) {
+        connection.query('UPDATE news SET headline = ?, head_img = ?, brief_text = ?, detail = ?, author_id = ?, status = ? where id= ?',
+          [payload.headlineText, payload.img, payload.briefText, payload.detail, payload.author_id, payload.id, payload.status], function (err, result) {
             if (err) {
               serviceCallback(err, null);
             } else {
+              console.log(JSON.stringify(result));
               serviceCallback(null, { status: 200, message: 'changed ' + result.changedRows + ' rows' });
             }
           }

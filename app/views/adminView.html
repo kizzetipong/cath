@@ -1,8 +1,11 @@
+<label for="author_id">User ID:</label> <input id="author_id" ng-model="author_id">
+<label for="token">TOKEN:</label> <input id="token" ng-model="token">
+<button id="saveToken" ng-click="saveLocalStorage()">Save User</button>
 <div id="admin-view" class="app-container" >
-  <md-content ng-if="dataReady" class="md-padding" layout-xs="column" layout="row">
-    <div flex-xs flex-gt-md="50" layout="row">
-      <md-card ng-repeat="(key, value) in list">
-        <a href="/news/{{value.id}}"><img style="width: 100%;" ng-src="{{value.img}}" class="md-card-image" alt="Washed Out"></a>
+  <md-content ng-if="dataReady" class="md-padding" layout="row">
+    <div ng-repeat="(key, value) in list" flex-xs layout="row">
+      <md-card>
+        <img style="width: 100%;" ng-src="{{value.img}}" class="md-card-image" alt="Washed Out">
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">{{value.headlineText}}</span>
@@ -12,8 +15,8 @@
           {{value.briefText}}
         </md-card-content>
         <md-card-actions layout="row" layout-align="end center">
-          <md-button>Edit</md-button>
-          <md-button>Delete</md-button>
+          <md-button><a href="/admin/news/{{value.id}}">Edit</a></md-button>
+          <md-button ng-click="toggleActive(value)">Enable/Disable</md-button>
         </md-card-actions>
       </md-card>
     </div>

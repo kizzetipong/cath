@@ -44,6 +44,7 @@ NewsListService.prototype.service = function (context, payload, serviceCallback)
               briefText: brief_text,
               date: r.expired_at,
               img: r.head_img,
+              status: r.status,
             }
             );
         });
