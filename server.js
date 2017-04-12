@@ -4,6 +4,12 @@ var bodyParser = require('body-parser');
 var compression = require('compression');
 var express = require('express');
 var http = require('http');
+var https = require('https');
+var fs = require('fs');
+var httpsOptions = {
+  key: fs.readFileSync('./key.pem'),
+  cert: fs.readFileSync('./cert.pem'),
+};
 var methodOverride = require('method-override');
 var multer = require('multer');
 var serviceCtrl = require('./server/service.js');
@@ -33,6 +39,7 @@ var storageAdmin = multer.diskStorage({
 
 var app = express();
 var server = http.createServer(app, { 'log level': 0, 'match origin protocol': 'yes' });
+var httpsserver = https.createServer(httpsOptions, app, { 'log level': 0, 'match origin protocol': 'yes' });
 var path = __dirname + '/app';
 var rootUrl = '';
 
@@ -56,6 +63,10 @@ app.set('port', 9999);
 
 server.listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));
+});
+
+httpsserver.listen(443, function () {
+  console.log('The Express https server is listening on port 443.');
 });
 
 app.get(rootUrl + '/templates.js', function (req, res) {

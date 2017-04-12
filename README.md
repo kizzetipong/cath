@@ -10,6 +10,8 @@ Just for fun
 0. Use command 'npm install'
 0. Use command 'bower install'
 0. Use command 'grunt prepare'
+0. Use command 'openssl req -x509 -newkey rsa:2048 -keyout keytmp.pem -out cert.pem -days 365' to generate cert.pem
+0. Use command 'openssl rsa -in keytmp.pem -out key.pem' to generate key.pem (http://stackoverflow.com/questions/21397809/create-a-trusted-self-signed-ssl-cert-for-localhost-for-use-with-express-node)
 
 * Use command 'grunt serve' to start web server with http://localhost:9999
 * Use command 'grunt build' to prepare deployment package save at folder '/dist'

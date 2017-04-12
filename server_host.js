@@ -4,11 +4,17 @@ var bodyParser = require('body-parser');
 var compression = require('compression');
 var express = require('express');
 var http = require('http');
+var https = require('https');
+var fs = require('fs');
+var httpsOptions = {
+  key: fs.readFileSync('./key.pem'),
+  cert: fs.readFileSync('./cert.pem'),
+};
 var methodOverride = require('method-override');
 var multer = require('multer');
 var serviceCtrl = require('./server/service.js');
 
-var storage_user = multer.diskStorage({
+var storageUser = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './uploads/');
   },
@@ -17,10 +23,10 @@ var storage_user = multer.diskStorage({
     var extension = originalname.split('.');
     var filename = req.body.user + Date.now() + '.' + extension[extension.length - 1];
     cb(null, filename);
-  }
+  },
 });
 
-var storage_admin = multer.diskStorage({
+var storageAdmin = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './uploads/admin/');
   },
@@ -28,11 +34,12 @@ var storage_admin = multer.diskStorage({
     var originalname = file.originalname;
     var filename = originalname;
     cb(null, filename);
-  }
+  },
 });
 
 var app = express();
 var server = http.createServer(app, { 'log level': 0, 'match origin protocol': 'yes' });
+var httpsserver = https.createServer(httpsOptions, app, { 'log level': 0, 'match origin protocol': 'yes' });
 var path = __dirname;
 var rootUrl = '';
 
@@ -51,6 +58,10 @@ server.listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));
 });
 
+httpsserver.listen(443, function () {
+  console.log('The Express https server is listening on port 443.');
+});
+
 app.get('/', function (req, res) {
   res.redirect(rootUrl + req.originalUrl.replace(/^\//, ''));
 });
@@ -60,8 +71,8 @@ app.get(rootUrl, function (req, res) {
 });
 
 // handle services
-app.post('/node/upload/:serviceName', multer({ storage: storage_user }).single('file'), serviceCtrl.upload);
-app.post('/node/upload/admin/:serviceName', multer({ storage: storage_admin }).single('file'), serviceCtrl.upload);
+app.post('/node/upload/:serviceName', multer({ storage: storageUser }).single('file'), serviceCtrl.upload);
+app.post('/node/upload/admin/:serviceName', multer({ storage: storageAdmin }).single('file'), serviceCtrl.upload);
 app.post('/node/:serviceName', serviceCtrl.post);
 app.get('/node/:serviceName', serviceCtrl.get);
 app.post(rootUrl + '/node/:serviceName', serviceCtrl.post);
