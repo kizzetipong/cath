@@ -7,10 +7,11 @@ var http = require('http');
 var https = require('https');
 var fs = require('fs');
 var httpsOptions = {
-  key: fs.readFileSync('./key.pem'),
-  cert: fs.readFileSync('./cert.pem'),
+  key: fs.readFileSync('./sslcert/fullchain.pem'),
+  cert: fs.readFileSync('./sslcert/privkey.pem'),
 };
 var methodOverride = require('method-override');
+var helmet = require('helmet');
 var multer = require('multer');
 var serviceCtrl = require('./server/service.js');
 
@@ -50,6 +51,7 @@ app.use(rootUrl + '/web', express.static(path));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride());
+app.use(helmet());
 app.use(require('prerender-node').set('prerenderToken', '2WCRutJAdOGa72kpzvFp'));
 
 app.set('port', 80);

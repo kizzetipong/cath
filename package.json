@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "My Angular AppSeed",
   "dependencies": {
+    "helmet": "^3.5.0",
     "lodash": "2.4.1",
     "multer": "^1.2.0",
     "prerender-node": "^2.5.0"
