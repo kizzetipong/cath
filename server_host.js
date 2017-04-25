@@ -7,8 +7,8 @@ var http = require('http');
 var https = require('https');
 var fs = require('fs');
 var httpsOptions = {
-  key: fs.readFileSync('./sslcert/fullchain.pem'),
-  cert: fs.readFileSync('./sslcert/privkey.pem'),
+  key: fs.readFileSync('./sslcert/privkey.pem'),
+  cert: fs.readFileSync('./sslcert/fullchain.pem'),
 };
 var methodOverride = require('method-override');
 var helmet = require('helmet');
